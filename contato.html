@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" wp-template wp-template-master="index.html" wp-template-post-template wp-template-post-template-types="page" wp-template-post-template-name="Contato" wp-template-preview-url="http://pam.local/">
+<html lang="zxx" wp-template wp-template-master="index.html" wp-template-post-template wp-template-post-template-types="page" wp-template-post-template-name="Contato" wp-template-preview-url="http://wordpress.localhost/contato/">
   <head>
     <title>Real House - Real Estate HTML Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -306,7 +306,7 @@
       </div>
     </header>
     <div wp-site-content>
-      <div class="sub-banner" cms-template-part="template-parts/content/sub-banner">
+      <div class="sub-banner">
         <div class="container">
           <div class="page-name">
             <h1 wp-title wp-title-set="content" wp-title-sep="''">Contact Us</h1>
@@ -344,35 +344,35 @@
         </div>
       </div>
       <div class="contact-1 content-area-5">
-        <div class="container">
+        <div class="container" data-pg-collapsed>
           <div class="row">
             <div class=" col-lg-4 col-md-5">
               <div class="contact-info">
                 <h3 class="heading">Escritório</h3>
-                <p wp-meta-value wp-meta-value-key="endereco_da_empresa">Rua Joaquim Machado, 283 - Sala 43
+                <p cms-post-field="endereco" cms-post-field-type="content" cms-post-field-acf>Rua Joaquim Machado, 283 - Sala 43
 Lapa - São Paulo - CEP: 05050 010</p>
                 <div class="media">
                   <i class="flaticon-technology-1"></i>
                   <div class="media-body">
                     <h5 class="mt-0">Phone:</h5>
-                    <p><a href="tel:0477-0477-8556-552" wp-cz-theme-mod>0477 8556 552</a></p>
+                    <p><a href="tel:0477-0477-8556-552" wp-acf-get-field="telefone" wp-acf-get-field-set="element">0477 8556 552</a></p>
                   </div>
                 </div>
                 <div class="media">
                   <i class="flaticon-envelope"></i>
                   <div class="media-body">
                     <h5 class="mt-0">Email:</h5>
-                    <p><a href="#" wp-cz-theme-mod="pam_header_email" wp-cz-theme-mod-set="element" wp-cz-theme-mod-check="true">info@themevessel.com</a></p>
+                    <p><a href="#" wp-acf-get-field="e-mail" wp-acf-get-field-set="element" wp-acf-get-field-set-attr="href">info@themevessel.com</a></p>
                   </div>
                 </div>
                 <div class="media">
                   <i class="flaticon-globe"></i>
                   <div class="media-body">
                     <h5 class="mt-0">Web:</h5>
-                    <p wp-meta-value wp-meta-value-key="endereco_do_website"><a href="#">info@themevessel.com</a></p>
+                    <p><a href="#" wp-acf-get-field="website" wp-acf-get-field-set="element">info@themevessel.com</a></p>
                   </div>
                 </div>
-                <div class="media mb-0">
+                <div class="media mb-0" cms-no-export>
                   <i class="flaticon-technology-2"></i>
                   <div class="media-body">
                     <h5 class="mt-0">Fax:</h5>
@@ -383,7 +383,7 @@ Lapa - São Paulo - CEP: 05050 010</p>
             </div>
             <div class="offset-lg-1 col-lg-7 col-md-7 ">
               <h3 class="heading">Entre em contato conosco</h3>
-              <form action="#" method="get" enctype="multipart/form-data" cms-form="contact_form" cms-form-send-email="true" cms-form-email="milton.higaki@gmail.com" cms-form-subject="Formulário de Contato" id="contact_form">
+              <form action="#" method="get" enctype="multipart/form-data" cms-form="contact_form" cms-form-send-email="true" cms-form-subject="Formulário de Contato" id="contact_form">
                 <div class="row">
                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <div class="form-group name">
@@ -424,7 +424,7 @@ Lapa - São Paulo - CEP: 05050 010</p>
       <div class="section">
         <div class="map">
           <div id="map" class="contact-map" cms-no-export wp-hide></div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.4156416429337!2d-46.90053558547252!3d-23.517548565859798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03f9793f14bf%3A0x9d2a069967fa44f0!2sEstr.%20das%20Na%C3%A7%C3%B5es%2C%20411%20-%20Vila%20Iracema%2C%20Barueri%20-%20SP%2C%2006422-100!5e0!3m2!1spt-BR!2sbr!4v1604333571065!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.4156416429337!2d-46.90053558547252!3d-23.517548565859798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03f9793f14bf%3A0x9d2a069967fa44f0!2sEstr.%20das%20Na%C3%A7%C3%B5es%2C%20411%20-%20Vila%20Iracema%2C%20Barueri%20-%20SP%2C%2006422-100!5e0!3m2!1spt-BR!2sbr!4v1604333571065!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" wp-acf-get-field="mapa" wp-acf-get-field-set-attr="src" wp-acf-get-field-set="attr"></iframe>
         </div>
       </div>
     </div>

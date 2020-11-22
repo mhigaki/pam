@@ -1,1555 +1,1564 @@
 <!DOCTYPE html>
-<html lang="pt-BR" wp-template wp-template-define-master-page="true" wp-template-preview-url="http://pam.local/" wp-template-export-as="index.php" wp-page-template="Main File" wp-page-template-field="The template for displaying">
-  <head>
-    <title>Real House - Real Estate HTML Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel='dns-prefetch' href='//maps.googleapis.com' wp-enqueue-style wp-enqueue-style-src="//maps.googleapis.com"/>
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' wp-enqueue-style wp-enqueue-style-src="//fonts.googleapis.com"/>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" wp-enqueue-style wp-enqueue-style-deps="pam-fonts">
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css" wp-enqueue-style>
-    <link rel="stylesheet" href="css/leaflet.css" type="text/css" wp-enqueue-style>
-    <link rel="stylesheet" href="css/map.css" type="text/css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="fonts/linearicons/linearicons.css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="css/dropzone.css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="css/slick.css" wp-enqueue-style>
-    <link rel="stylesheet" type="text/css" href="css/style.css" wp-enqueue-style wp-enqueue-style-location="website_admin">
-    <link rel="stylesheet" href="css/skins/red.css" wp-enqueue-style wp-enqueue-style-location="website_admin">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" cms-no-export>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700" wp-enqueue-style="pam-fonts" wp-enqueue-style-src="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
-    <link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css" wp-no-enqueue>
-    <script src="js/ie-emulation-modes-warning.js" wp-no-enqueue></script>
-    <script src="js/ie-emulation-modes-warning.js" wp-no-enqueue></script>
-  </head>
-  <body>
-    <div class="page_loader"></div>
-    <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-8 col-sm-7">
-            <div class="list-inline">
-              <a href="tel:5511941101331" rel="nofollow noreferrer noopener" target="_self" wp-cz-control="pam_sc_header_phone_lnk" wp-cz-control-label="Telefone Link" wp-cz-control-section="pam_header" wp-cz-control-type="url" wp-cz-theme-mod-set="attr" wp-cz-theme-mod="pam_sc_header_phone_lnk" wp-cz-theme-mod-set-attr="href" wp-cz-control-2="pam_sc_header_phone" wp-cz-control-label-2="Telefone" wp-cz-control-section-2="pam_header" wp-cz-control-type-2="text" wp-cz-theme-mod-2="pam_sc_header_phone" wp-cz-theme-mod-2-set-attr-append="true" wp-cz-theme-mod-2-set-attr="<i class=&quot;fa fa-phone&quot;></i>" wp-cz-control-input-class-2="<i class=&quot;fa fa-phone&quot;></i>" wp-cz-control-default="tel:5511930305500" wp-cz-control-default-2="+55 11 93030-5500" wp-cz-theme-mod-check="true"> <i class="fa fa-phone"></i></a>
-              <a href="mailto:milton.higaki@gmail.com" rel="nofollow noreferrer noopener" target="_self" wp-cz-control="pam_sc_header_mail_link" wp-cz-control-label="E-Mail Link" wp-cz-control-section="pam_header" wp-cz-control-type="url" wp-cz-theme-mod-set="attr" wp-cz-theme-mod="pam_sc_header_mail_link" wp-cz-theme-mod-set-attr="href" wp-cz-control-2="pam_sc_header_mail" wp-cz-control-label-2="E-Mail" wp-cz-control-section-2="pam_header" wp-cz-control-type-2="text" wp-cz-theme-mod-2="pam_sc_header_mail" wp-cz-control-default-2="<i class=&quot;fa fa-envelope&quot;></i> contato@pamconsultoria.com.br" wp-cz-control-default="mailto:contato@pamconsultoria.com.br" wp-cz-theme-mod-check="true"><i class="fa fa-envelope"></i> milton.higaki@gmail.com</a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-4 col-sm-5">
-            <ul class="pull-right top-social-media">
-              <li>
-                <a href="#" class="facebook" rel="nofollow noreferrer noopener"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#" class="twitter" rel="nofollow noreferrer noopener"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#" class="linkedin" rel="nofollow noreferrer noopener"><i class="fa fa-linkedin"></i> </a>
-              </li>
-              <li>
-                <a href="#" class="rss" rel="nofollow noreferrer noopener"><i class="fa fa-instagram"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-    <header class="main-header" data-pgc-lock>
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand logo" href="https://pam.local" wp-href="url"> <img src="https://pam.local/wp-content/uploads/2020/11/logo-site.svg" alt="logo" wp-cz-control="pam_brand_logo" wp-cz-control-label="Selecione o Logo" wp-cz-control-section="title_tagline" wp-cz-control-type="media" wp-cz-control-mime-type="image" wp-cz-theme-mod="pam_brand_logo" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-set-attr="src" wp-cz-theme-mod-set-get-image wp-cz-theme-mod-set-get-image-size="large" wp-cz-theme-mod-no-prefix="true" wp-cz-control-input-class="style-svg" class="style-svg"> </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto" wp-nav-menu="primary" wp-nav-menu-theme-location="primary" wp-nav-menu-current-class="active" wp-nav-menu-depth="5" wp-nav-menu-type="bootstrap4">
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<html lang="pt-BR" wp-template wp-template-define-master-page="true" wp-template-export-as="index.php" wp-page-template="Main File" wp-page-template-field="The template for displaying" wp-template-preview-url="http://wordpress.localhost/">
+	<head>
+		<title>PAM Consultoria</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel='dns-prefetch' href='//maps.googleapis.com' wp-enqueue-style wp-enqueue-style-src="//maps.googleapis.com"/>
+		<link rel='dns-prefetch' href='//fonts.googleapis.com' wp-enqueue-style wp-enqueue-style-src="//fonts.googleapis.com"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" wp-enqueue-style wp-enqueue-style-deps="pam-fonts">
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css" wp-enqueue-style>
+		<link rel="stylesheet" href="css/leaflet.css" type="text/css" wp-enqueue-style>
+		<link rel="stylesheet" href="css/map.css" type="text/css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="fonts/linearicons/linearicons.css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="css/dropzone.css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="css/slick.css" wp-enqueue-style>
+		<link rel="stylesheet" type="text/css" href="css/style.css" wp-enqueue-style wp-enqueue-style-location="website_admin">
+		<link rel="stylesheet" href="css/skins/red.css" wp-enqueue-style wp-enqueue-style-location="website_admin">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" cms-no-export>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700" wp-enqueue-style="pam-fonts" wp-enqueue-style-src="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+		<link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css" wp-no-enqueue>
+		<script src="js/ie-emulation-modes-warning.js" wp-no-enqueue></script>
+		<script src="js/ie-emulation-modes-warning.js" wp-no-enqueue></script>
+		<meta name="description" content="Consultoria de Imoveis">
+		<meta name="author" content="MNH">
+	</head>
+	<body>
+		<div class="page_loader"></div>
+		<header id="masterhead" class="site-header" wp-if-is-404="!">
+			<div class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-8 col-sm-7">
+							<div class="list-inline">
+								<a href="tel:5511941101331" rel="nofollow noreferrer noopener" target="_self" wp-cz-control="pam_sc_header_phone_lnk" wp-cz-control-section="pam_header" wp-cz-control-type="url" wp-cz-control-2="pam_sc_header_phone" wp-cz-control-section-2="pam_header" wp-cz-control-type-2="text" wp-cz-theme-mod-set-attr="href" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-check="true" wp-cz-theme-mod-default="tel:5511930305500" wp-cz-theme-mod="pam_sc_header_phone_lnk" wp-cz-theme-mod-2-set-attr-append="true" wp-cz-theme-mod-2-set-attr="<i class=&quot;fa fa-phone&quot;></i>" wp-cz-theme-mod-default-2="<i class=&quot;fa fa-phone&quot;></i> +55 11 93030-5500" wp-cz-theme-mod-2="pam_sc_header_phone" wp-cz-control-label="Dados de Contato" wp-cz-control-description="Telefone Link" wp-cz-control-description-2="Telefone"><i class="fa fa-phone"></i> 5511941101331</a>
+								<a href="mailto:milton.higaki@gmail.com" rel="nofollow noreferrer noopener" target="_self" wp-cz-control="pam_sc_header_mail_link" wp-cz-control-section="pam_header" wp-cz-control-type="url" wp-cz-theme-mod-set="attr" wp-cz-theme-mod="pam_sc_header_mail_link" wp-cz-theme-mod-set-attr="href" wp-cz-control-2="pam_sc_header_mail" wp-cz-control-section-2="pam_header" wp-cz-control-type-2="text" wp-cz-theme-mod-2="pam_sc_header_mail" wp-cz-control-default-2="<i class=&quot;fa fa-envelope&quot;></i> contato@pamconsultoria.com.br" wp-cz-control-default="mailto:contato@pamconsultoria.com.br" wp-cz-theme-mod-check="true" wp-cz-control-description="E-Mail Link" wp-cz-control-description-2="E-Mail"><i class="fa fa-envelope"></i> milton.higaki@gmail.com</a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-4 col-sm-5">
+							<ul class="pull-right top-social-media" wp-nav-menu="social" wp-nav-menu-theme-location="social">
+								<li>
+									<a href="#" class="facebook" rel="nofollow noreferrer noopener"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#" class="twitter" rel="nofollow noreferrer noopener"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#" class="linkedin" rel="nofollow noreferrer noopener"><i class="fa fa-linkedin"></i> </a>
+								</li>
+								<li>
+									<a href="#" class="rss" rel="nofollow noreferrer noopener"><i class="fa fa-instagram"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-header">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand logo" href="index-2.html" wp-href="url"> <img src="img/logos/logo-site.svg" alt="logo" class="style-svg" wp-cz-control="pam_brand_logo" wp-cz-control-label="Selecione o Logo" wp-cz-control-section="tagline_title" wp-cz-control-type="media" wp-cz-control-mime-type="image" wp-cz-theme-mod="pam_brand_logo" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-set-attr="src" wp-cz-theme-mod-set-get-image wp-cz-theme-mod-set-get-image-size="large" wp-cz-control-input-class="style-svg" wp-cz-control-description="Informe o Logo da PAM"> </a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto" wp-nav-menu="primary" wp-nav-menu-theme-location="primary" wp-nav-menu-current-class="active" wp-nav-menu-depth="5" wp-nav-menu-type="bootstrap4">
+								<li class="nav-item dropdown active">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Index </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li>
-                    <a class="dropdown-item" href="index-2.html">Index 1</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index-3.html">Index 2</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index-4.html">Index 3</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index-5.html">Index 4</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="index-6.html">Index 5 (Video)</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+										<li>
+											<a class="dropdown-item" href="index-2.html">Index 1</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="index-3.html">Index 2</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="index-4.html">Index 3</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="index-5.html">Index 4</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="index-6.html">Index 5 (Video)</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Properties </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">List Layout</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="properties-list-rightside.html">Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-list-leftsidebar.html">Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-list-fullwidth.html">Fullwidth</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Grid Layout</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="properties-grid-rightside.html">Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-grid-leftside.html">Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-grid-fullwidth.html">Fullwidth</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Map View</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="properties-map-rightside-list.html">Map List Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-map-leftside-list.html">Map List Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-map-rightside-grid.html">Map Grid Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-map-leftside-grid.html">Map Grid Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-map-full.html">Map FullWidth</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Property Detail</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="properties-details.html">Property Detail 1</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-details-2.html">Property Detail 2</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="properties-details-3.html">Property Detail 3</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown megamenu-li">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
-                  <div class="megamenu-area">
-                    <div class="row">
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="megamenu-section">
-                          <h6 class="megamenu-title">Pages</h6>
-                          <a class="dropdown-item" href="about.html">About 1</a>
-                          <a class="dropdown-item" href="about-2.html">About 2</a>
-                          <a class="dropdown-item" href="properties-list-rightside.html">Properties List</a>
-                          <a class="dropdown-item" href="properties-grid-rightside.html">Properties Grid</a>
-                          <a class="dropdown-item" href="properties-comparison.html">Properties Comparison</a>
-                          <a class="dropdown-item" href="search-brand.html">Properties Brands</a>
-                          <a class="dropdown-item" href="services-1.html">Services 1</a>
-                          <a class="dropdown-item" href="services-2.html">Services 2</a>
-                          <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                          <a class="dropdown-item" href="elements.html">Elements</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="megamenu-section">
-                          <h6 class="megamenu-title">Pages</h6>
-                          <a class="dropdown-item" href="agent-list.html">Agent List 1</a>
-                          <a class="dropdown-item" href="agent-list-2.html">Agent List 2</a>
-                          <a class="dropdown-item" href="agent-grid.html">Agent Grid 1</a>
-                          <a class="dropdown-item" href="agent-grid-2.html">Agent Grid 2</a>
-                          <a class="dropdown-item" href="agent-detail.html">Agent Detail</a>
-                          <a class="dropdown-item" href="pricing-tables.html">Pricing Tables 1</a>
-                          <a class="dropdown-item" href="pricing-tables-2.html">Pricing Tables 2</a>
-                          <a class="dropdown-item" href="pricing-tables-3.html">Pricing Tables 3</a>
-                          <a class="dropdown-item" href="typography.html">Typography</a>
-                          <a class="dropdown-item" href="typography-2.html">Typography 2</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="megamenu-section">
-                          <h6 class="megamenu-title">Pages</h6>
-                          <a class="dropdown-item" href="contact.html">Contact 1</a>
-                          <a class="dropdown-item" href="contact-2.html">Contact 2</a>
-                          <a class="dropdown-item" href="contact-3.html">Contact 3</a>
-                          <a class="dropdown-item" href="gallery-3column.html">Gallery 3 column</a>
-                          <a class="dropdown-item" href="gallery-4column.html">Gallery 4 column</a>
-                          <a class="dropdown-item" href="gallery-6column.html">Gallery 6 column</a>
-                          <a class="dropdown-item" href="faq.html">Faq 1</a>
-                          <a class="dropdown-item" href="faq-2.html">Faq 2</a>
-                          <a class="dropdown-item" href="faq-3.html">Faq 3</a>
-                          <a class="dropdown-item" href="icon.html">Icon</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="megamenu-section">
-                          <h6 class="megamenu-title">Pages</h6>
-                          <a class="dropdown-item" href="my-profile.html">My profile</a>
-                          <a class="dropdown-item" href="my-properties.html">My Properties</a>
-                          <a class="dropdown-item" href="favorited-properties.html">Favorited Properties</a>
-                          <a class="dropdown-item" href="submit-property.html">Submit Property</a>
-                          <a class="dropdown-item" href="login.html">Login</a>
-                          <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                          <a class="dropdown-item" href="change-password.html">Change Password</a>
-                          <a class="dropdown-item" href="signup.html">Register</a>
-                          <a class="dropdown-item" href="404.html">Pages 404</a>
-                          <a class="dropdown-item" href="404-2.html">Pages 404 2</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" href="#">List Layout</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="properties-list-rightside.html">Right Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-list-leftsidebar.html">Left Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-list-fullwidth.html">Fullwidth</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" href="#">Grid Layout</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="properties-grid-rightside.html">Right Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-grid-leftside.html">Left Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-grid-fullwidth.html">Fullwidth</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" href="#">Map View</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="properties-map-rightside-list.html">Map List Right Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-map-leftside-list.html">Map List Left Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-map-rightside-grid.html">Map Grid Right Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-map-leftside-grid.html">Map Grid Left Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-map-full.html">Map FullWidth</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" href="#">Property Detail</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="properties-details.html">Property Detail 1</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-details-2.html">Property Detail 2</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="properties-details-3.html">Property Detail 3</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown megamenu-li">
+									<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+									<div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
+										<div class="megamenu-area">
+											<div class="row">
+												<div class="col-sm-6 col-lg-3">
+													<div class="megamenu-section">
+														<h6 class="megamenu-title">Pages</h6>
+														<a class="dropdown-item" href="about.html">About 1</a>
+														<a class="dropdown-item" href="about-2.html">About 2</a>
+														<a class="dropdown-item" href="properties-list-rightside.html">Properties List</a>
+														<a class="dropdown-item" href="properties-grid-rightside.html">Properties Grid</a>
+														<a class="dropdown-item" href="properties-comparison.html">Properties Comparison</a>
+														<a class="dropdown-item" href="search-brand.html">Properties Brands</a>
+														<a class="dropdown-item" href="services-1.html">Services 1</a>
+														<a class="dropdown-item" href="services-2.html">Services 2</a>
+														<a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
+														<a class="dropdown-item" href="elements.html">Elements</a>
+													</div>
+												</div>
+												<div class="col-sm-6 col-lg-3">
+													<div class="megamenu-section">
+														<h6 class="megamenu-title">Pages</h6>
+														<a class="dropdown-item" href="agent-list.html">Agent List 1</a>
+														<a class="dropdown-item" href="agent-list-2.html">Agent List 2</a>
+														<a class="dropdown-item" href="agent-grid.html">Agent Grid 1</a>
+														<a class="dropdown-item" href="agent-grid-2.html">Agent Grid 2</a>
+														<a class="dropdown-item" href="agent-detail.html">Agent Detail</a>
+														<a class="dropdown-item" href="pricing-tables.html">Pricing Tables 1</a>
+														<a class="dropdown-item" href="pricing-tables-2.html">Pricing Tables 2</a>
+														<a class="dropdown-item" href="pricing-tables-3.html">Pricing Tables 3</a>
+														<a class="dropdown-item" href="typography.html">Typography</a>
+														<a class="dropdown-item" href="typography-2.html">Typography 2</a>
+													</div>
+												</div>
+												<div class="col-sm-6 col-lg-3">
+													<div class="megamenu-section">
+														<h6 class="megamenu-title">Pages</h6>
+														<a class="dropdown-item" href="contact.html">Contact 1</a>
+														<a class="dropdown-item" href="contact-2.html">Contact 2</a>
+														<a class="dropdown-item" href="contact-3.html">Contact 3</a>
+														<a class="dropdown-item" href="gallery-3column.html">Gallery 3 column</a>
+														<a class="dropdown-item" href="gallery-4column.html">Gallery 4 column</a>
+														<a class="dropdown-item" href="gallery-6column.html">Gallery 6 column</a>
+														<a class="dropdown-item" href="faq.html">Faq 1</a>
+														<a class="dropdown-item" href="faq-2.html">Faq 2</a>
+														<a class="dropdown-item" href="faq-3.html">Faq 3</a>
+														<a class="dropdown-item" href="icon.html">Icon</a>
+													</div>
+												</div>
+												<div class="col-sm-6 col-lg-3">
+													<div class="megamenu-section">
+														<h6 class="megamenu-title">Pages</h6>
+														<a class="dropdown-item" href="my-profile.html">My profile</a>
+														<a class="dropdown-item" href="my-properties.html">My Properties</a>
+														<a class="dropdown-item" href="favorited-properties.html">Favorited Properties</a>
+														<a class="dropdown-item" href="submit-property.html">Submit Property</a>
+														<a class="dropdown-item" href="login.html">Login</a>
+														<a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+														<a class="dropdown-item" href="change-password.html">Change Password</a>
+														<a class="dropdown-item" href="signup.html">Register</a>
+														<a class="dropdown-item" href="404.html">Pages 404</a>
+														<a class="dropdown-item" href="404-2.html">Pages 404 2</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Blog </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Classic</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="blog-classic-sidebar-right.html">Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="blog-classic-sidebar-left.html">Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="blog-classic-fullwidth.html">FullWidth</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Columns</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="blog-columns-2col.html">2 Columns</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="blog-columns-3col.html">3 Columns</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Masonry</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="blog-masonry-2col.html">2 Masonry</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="blog-masonry-3col.html">3 Masonry</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Blog Details</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="blog-single-sidebar-right.html">Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="blog-single-sidebar-left.html">Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="blog-single-fullwidth.html">Fullwidth</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="submit-property.html" class="nav-link link-color"><i class="fa fa-plus"></i> Submit Property</a>
-              </li>
-              <li class="nav-item">
-                <a href="#full-page-search" class="nav-link link-color"><i class="fa fa-search"></i></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- Top header start -->
-    <!-- Top header end -->
-    <!-- Main header start -->
-    <div wp-site-content id="content">
-      <div id="primary">
-        <main id="site-main">
-          <div class="banner" id="banner">
-            <div id="bannerCarousole" class="carousel slide" data-ride="carousel" wp-post-type-menu-icon="dashicons-slides" wp-post-type-show-in-menu="true" wp-post-type-supports="title,editor,thumbnail,custom-fields" wp-post-type-public="true" wp-post-type-name-singular="Banners" wp-post-type-name="Banners" wp-post-type="sliders" wp-loop-orderby="rand" wp-loop-order="ASC" wp-loop-posts-per-page="3" wp-loop-post-type-custom="sliders" wp-loop-first-classes="active" wp-loop-show-empty-text="false" wp-loop="sliders_query" wp-loop-post-status="publish" wp-loop-nopaging="true" wp-loop-cache-results="false">
-              <div class="carousel-inner" wp-loop-items-container>
-                <div class="carousel-item banner-max-height active" wp-the-id wp-post-class wp-loop-item>
-                  <img class="d-block w-100" src="img/banner/banner-1.jpg" alt="Banner" width="1920" height="1080" wp-the-post-thumbnail="large" wp-the-post-thumbnail-if="true" wp-the-post-thumbnail-sizes="max-width(640px) 97vw, max-width(768px) 750px" wp-the-post-thumbnail-attr-alt="Banner">
-                  <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
-                    <div class="carousel-content container">
-                      <div class="text-center">
-                        <h3 class="text-uppercase" data-animation="animated fadeInDown delay-05s" wp-the-title>Banner 01</h3>
-                        <p data-animation="animated fadeInUp delay-10s" wp-the-content wp-the-content-set="content"></p>
-                        <a class="btn btn-white" href="http://wordpress.localhost/sliders/banner-01/" cms-post-link="cms-post-link" rel="nofollow noreferrer noopener">Saiba Mais</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item banner-max-height" cms-no-export>
-                  <img class="d-block w-100" src="img/banner/banner-3.jpg" alt="banner">
-                  <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
-                    <div class="carousel-content container">
-                      <div class="text-right">
-                        <h3 class="text-uppercase" data-animation="animated fadeInDown delay-05s">Find Your Dream House</h3>
-                        <p data-animation="animated fadeInUp delay-10s">
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" href="#">Classic</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="blog-classic-sidebar-right.html">Right Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="blog-classic-sidebar-left.html">Left Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="blog-classic-fullwidth.html">FullWidth</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" href="#">Columns</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="blog-columns-2col.html">2 Columns</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="blog-columns-3col.html">3 Columns</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" href="#">Masonry</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="blog-masonry-2col.html">2 Masonry</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="blog-masonry-3col.html">3 Masonry</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" href="#">Blog Details</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="blog-single-sidebar-right.html">Right Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="blog-single-sidebar-left.html">Left Sidebar</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="blog-single-fullwidth.html">Fullwidth</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a href="submit-property.html" class="nav-link link-color"><i class="fa fa-plus"></i> Submit Property</a>
+								</li>
+								<li class="nav-item">
+									<a href="#full-page-search" class="nav-link link-color"><i class="fa fa-search"></i></a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- Top header start -->
+		<!-- Top header end -->
+		<!-- Main header start -->
+		<div wp-site-content id="main" class="site-main">
+			<div id="primary">
+				<main id="site-main">
+					<div class="banner" id="banner">
+						<div id="bannerCarousole" class="carousel slide" data-ride="carousel" wp-post-type-menu-icon="dashicons-slides" wp-post-type-show-in-menu="true" wp-post-type-supports="title,editor,thumbnail,custom-fields" wp-post-type-public="true" wp-post-type-name-singular="Banners" wp-post-type-name="Banners" wp-post-type="sliders" wp-loop-orderby="rand" wp-loop-order="ASC" wp-loop-posts-per-page="3" wp-loop-post-type-custom="sliders" wp-loop-first-classes="active" wp-loop-show-empty-text="false" wp-loop="sliders_query" wp-loop-post-status="publish" wp-loop-nopaging="true" wp-loop-cache-results="false">
+							<div class="carousel-inner" wp-loop-items-container>
+								<div class="carousel-item banner-max-height active" wp-the-id wp-post-class wp-loop-item>
+									<img class="d-block w-100" src="img/banner/banner-1.jpg" alt="Banner" width="1920" height="1080" wp-the-post-thumbnail wp-the-post-thumbnail-if="true" wp-the-post-thumbnail-attr-alt="Banner">
+									<div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
+										<div class="carousel-content container">
+											<div class="text-center">
+												<h3 class="text-uppercase" data-animation="animated fadeInDown delay-05s" wp-the-title>Banner 01</h3>
+												<p data-animation="animated fadeInUp delay-10s" wp-the-content wp-the-content-set="content"></p>
+												<a class="btn btn-white" href="http://wordpress.localhost/sliders/banner-01/" rel="nofollow noreferrer noopener" cms-post-field-if cms-post-field-type="link" cms-post-field-acf cms-post-field="url_da_pagina">Saiba Mais</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item banner-max-height" cms-no-export>
+									<img class="d-block w-100" src="img/banner/banner-3.jpg" alt="banner">
+									<div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
+										<div class="carousel-content container">
+											<div class="text-right">
+												<h3 class="text-uppercase" data-animation="animated fadeInDown delay-05s">Find Your Dream House</h3>
+												<p data-animation="animated fadeInUp delay-10s">
                   This is real estate website template based on Bootstrap 4 framework. </p>
-                        <a href="index-2.html" class="btn btn-white">Read More</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item banner-max-height" cms-no-export>
-                  <img class="d-block w-100" src="img/banner/banner-2.jpg" alt="banner">
-                  <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
-                    <div class="carousel-content container">
-                      <div class="text-left">
-                        <h3 class="text-uppercase" data-animation="animated fadeInDown delay-05s">Find Your Dream House</h3>
-                        <p data-animation="animated fadeInUp delay-10s">
+												<a href="index-2.html" class="btn btn-white">Read More</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item banner-max-height" cms-no-export>
+									<img class="d-block w-100" src="img/banner/banner-2.jpg" alt="banner">
+									<div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
+										<div class="carousel-content container">
+											<div class="text-left">
+												<h3 class="text-uppercase" data-animation="animated fadeInDown delay-05s">Find Your Dream House</h3>
+												<p data-animation="animated fadeInUp delay-10s">
                   This is real estate website template based on Bootstrap 4 framework. </p>
-                        <a class="btn btn-white" href="index-2.html">Saiba Mais</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#bannerCarousole" role="button" data-slide="prev"> <span class="slider-mover-left" aria-hidden="true"> <i class="fa fa-angle-left"></i> </span> </a>
-              <a class="carousel-control-next" href="#bannerCarousole" role="button" data-slide="next"> <span class="slider-mover-right" aria-hidden="true"> <i class="fa fa-angle-right"></i> </span> </a>
-            </div>
-            <!-- Search Section start -->
-            <div class="search-section search-area-3 d-none d-xl-block d-lg-block" id="search-area-3">
-              <div class="container">
-                <div class="search-section-area ssa">
-                  <div class="search-area-inner">
-                    <div class="search-contents">
-                      <form method="GET">
-                        <div class="row">
-                          <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
-                              <select class="selectpicker search-fields" name="area">
-                                <option>Area</option>
-                                <option>3000</option>
-                                <option>2600</option>
-                                <option>2200</option>
-                                <option>1800</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
-                              <select class="selectpicker search-fields" name="property-status">
-                                <option>Property Status</option>
-                                <option>For Sale</option>
-                                <option>For Rent</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
-                              <select class="selectpicker search-fields" name="property-types">
-                                <option>Property Types</option>
-                                <option>Apartments</option>
-                                <option>Houses</option>
-                                <option>Commercial</option>
-                                <option>Garages</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
-                              <select class="selectpicker search-fields" name="location">
-                                <option>Location</option>
-                                <option>United States</option>
-                                <option>United Kingdom</option>
-                                <option>American Samoa</option>
-                                <option>Belgium</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
-                              <select class="selectpicker search-fields" name="max-area">
-                                <option>Max Area (Sq Ff)</option>
-                                <option>2400</option>
-                                <option>2800</option>
-                                <option>3200</option>
-                                <option>3600</option>
-                                <option>4000</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
-                              <select class="selectpicker search-fields" name="min-area">
-                                <option>Min Area (Sq Ff)</option>
-                                <option>2400</option>
-                                <option>2800</option>
-                                <option>3200</option>
-                                <option>3600</option>
-                                <option>4000</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="range-slider">
-                              <div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
-                              <div class="clearfix"></div>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
-                              <button class="search-button">Search</button>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Search Section end -->
-          </div>
-          <div class="search-section search-area-2 bg-grea d-lg-none d-xl-none">
-            <div class="container">
-              <div class="search-section-area">
-                <div class="search-area-inner">
-                  <div class="search-contents">
-                    <form method="GET">
-                      <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                          <div class="form-group">
-                            <select class="selectpicker search-fields" name="area">
-                              <option>Area</option>
-                              <option>3000</option>
-                              <option>2600</option>
-                              <option>2200</option>
-                              <option>1800</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                          <div class="form-group">
-                            <select class="selectpicker search-fields" name="property-status">
-                              <option>Property Status</option>
-                              <option>For Sale</option>
-                              <option>For Rent</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                          <div class="form-group">
-                            <select class="selectpicker search-fields" name="property-types">
-                              <option>Property Types</option>
-                              <option>Apartments</option>
-                              <option>Houses</option>
-                              <option>Commercial</option>
-                              <option>Garages</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                          <div class="form-group">
-                            <select class="selectpicker search-fields" name="location">
-                              <option>Location</option>
-                              <option>United States</option>
-                              <option>United Kingdom</option>
-                              <option>American Samoa</option>
-                              <option>Belgium</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                          <div class="form-group">
-                            <select class="selectpicker search-fields" name="max-area">
-                              <option>Max Area (Sq Ff)</option>
-                              <option>2400</option>
-                              <option>2800</option>
-                              <option>3200</option>
-                              <option>3600</option>
-                              <option>4000</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                          <div class="form-group">
-                            <select class="selectpicker search-fields" name="min-area">
-                              <option>Min Area (Sq Ff)</option>
-                              <option>2400</option>
-                              <option>2800</option>
-                              <option>3200</option>
-                              <option>3600</option>
-                              <option>4000</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                          <div class="range-slider">
-                            <div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
-                            <div class="clearfix"></div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                          <div class="form-group">
-                            <button class="search-button">Search</button>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="featured-properties content-area-9" wp-cz-control-description="Marque para exibir a seção" wp-cz-control="display_pam_sc_features" wp-cz-control-label="Display Section Features" wp-cz-control-section="pam_sc_features" wp-cz-control-type="checkbox">
-            <div class="container">
-              <!-- Main title -->
-              <div class="main-title" cms-editable="display_pam_sc_properties_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Novidades" cms-editable-section="pam_sc_features">
-                <h1 wp-the-title>What are you looking for?</h1>
-                <p cms-post-excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
-              </div>
-              <div class="slick-slider-area">
-                <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                  <div class="slick-slide-item">
-                    <div class="property-box">
-                      <div class="property-thumbnail">
-                        <a href="properties-details.html" class="property-img"> <div class="listing-badges">
-                            <span class="featured">Featured</span>
-                          </div> <div class="price-ratings-box">
-                            <p class="price">
+												<a class="btn btn-white" href="index-2.html">Saiba Mais</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#bannerCarousole" role="button" data-slide="prev"> <span class="slider-mover-left" aria-hidden="true"> <i class="fa fa-angle-left"></i> </span> </a>
+							<a class="carousel-control-next" href="#bannerCarousole" role="button" data-slide="next"> <span class="slider-mover-right" aria-hidden="true"> <i class="fa fa-angle-right"></i> </span> </a>
+						</div>
+						<!-- Search Section start -->
+						<div class="search-section search-area-3 d-none d-xl-block d-lg-block" id="search-area-3">
+							<div class="container">
+								<div class="search-section-area ssa">
+									<div class="search-area-inner">
+										<div class="search-contents">
+											<form method="GET">
+												<div class="row">
+													<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+														<div class="form-group">
+															<select class="selectpicker search-fields" name="area">
+																<option>Area</option>
+																<option>3000</option>
+																<option>2600</option>
+																<option>2200</option>
+																<option>1800</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+														<div class="form-group">
+															<select class="selectpicker search-fields" name="property-status">
+																<option>Property Status</option>
+																<option>For Sale</option>
+																<option>For Rent</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+														<div class="form-group">
+															<select class="selectpicker search-fields" name="property-types">
+																<option>Property Types</option>
+																<option>Apartments</option>
+																<option>Houses</option>
+																<option>Commercial</option>
+																<option>Garages</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+														<div class="form-group">
+															<select class="selectpicker search-fields" name="location">
+																<option>Location</option>
+																<option>United States</option>
+																<option>United Kingdom</option>
+																<option>American Samoa</option>
+																<option>Belgium</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+														<div class="form-group">
+															<select class="selectpicker search-fields" name="max-area">
+																<option>Max Area (Sq Ff)</option>
+																<option>2400</option>
+																<option>2800</option>
+																<option>3200</option>
+																<option>3600</option>
+																<option>4000</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+														<div class="form-group">
+															<select class="selectpicker search-fields" name="min-area">
+																<option>Min Area (Sq Ff)</option>
+																<option>2400</option>
+																<option>2800</option>
+																<option>3200</option>
+																<option>3600</option>
+																<option>4000</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+														<div class="range-slider">
+															<div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+														<div class="form-group">
+															<button class="search-button">Search</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Search Section end -->
+					</div>
+					<div class="search-section search-area-2 bg-grea d-lg-none d-xl-none">
+						<div class="container">
+							<div class="search-section-area">
+								<div class="search-area-inner">
+									<div class="search-contents">
+										<form method="GET">
+											<div class="row">
+												<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+													<div class="form-group">
+														<select class="selectpicker search-fields" name="area">
+															<option>Area</option>
+															<option>3000</option>
+															<option>2600</option>
+															<option>2200</option>
+															<option>1800</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+													<div class="form-group">
+														<select class="selectpicker search-fields" name="property-status">
+															<option>Property Status</option>
+															<option>For Sale</option>
+															<option>For Rent</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+													<div class="form-group">
+														<select class="selectpicker search-fields" name="property-types">
+															<option>Property Types</option>
+															<option>Apartments</option>
+															<option>Houses</option>
+															<option>Commercial</option>
+															<option>Garages</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+													<div class="form-group">
+														<select class="selectpicker search-fields" name="location">
+															<option>Location</option>
+															<option>United States</option>
+															<option>United Kingdom</option>
+															<option>American Samoa</option>
+															<option>Belgium</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+													<div class="form-group">
+														<select class="selectpicker search-fields" name="max-area">
+															<option>Max Area (Sq Ff)</option>
+															<option>2400</option>
+															<option>2800</option>
+															<option>3200</option>
+															<option>3600</option>
+															<option>4000</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+													<div class="form-group">
+														<select class="selectpicker search-fields" name="min-area">
+															<option>Min Area (Sq Ff)</option>
+															<option>2400</option>
+															<option>2800</option>
+															<option>3200</option>
+															<option>3600</option>
+															<option>4000</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+													<div class="range-slider">
+														<div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 col-sm-6 col-6">
+													<div class="form-group">
+														<button class="search-button">Search</button>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="featured-properties content-area-9" wp-cz-control-description="Marque para exibir a seção" wp-cz-control="display_pam_sc_features" wp-cz-control-label="Display Section Features" wp-cz-control-section="pam_sc_features" wp-cz-control-type="checkbox">
+						<div class="container">
+							<!-- Main title -->
+							<div class="main-title" cms-editable="display_pam_sc_properties_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Novidades" cms-editable-section="pam_sc_features">
+								<h1 wp-the-title>What are you looking for?</h1>
+								<p cms-post-excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
+							</div>
+							<div class="slick-slider-area" cms-post="query" cms-post-type-count="5" cms-post-items-container="this" cms-post-repeat=".row > div:nth-of-type(1)" cms-post-type-paginate="false" cms-post-type="properties">
+								<div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+									<div class="slick-slide-item">
+										<div class="property-box">
+											<div class="property-thumbnail">
+												<a href="properties-details.html" class="property-img" cms-post-link> <div class="listing-badges">
+														<span wp-terms-template wp-terms-template-taxonomy="properties_status" class="featured" wp-acf-get-field="selecione_a_cor" wp-acf-get-field-set="style" wp-acf-get-field-set-style="background-color">Featured</span>
+													</div> <div class="price-ratings-box">
+														<p class="price" cms-post-field="preco" cms-post-field-type="content" cms-post-field-acf>
                                         $178,000 </p>
-                            <div class="ratings">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div> <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                              <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
-                              <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img class="d-block w-100" src="img/properties/properties-2.jpg" alt="properties">
-                              </div>
-                              <div class="carousel-item">
-                                <img class="d-block w-100" src="img/properties/properties-2.jpg" alt="properties">
-                              </div>
-                              <div class="carousel-item">
-                                <img class="d-block w-100" src="img/properties/properties-2.jpg" alt="properties">
-                              </div>
-                            </div>
-                          </div> </a>
-                      </div>
-                      <div class="detail">
-                        <h1 class="title"> <a href="properties-details.html">Modern Family Home</a> </h1>
-                        <div class="location">
-                          <a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
-                        </div>
-                        <ul class="facilities-list clearfix">
-                          <li>
-                            <i class="flaticon-furniture"></i> 3 Bedrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-holidays"></i> 2 Bathrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-square"></i> Sq Ft:3400
-                          </li>
-                          <li>
-                            <i class="flaticon-vehicle"></i> 1 Garage
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="footer clearfix">
-                        <div class="pull-left days">
-                          <p><i class="flaticon-time"></i> 5 Days ago</p>
-                        </div>
-                        <ul class="pull-right">
-                          <li>
-                            <a href="#"><i class="flaticon-favorite"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="flaticon-multimedia"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <div class="property-box">
-                      <div class="property-thumbnail">
-                        <a href="properties-details.html" class="property-img"> <div class="listing-badges">
-                            <span class="featured">Featured</span>
-                          </div> <div class="price-ratings-box">
-                            <p class="price">
+														<div class="ratings" cms-no-export>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div> <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" wp-acf-get-field="slides_do_imovel" wp-acf-get-field-set="element">
+														<ol class="carousel-indicators">
+															<li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+															<li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+															<li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+														</ol>
+														<div class="carousel-inner">
+															<div class="carousel-item active">
+																<img class="d-block w-100" src="img/properties/properties-2.jpg" alt="properties">
+															</div>
+															<div class="carousel-item">
+																<img class="d-block w-100" src="img/properties/properties-2.jpg" alt="properties">
+															</div>
+															<div class="carousel-item">
+																<img class="d-block w-100" src="img/properties/properties-2.jpg" alt="properties">
+															</div>
+														</div>
+													</div> </a>
+											</div>
+											<div class="detail">
+												<h1 class="title"> <a href="properties-details.html" wp-the-title cms-post-link>Modern Family Home</a> </h1>
+												<div class="location">
+													<a href="properties-details.html" cms-post-field-if cms-post-field-type="link" cms-post-field-acf cms-post-field="endereco"> <i class="fa fa-map-marker" wp-acf-get-field-set="after" wp-acf-get-field="endereco"></i> </a>
+												</div>
+												<ul class="facilities-list clearfix">
+													<li>
+														<i class="flaticon-furniture"></i>
+													</li>
+													<li>
+														<i class="flaticon-holidays"></i> 
+														<?php echo get_field( 'informacoes_planta_banheiros' ); ?>
+													</li>
+													<li>
+														<i class="flaticon-square" wp-acf-get-field="informacoes_planta_area" wp-acf-get-field-set="after"></i>
+													</li>
+													<li>
+														<i class="flaticon-vehicle"></i> 
+														<?php echo get_field( 'informacoes_planta_garagem' ); ?>
+													</li>
+												</ul>
+											</div>
+											<div class="footer clearfix">
+												<div class="pull-left days">
+													<p wp-the-modified-date wp-the-modified-date-set="content" wp-the-modified-date-before="<i class=&quot;flaticon-time&quot;></i>"><i class="flaticon-time"></i> 5 Days ago</p>
+												</div>
+												<ul class="pull-right">
+													<li>
+														<a href="#"><i class="flaticon-favorite"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="flaticon-multimedia"></i></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<div class="property-box">
+											<div class="property-thumbnail">
+												<a href="properties-details.html" class="property-img"> <div class="listing-badges">
+														<span class="featured">Featured</span>
+													</div> <div class="price-ratings-box">
+														<p class="price">
                                         $178,000 </p>
-                            <div class="ratings">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div> <img class="d-block w-100" src="img/properties/properties-5.jpg" alt="properties"> </a>
-                      </div>
-                      <div class="detail">
-                        <h1 class="title"> <a href="properties-details.html">Relaxing Apartment</a> </h1>
-                        <div class="location">
-                          <a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
-                        </div>
-                        <ul class="facilities-list clearfix">
-                          <li>
-                            <i class="flaticon-furniture"></i> 3 Bedrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-holidays"></i> 2 Bathrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-square"></i> Sq Ft:3400
-                          </li>
-                          <li>
-                            <i class="flaticon-vehicle"></i> 1 Garage
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="footer clearfix">
-                        <div class="pull-left days">
-                          <p><i class="flaticon-time"></i> 5 Days ago</p>
-                        </div>
-                        <ul class="pull-right">
-                          <li>
-                            <a href="#"><i class="flaticon-favorite"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="flaticon-multimedia"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <div class="property-box">
-                      <div class="property-thumbnail">
-                        <a href="properties-details.html" class="property-img"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
-                            <p class="price">
+														<div class="ratings">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div> <img class="d-block w-100" src="img/properties/properties-5.jpg" alt="properties"> </a>
+											</div>
+											<div class="detail">
+												<h1 class="title"> <a href="properties-details.html">Relaxing Apartment</a> </h1>
+												<div class="location">
+													<a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
+												</div>
+												<ul class="facilities-list clearfix">
+													<li>
+														<i class="flaticon-furniture"></i> 3 Bedrooms
+													</li>
+													<li>
+														<i class="flaticon-holidays"></i> 2 Bathrooms
+													</li>
+													<li>
+														<i class="flaticon-square"></i> Sq Ft:3400
+													</li>
+													<li>
+														<i class="flaticon-vehicle"></i> 1 Garage
+													</li>
+												</ul>
+											</div>
+											<div class="footer clearfix">
+												<div class="pull-left days">
+													<p><i class="flaticon-time"></i> 5 Days ago</p>
+												</div>
+												<ul class="pull-right">
+													<li>
+														<a href="#"><i class="flaticon-favorite"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="flaticon-multimedia"></i></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<div class="property-box">
+											<div class="property-thumbnail">
+												<a href="properties-details.html" class="property-img"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+														<p class="price">
                                         $178,000 </p>
-                            <div class="ratings">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div> <img class="d-block w-100" src="img/properties/properties-6.jpg" alt="properties"> </a>
-                      </div>
-                      <div class="detail">
-                        <h1 class="title"> <a href="properties-details.html">Park Avenue</a> </h1>
-                        <div class="location">
-                          <a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
-                        </div>
-                        <ul class="facilities-list clearfix">
-                          <li>
-                            <i class="flaticon-furniture"></i> 3 Bedrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-holidays"></i> 2 Bathrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-square"></i> Sq Ft:3400
-                          </li>
-                          <li>
-                            <i class="flaticon-vehicle"></i> 1 Garage
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="footer clearfix">
-                        <div class="pull-left days">
-                          <p><i class="flaticon-time"></i> 5 Days ago</p>
-                        </div>
-                        <ul class="pull-right">
-                          <li>
-                            <a href="#"><i class="flaticon-favorite"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="flaticon-multimedia"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <div class="property-box">
-                      <div class="property-thumbnail">
-                        <a href="properties-details.html" class="property-img"> <div class="listing-badges">
-                            <span class="featured">Featured</span>
-                          </div> <div class="price-ratings-box">
-                            <p class="price">
+														<div class="ratings">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div> <img class="d-block w-100" src="img/properties/properties-6.jpg" alt="properties"> </a>
+											</div>
+											<div class="detail">
+												<h1 class="title"> <a href="properties-details.html">Park Avenue</a> </h1>
+												<div class="location">
+													<a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
+												</div>
+												<ul class="facilities-list clearfix">
+													<li>
+														<i class="flaticon-furniture"></i> 3 Bedrooms
+													</li>
+													<li>
+														<i class="flaticon-holidays"></i> 2 Bathrooms
+													</li>
+													<li>
+														<i class="flaticon-square"></i> Sq Ft:3400
+													</li>
+													<li>
+														<i class="flaticon-vehicle"></i> 1 Garage
+													</li>
+												</ul>
+											</div>
+											<div class="footer clearfix">
+												<div class="pull-left days">
+													<p><i class="flaticon-time"></i> 5 Days ago</p>
+												</div>
+												<ul class="pull-right">
+													<li>
+														<a href="#"><i class="flaticon-favorite"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="flaticon-multimedia"></i></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<div class="property-box">
+											<div class="property-thumbnail">
+												<a href="properties-details.html" class="property-img"> <div class="listing-badges">
+														<span class="featured">Featured</span>
+													</div> <div class="price-ratings-box">
+														<p class="price">
                                         $178,000 </p>
-                            <div class="ratings">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div> <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                              <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-                              <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img class="d-block w-100" src="img/properties/properties-4.jpg" alt="properties">
-                              </div>
-                              <div class="carousel-item">
-                                <img class="d-block w-100" src="img/properties/properties-4.jpg" alt="properties">
-                              </div>
-                              <div class="carousel-item">
-                                <img class="d-block w-100" src="img/properties/properties-4.jpg" alt="properties">
-                              </div>
-                            </div>
-                          </div> </a>
-                      </div>
-                      <div class="detail">
-                        <h1 class="title"> <a href="properties-details.html">Modern Family Home</a> </h1>
-                        <div class="location">
-                          <a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
-                        </div>
-                        <ul class="facilities-list clearfix">
-                          <li>
-                            <i class="flaticon-furniture"></i> 3 Bedrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-holidays"></i> 2 Bathrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-square"></i> Sq Ft:3400
-                          </li>
-                          <li>
-                            <i class="flaticon-vehicle"></i> 1 Garage
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="footer clearfix">
-                        <div class="pull-left days">
-                          <p><i class="flaticon-time"></i> 5 Days ago</p>
-                        </div>
-                        <ul class="pull-right">
-                          <li>
-                            <a href="#"><i class="flaticon-favorite"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="flaticon-multimedia"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <div class="property-box">
-                      <div class="property-thumbnail">
-                        <a href="properties-details.html" class="property-img"> <div class="listing-badges">
-                            <span class="featured">Featured</span>
-                          </div> <div class="price-ratings-box">
-                            <p class="price">
+														<div class="ratings">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div> <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+														<ol class="carousel-indicators">
+															<li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+															<li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+															<li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+														</ol>
+														<div class="carousel-inner">
+															<div class="carousel-item active">
+																<img class="d-block w-100" src="img/properties/properties-4.jpg" alt="properties">
+															</div>
+															<div class="carousel-item">
+																<img class="d-block w-100" src="img/properties/properties-4.jpg" alt="properties">
+															</div>
+															<div class="carousel-item">
+																<img class="d-block w-100" src="img/properties/properties-4.jpg" alt="properties">
+															</div>
+														</div>
+													</div> </a>
+											</div>
+											<div class="detail">
+												<h1 class="title"> <a href="properties-details.html">Modern Family Home</a> </h1>
+												<div class="location">
+													<a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
+												</div>
+												<ul class="facilities-list clearfix">
+													<li>
+														<i class="flaticon-furniture"></i> 3 Bedrooms
+													</li>
+													<li>
+														<i class="flaticon-holidays"></i> 2 Bathrooms
+													</li>
+													<li>
+														<i class="flaticon-square"></i> Sq Ft:3400
+													</li>
+													<li>
+														<i class="flaticon-vehicle"></i> 1 Garage
+													</li>
+												</ul>
+											</div>
+											<div class="footer clearfix">
+												<div class="pull-left days">
+													<p><i class="flaticon-time"></i> 5 Days ago</p>
+												</div>
+												<ul class="pull-right">
+													<li>
+														<a href="#"><i class="flaticon-favorite"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="flaticon-multimedia"></i></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<div class="property-box">
+											<div class="property-thumbnail">
+												<a href="properties-details.html" class="property-img"> <div class="listing-badges">
+														<span class="featured">Featured</span>
+													</div> <div class="price-ratings-box">
+														<p class="price">
                                         $178,000 </p>
-                            <div class="ratings">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div> <img class="d-block w-100" src="img/properties/properties-1.jpg" alt="properties"> </a>
-                      </div>
-                      <div class="detail">
-                        <h1 class="title"> <a href="properties-details.html">Relaxing Apartment</a> </h1>
-                        <div class="location">
-                          <a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
-                        </div>
-                        <ul class="facilities-list clearfix">
-                          <li>
-                            <i class="flaticon-furniture"></i> 3 Bedrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-holidays"></i> 2 Bathrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-square"></i> Sq Ft:3400
-                          </li>
-                          <li>
-                            <i class="flaticon-vehicle"></i> 1 Garage
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="footer clearfix">
-                        <div class="pull-left days">
-                          <p><i class="flaticon-time"></i> 5 Days ago</p>
-                        </div>
-                        <ul class="pull-right">
-                          <li>
-                            <a href="#"><i class="flaticon-favorite"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="flaticon-multimedia"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <div class="property-box">
-                      <div class="property-thumbnail">
-                        <a href="properties-details.html" class="property-img"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
-                            <p class="price">
+														<div class="ratings">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div> <img class="d-block w-100" src="img/properties/properties-1.jpg" alt="properties"> </a>
+											</div>
+											<div class="detail">
+												<h1 class="title"> <a href="properties-details.html">Relaxing Apartment</a> </h1>
+												<div class="location">
+													<a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
+												</div>
+												<ul class="facilities-list clearfix">
+													<li>
+														<i class="flaticon-furniture"></i> 3 Bedrooms
+													</li>
+													<li>
+														<i class="flaticon-holidays"></i> 2 Bathrooms
+													</li>
+													<li>
+														<i class="flaticon-square"></i> Sq Ft:3400
+													</li>
+													<li>
+														<i class="flaticon-vehicle"></i> 1 Garage
+													</li>
+												</ul>
+											</div>
+											<div class="footer clearfix">
+												<div class="pull-left days">
+													<p><i class="flaticon-time"></i> 5 Days ago</p>
+												</div>
+												<ul class="pull-right">
+													<li>
+														<a href="#"><i class="flaticon-favorite"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="flaticon-multimedia"></i></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<div class="property-box">
+											<div class="property-thumbnail">
+												<a href="properties-details.html" class="property-img"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+														<p class="price">
                                         $178,000 </p>
-                            <div class="ratings">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div> <img class="d-block w-100" src="img/properties/properties-3.jpg" alt="properties"> </a>
-                      </div>
-                      <div class="detail">
-                        <h1 class="title"> <a href="properties-details.html">Park Avenue</a> </h1>
-                        <div class="location">
-                          <a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
-                        </div>
-                        <ul class="facilities-list clearfix">
-                          <li>
-                            <i class="flaticon-furniture"></i> 3 Bedrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-holidays"></i> 2 Bathrooms
-                          </li>
-                          <li>
-                            <i class="flaticon-square"></i> Sq Ft:3400
-                          </li>
-                          <li>
-                            <i class="flaticon-vehicle"></i> 1 Garage
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="footer clearfix">
-                        <div class="pull-left days">
-                          <p><i class="flaticon-time"></i> 5 Days ago</p>
-                        </div>
-                        <ul class="pull-right">
-                          <li>
-                            <a href="#"><i class="flaticon-favorite"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="flaticon-multimedia"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="slick-prev slick-arrow-buton">
-                  <i class="fa fa-angle-left"></i>
-                </div>
-                <div class="slick-next slick-arrow-buton">
-                  <i class="fa fa-angle-right"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="services-2 content-area-5 bg-grea-3" cms-editable="display_pam_sc_services" cms-editable-type="show" cms-editable-label="Display Section Service" cms-editable-section="pam_sc_services" wp-cz-control-description="Marque para exibir a seção">
-            <div class="container">
-              <!-- Main title -->
-              <div class="main-title" cms-editable="display_pam_sc_service_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_services">
-                <h1 wp-the-title>What are you looking for?</h1>
-                <p cms-post-excerpt cms-post-excerpt-if>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
-              </div>
-              <div class="row wow" cms-post="query" cms-post-type="servicos" cms-post-type-count="4" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-order="rand">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft delay-04s">
-                  <div class="service-info-5">
-                    <i class="flaticon-apartment" cms-post-field="icon_services" cms-post-field-type="class" cms-post-field-acf cms-post-field-class-replace="flaticon-apartment"></i>
-                    <h4 cms-post-title>Apartments</h4>
-                    <p cms-post-content>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft delay-04s" cms-no-export>
-                  <div class="service-info-5">
-                    <i class="flaticon-internet"></i>
-                    <h4 cms-post-title>Houses</h4>
-                    <p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInRight delay-04s" cms-no-export>
-                  <div class="service-info-5">
-                    <i class="flaticon-vehicle"></i>
-                    <h4>Garages</h4>
-                    <p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInRight delay-04s" cms-no-export>
-                  <div class="service-info-5">
-                    <i class="flaticon-coins"></i>
-                    <h4>Commercial</h4>
-                    <p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                  </div>
-                </div>
-              </div>
-              <div class="text-center read-more-2">
-                <a href="services-1.html" class="btn-white" rel="nofollow noreferrer noopener" target="_self">Saiba Mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="categories content-area-8" cms-editable="display_pam_sc_categories" cms-editable-type="show" cms-editable-label="Display Section Categories" cms-editable-section="pam_sc_categories" wp-cz-control-description="Marque para exibir a seção">
-            <div class="container">
-              <!-- Main title -->
-              <div class="main-title" cms-editable="display_pam_sc_categories_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_categories">
-                <h1 wp-the-title>What are you looking for?</h1>
-                <p cms-post-excerpt cms-post-excerpt-if>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
-              </div>
-              <div class="row wow">
-                <div class="col-lg-7 col-md-12 col-sm-12">
-                  <div class="row">
-                    <div class="col-sm-6 wow fadeInLeft delay-04s col-pad">
-                      <div class="category">
-                        <div class="category_bg_box cat-1-bg">
-                          <div class="category-overlay">
-                            <div class="category-content">
-                              <h3 class="category-title"> <a href="#">Apartment</a> </h3>
-                              <a href="properties-list-rightside.html" class="category-subtitle">14 Properties</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 wow fadeInLeft delay-04s col-pad">
-                      <div class="category">
-                        <div class="category_bg_box cat-2-bg">
-                          <div class="category-overlay">
-                            <div class="category-content">
-                              <h3 class="category-title"> <a href="#">House</a> </h3>
-                              <a href="properties-list-rightside.html" class="category-subtitle">98 Properties</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-12 wow fadeInUp delay-04s col-pad">
-                      <div class="category">
-                        <div class="category_bg_box cat-3-bg">
-                          <div class="category-overlay">
-                            <div class="category-content">
-                              <h3 class="category-title"> <a href="#">Villa</a> </h3>
-                              <a href="properties-list-rightside.html" class="category-subtitle">98 Properties</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-5 col-md-12 col-sm-12 wow fadeInRight delay-04s col-pad d-none d-xl-block d-lg-block">
-                  <div class="category">
-                    <div class="category_bg_box category_long_bg cat-4-bg">
-                      <div class="category-overlay">
-                        <div class="category-content">
-                          <h3 class="category-title"> <a href="#">Farm</a> </h3>
-                          <a href="properties-list-rightside.html" class="category-subtitle">12 Properties</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="counters overview-bgi" cms-editable="display_pam_sc_counters" cms-editable-type="show" cms-editable-label="Display Section Counters" cms-editable-section="pam_sc_counters" wp-cz-control-description="Marque para exibir a seção" cms-no-export>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 wow fadeInLeft delay-04s">
-                  <div class="media counter-box">
-                    <div class="media-left">
-                      <i class="flaticon-tag"></i>
-                    </div>
-                    <div class="media-body">
-                      <h1 class="counter">967</h1>
-                      <p>Listings For Sale</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 wow fadeInLeft delay-04s">
-                  <div class="media counter-box">
-                    <div class="media-left">
-                      <i class="flaticon-business"></i>
-                    </div>
-                    <div class="media-body">
-                      <h1 class="counter">1276</h1>
-                      <p>Listings For Rent</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 wow fadeInRight delay-04s">
-                  <div class="media counter-box">
-                    <div class="media-left">
-                      <i class="flaticon-people"></i>
-                    </div>
-                    <div class="media-body">
-                      <h1 class="counter">396</h1>
-                      <p>Agents</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 wow fadeInRight delay-04s">
-                  <div class="media counter-box">
-                    <div class="media-left">
-                      <i class="flaticon-people-1"></i>
-                    </div>
-                    <div class="media-body">
-                      <h1 class="counter">177</h1>
-                      <p>Brokers</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="our-team-2 content-area" cms-editable="display_pam_sc_team" cms-editable-type="show" cms-editable-label="Display Section Team" cms-editable-section="pam_sc_team" wp-cz-control-description="Marque para exibir a seção">
-            <div class="container">
-              <!-- Main title -->
-              <div class="main-title" cms-editable="display_pam_sc_team_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_team">
-                <h1 wp-the-title>What are you looking for?</h1>
-                <p cms-post-excerpt cms-post-excerpt-if>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
-              </div>
-              <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s" cms-post="query" cms-post-type="corretor" cms-post-type-count="4" cms-post-type-paginate="false">
-                  <div class="team-1">
-                    <div class="team-photo">
-                      <a href="https://pam.local/corretor/alessandro-tesci/" cms-post-link> <img src="https://pam.local/wp-content/uploads/2020/11/avatar-1-500x600.jpg" alt="" class="img-fluid" width="210" height="175" cms-post-image="post-thumbnail"> </a>
-                    </div>
-                    <div class="team-details">
-                      <h5><a href="#" cms-post-title cms-post-link>Martin Smith</a></h5>
-                      <h6 cms-post-field="creci_numero" cms-post-field-type="content" cms-post-field-acf>123.456</h6>
-                      <ul class="social-list clearfix">
-                        <li>
-                          <a class="facebook" href="https://www.facebook.com/milton.higaki" cms-post-field="facebook" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                          <a href="https://twitter.com/HigakiMilton" class="twitter" cms-post-field="twitter" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="https://www.instagram.com/_boku/" class="instagram" cms-post-field="instagram" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li>
-                          <a href="https://www.linkedin.com/in/mhigaki/" class="linkedin" cms-post-field="linkedin" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-linkedin"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s" cms-no-export>
-                  <div class="team-1">
-                    <div class="team-photo">
-                      <a href="#"> <img src="img/avatar/avatar-6.jpg" alt="agent-2" class="img-fluid"> </a>
-                    </div>
-                    <div class="team-details">
-                      <h5><a href="#">John Pitarshon</a></h5>
-                      <h6>Creative Director</h6>
-                      <ul class="social-list clearfix">
-                        <li>
-                          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s" cms-no-export>
-                  <div class="team-1">
-                    <div class="team-photo">
-                      <a href="#"> <img src="img/avatar/avatar-8.jpg" alt="agent-2" class="img-fluid"> </a>
-                    </div>
-                    <div class="team-details">
-                      <h5><a href="#">Maria Blank</a></h5>
-                      <h6>Office Manager</h6>
-                      <ul class="social-list clearfix">
-                        <li>
-                          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s" cms-no-export>
-                  <div class="team-1">
-                    <div class="team-photo">
-                      <a href="#"> <img src="img/avatar/avatar-5.jpg" alt="agent-2" class="img-fluid"> </a>
-                    </div>
-                    <div class="team-details">
-                      <h5><a href="#">Karen Paran</a></h5>
-                      <h6>Support Manager</h6>
-                      <ul class="social-list clearfix">
-                        <li>
-                          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li>
-                          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-3" cms-editable="display_pam_sc_testemonials" cms-editable-type="show" cms-editable-label="Display Section Testemonial" cms-editable-section="pam_sc_testemonial" wp-cz-control-description="Marque para exibir a seção">
-            <div class="container">
-              <div class="main-title" cms-editable="display_pam_sc_testemonials_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_testemonial">
-                <h1 wp-the-title>What are you looking for?</h1>
-              </div>
-              <div class="slick-slider-area">
-                <div class="row slick-carousel" data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                  <div class="slick-slide-item" cms-post="query" cms-post-type="testemonials" cms-post-type-register cms-post-type-count="2" cms-post-type-name="Testemonials" cms-post-type-name-singular="Testemonial">
-                    <div class="testimonial-inner">
-                      <div class="content-box">
-                        <div class="rating">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-half-full"></i>
-                        </div>
-                        <p cms-post-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-                      </div>
-                      <div class="media">
-                        <a href="#"> <img src="img/avatar/avatar-2.jpg" alt="testimonial-avatar" class="img-fluid"> </a>
-                        <div class="media-body align-self-center">
-                          <h5 cms-post-title>
+														<div class="ratings">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div> <img class="d-block w-100" src="img/properties/properties-3.jpg" alt="properties"> </a>
+											</div>
+											<div class="detail">
+												<h1 class="title"> <a href="properties-details.html">Park Avenue</a> </h1>
+												<div class="location">
+													<a href="properties-details.html"> <i class="fa fa-map-marker"></i>123 Kathal St. Tampa City, </a>
+												</div>
+												<ul class="facilities-list clearfix">
+													<li>
+														<i class="flaticon-furniture"></i> 3 Bedrooms
+													</li>
+													<li>
+														<i class="flaticon-holidays"></i> 2 Bathrooms
+													</li>
+													<li>
+														<i class="flaticon-square"></i> Sq Ft:3400
+													</li>
+													<li>
+														<i class="flaticon-vehicle"></i> 1 Garage
+													</li>
+												</ul>
+											</div>
+											<div class="footer clearfix">
+												<div class="pull-left days">
+													<p><i class="flaticon-time"></i> 5 Days ago</p>
+												</div>
+												<ul class="pull-right">
+													<li>
+														<a href="#"><i class="flaticon-favorite"></i></a>
+													</li>
+													<li>
+														<a href="#"><i class="flaticon-multimedia"></i></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slick-prev slick-arrow-buton">
+									<i class="fa fa-angle-left"></i>
+								</div>
+								<div class="slick-next slick-arrow-buton">
+									<i class="fa fa-angle-right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="services-2 content-area-5 bg-grea-3" cms-editable="display_pam_sc_services" cms-editable-type="show" cms-editable-label="Display Section Service" cms-editable-section="pam_sc_services" wp-cz-control-description="Marque para exibir a seção">
+						<div class="container">
+							<!-- Main title -->
+							<div class="main-title" cms-editable="display_pam_sc_service_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_services">
+								<h1 wp-the-title>What are you looking for?</h1>
+								<p cms-post-excerpt cms-post-excerpt-if>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
+							</div>
+							<div class="row wow" cms-post="query" cms-post-type="servicos" cms-post-type-count="4" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-order="rand">
+								<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft delay-04s">
+									<div class="service-info-5">
+										<i class="flaticon-apartment" cms-post-field="icon_services" cms-post-field-type="class" cms-post-field-acf cms-post-field-class-replace="flaticon-apartment"></i>
+										<h4 cms-post-title>Apartments</h4>
+										<p cms-post-content>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft delay-04s" cms-no-export>
+									<div class="service-info-5">
+										<i class="flaticon-internet"></i>
+										<h4 cms-post-title>Houses</h4>
+										<p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInRight delay-04s" cms-no-export>
+									<div class="service-info-5">
+										<i class="flaticon-vehicle"></i>
+										<h4>Garages</h4>
+										<p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInRight delay-04s" cms-no-export>
+									<div class="service-info-5">
+										<i class="flaticon-coins"></i>
+										<h4>Commercial</h4>
+										<p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+									</div>
+								</div>
+							</div>
+							<div class="text-center read-more-2" cms-no-export>
+								<a href="services-1.html" class="btn-white" rel="nofollow noreferrer noopener" target="_self">Saiba Mais</a>
+							</div>
+						</div>
+					</div>
+					<div class="categories content-area-8" cms-editable="display_pam_sc_categories" cms-editable-type="show" cms-editable-label="Display Section Categories" cms-editable-section="pam_sc_categories" wp-cz-control-description="Marque para exibir a seção" cms-editable-2="display_pam_sc_categories_load_page" cms-editable-label-2="Selecione a Pagina de Categorias" cms-editable-section-2="pam_sc_categories" cms-editable-type-2="page">
+						<div class="container">
+							<!-- Main title -->
+							<div class="main-title">
+								<h1 wp-the-title>What are you looking for?</h1>
+								<p cms-post-excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
+							</div>
+							<div class="row wow">
+								<div class="col-lg-7 col-md-12 col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 wow fadeInLeft delay-04s col-pad">
+											<div class="category">
+												<div class="category_bg_box cat-1-bg">
+													<div class="category-overlay">
+														<div class="category-content">
+															<h3 class="category-title"> <a href="#">Apartment</a> </h3>
+															<a href="properties-list-rightside.html" class="category-subtitle">14 Properties</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 wow fadeInLeft delay-04s col-pad">
+											<div class="category">
+												<div class="category_bg_box cat-2-bg">
+													<div class="category-overlay">
+														<div class="category-content">
+															<h3 class="category-title"> <a href="#">House</a> </h3>
+															<a href="properties-list-rightside.html" class="category-subtitle">98 Properties</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 wow fadeInUp delay-04s col-pad">
+											<div class="category">
+												<div class="category_bg_box cat-3-bg">
+													<div class="category-overlay">
+														<div class="category-content">
+															<h3 class="category-title"> <a href="#">Villa</a> </h3>
+															<a href="properties-list-rightside.html" class="category-subtitle">98 Properties</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-5 col-md-12 col-sm-12 wow fadeInRight delay-04s col-pad d-none d-xl-block d-lg-block">
+									<div class="category">
+										<div class="category_bg_box category_long_bg cat-4-bg">
+											<div class="category-overlay">
+												<div class="category-content">
+													<h3 class="category-title"> <a href="#">Farm</a> </h3>
+													<a href="properties-list-rightside.html" class="category-subtitle">12 Properties</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="counters overview-bgi" cms-editable="display_pam_sc_counters" cms-editable-type="show" cms-editable-label="Display Section Counters" cms-editable-section="pam_sc_counters" wp-cz-control-description="Marque para exibir a seção" cms-no-export>
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-3 col-md-3 col-sm-6 wow fadeInLeft delay-04s">
+									<div class="media counter-box">
+										<div class="media-left">
+											<i class="flaticon-tag"></i>
+										</div>
+										<div class="media-body">
+											<h1 class="counter">967</h1>
+											<p>Listings For Sale</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-6 wow fadeInLeft delay-04s">
+									<div class="media counter-box">
+										<div class="media-left">
+											<i class="flaticon-business"></i>
+										</div>
+										<div class="media-body">
+											<h1 class="counter">1276</h1>
+											<p>Listings For Rent</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-6 wow fadeInRight delay-04s">
+									<div class="media counter-box">
+										<div class="media-left">
+											<i class="flaticon-people"></i>
+										</div>
+										<div class="media-body">
+											<h1 class="counter">396</h1>
+											<p>Agents</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-6 wow fadeInRight delay-04s">
+									<div class="media counter-box">
+										<div class="media-left">
+											<i class="flaticon-people-1"></i>
+										</div>
+										<div class="media-body">
+											<h1 class="counter">177</h1>
+											<p>Brokers</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="our-team-2 content-area" cms-editable="display_pam_sc_team" cms-editable-type="show" cms-editable-label="Display Section Team" cms-editable-section="pam_sc_team" wp-cz-control-description="Marque para exibir a seção">
+						<div class="container">
+							<!-- Main title -->
+							<div class="main-title" cms-editable="display_pam_sc_team_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_team">
+								<h1 wp-the-title>What are you looking for?</h1>
+								<p cms-post-excerpt cms-post-excerpt-if>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
+							</div>
+							<div class="row">
+								<div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s" cms-post="query" cms-post-type="corretor" cms-post-type-count="4" cms-post-type-paginate="false">
+									<div class="team-1">
+										<div class="team-photo">
+											<a href="https://pam.local/corretor/alessandro-tesci/" cms-post-link> <img src="img/avatar/avatar-8.jpg" alt="" class="img-fluid" width="210" height="175" cms-post-image="corretor"> </a>
+										</div>
+										<div class="team-details">
+											<h5><a href="#" cms-post-title cms-post-link>Martin Smith</a></h5>
+											<h6 cms-post-field="creci_numero" cms-post-field-type="content" cms-post-field-acf>123.456</h6>
+											<ul class="social-list clearfix">
+												<li>
+													<a class="facebook" href="https://www.facebook.com/milton.higaki" cms-post-field="facebook" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-facebook"></i></a>
+												</li>
+												<li>
+													<a href="https://twitter.com/HigakiMilton" class="twitter" cms-post-field="twitter" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-twitter"></i></a>
+												</li>
+												<li>
+													<a href="https://www.instagram.com/_boku/" class="instagram" cms-post-field="instagram" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-instagram"></i></a>
+												</li>
+												<li>
+													<a href="https://www.linkedin.com/in/mhigaki/" class="linkedin" cms-post-field="linkedin" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-linkedin"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s" cms-no-export>
+									<div class="team-1">
+										<div class="team-photo">
+											<a href="#"> <img src="img/avatar/avatar-6.jpg" alt="agent-2" class="img-fluid"> </a>
+										</div>
+										<div class="team-details">
+											<h5><a href="#">John Pitarshon</a></h5>
+											<h6>Creative Director</h6>
+											<ul class="social-list clearfix">
+												<li>
+													<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+												</li>
+												<li>
+													<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+												</li>
+												<li>
+													<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+												</li>
+												<li>
+													<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s" cms-no-export>
+									<div class="team-1">
+										<div class="team-photo">
+											<a href="#"> <img src="img/avatar/avatar-8.jpg" alt="agent-2" class="img-fluid"> </a>
+										</div>
+										<div class="team-details">
+											<h5><a href="#">Maria Blank</a></h5>
+											<h6>Office Manager</h6>
+											<ul class="social-list clearfix">
+												<li>
+													<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+												</li>
+												<li>
+													<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+												</li>
+												<li>
+													<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+												</li>
+												<li>
+													<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s" cms-no-export>
+									<div class="team-1">
+										<div class="team-photo">
+											<a href="#"> <img src="img/avatar/avatar-5.jpg" alt="agent-2" class="img-fluid"> </a>
+										</div>
+										<div class="team-details">
+											<h5><a href="#">Karen Paran</a></h5>
+											<h6>Support Manager</h6>
+											<ul class="social-list clearfix">
+												<li>
+													<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+												</li>
+												<li>
+													<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+												</li>
+												<li>
+													<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+												</li>
+												<li>
+													<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial-3" cms-editable="display_pam_sc_testemonials" cms-editable-type="show" cms-editable-label="Display Section Testemonial" cms-editable-section="pam_sc_testemonial" wp-cz-control-description="Marque para exibir a seção">
+						<div class="container">
+							<div class="main-title" cms-editable="display_pam_sc_testemonials_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_testemonial">
+								<h1 wp-the-title>What are you looking for?</h1>
+							</div>
+							<div class="slick-slider-area">
+								<div class="row slick-carousel" data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+									<div class="slick-slide-item" cms-post="query" cms-post-type="testemonials" cms-post-type-register cms-post-type-count="2" cms-post-type-name="Testemonials" cms-post-type-name-singular="Testemonial">
+										<div class="testimonial-inner">
+											<div class="content-box">
+												<div class="rating" cms-no-export>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half-full"></i>
+												</div>
+												<p cms-post-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+											</div>
+											<div class="media">
+												<a href="#"> <img src="img/avatar/avatar-2.jpg" alt="testimonial-avatar" class="img-fluid" wp-the-post-thumbnail> </a>
+												<div class="media-body align-self-center">
+													<h5 cms-post-title>
                                     Eliane Perei </h5>
-                          <h6>Web Developer</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <div class="testimonial-inner">
-                      <div class="content-box">
-                        <div class="rating">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-half-full"></i>
-                        </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-                      </div>
-                      <div class="media">
-                        <a href="#"> <img src="img/avatar/avatar-3.jpg" alt="testimonial-avatar" class="img-fluid"> </a>
-                        <div class="media-body align-self-center">
-                          <h5>
+													<h6 cms-no-export>Web Developer</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<div class="testimonial-inner">
+											<div class="content-box">
+												<div class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half-full"></i>
+												</div>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+											</div>
+											<div class="media">
+												<a href="#"> <img src="img/avatar/avatar-3.jpg" alt="testimonial-avatar" class="img-fluid"> </a>
+												<div class="media-body align-self-center">
+													<h5>
                                     Maria Blank </h5>
-                          <h6>Office Manager</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <div class="testimonial-inner">
-                      <div class="content-box">
-                        <div class="rating">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-half-full"></i>
-                        </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-                      </div>
-                      <div class="media">
-                        <a href="#"> <img src="img/avatar/avatar-4.jpg" alt="testimonial-avatar" class="img-fluid"> </a>
-                        <div class="media-body align-self-center">
-                          <h5>
+													<h6>Office Manager</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<div class="testimonial-inner">
+											<div class="content-box">
+												<div class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half-full"></i>
+												</div>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+											</div>
+											<div class="media">
+												<a href="#"> <img src="img/avatar/avatar-4.jpg" alt="testimonial-avatar" class="img-fluid"> </a>
+												<div class="media-body align-self-center">
+													<h5>
                                     Karen Paran </h5>
-                          <h6>Support Manager</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <div class="testimonial-inner">
-                      <div class="content-box">
-                        <div class="rating">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-half-full"></i>
-                        </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-                      </div>
-                      <div class="media">
-                        <a href="#"> <img src="img/avatar/avatar-1.jpg" alt="testimonial-avatar" class="img-fluid"> </a>
-                        <div class="media-body align-self-center">
-                          <h5>
+													<h6>Support Manager</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<div class="testimonial-inner">
+											<div class="content-box">
+												<div class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half-full"></i>
+												</div>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+											</div>
+											<div class="media">
+												<a href="#"> <img src="img/avatar/avatar-1.jpg" alt="testimonial-avatar" class="img-fluid"> </a>
+												<div class="media-body align-self-center">
+													<h5>
                                     John Pitarshon </h5>
-                          <h6>Creative Director</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="blog content-area" cms-editable="display_pam_sc_blog" cms-editable-type="show" cms-editable-label="Display Section Blog" cms-editable-section="pam_sc_blog" wp-cz-control-description="Marque para exibir a seção">
-            <div class="container">
-              <!-- Main title -->
-              <div class="main-title" cms-editable="display_pam_sc_blog_load_page" cms-editable-type="page" cms-editable-label="Display Section Blog" cms-editable-section="pam_sc_blog">
-                <h1 cms-post-title>Latest news</h1>
-                <p cms-post-content>Check out some recent news posts.</p>
-              </div>
-              <div class="row wow fadeInUp delay-04s" wp-loop-show-empty-text="false" wp-loop="post_query" wp-loop-post-type="post" wp-loop-orderby="date" wp-loop-order="DESC" wp-loop-posts-per-page="3" wp-loop-post-status="publish" wp-loop-show-items="3">
-                <div class="col-lg-4 col-md-6" wp-loop-item wp-post-class wp-the-id>
-                  <div class="blog-1">
-                    <div class="blog-photo">
-                      <img src="img/blog/blog-1.jpg" alt="blog" class="img-fluid" cms-post-image width="960" height="540">
-                      <div class="profile-user">
-                        <img src="img/avatar/avatar-1.jpg" alt="user" wp-get-avatar wp-get-avatar-size="45" width="45" height="45">
-                      </div>
-                    </div>
-                    <div class="detail">
-                      <div class="post-meta clearfix">
-                        <ul>
-                          <li> 
-                            <strong><a href="#" cms-author-field="user_firstname" cms-author-field-type="content" cms-author-field-type-2="link" cms-author-field-2="user_url">Alex Teseira</a></strong>
-                          </li>
-                          <li class="mr-0">
-                            <span wp-the-date wp-the-date-set="content" wp-the-date-show-same="true">Feb 31, 2018</span>
-                          </li>
-                          <li class="float-right mr-0">
-                            <i class="fa fa-commenting-o" wp-comments-title wp-comments-title-set="after" wp-comments-title-multiple="%1$s"></i>
-                          </li>
-                          <li class="float-right">
-                            <i class="fa fa-calendar" wp-the-author-posts wp-the-author-posts-set="after"></i>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3> <a href="blog-single-sidebar-right.html" cms-post-link wp-the-title>Buying a Best House</a> </h3>
-                      <p wp-get-the-excerpt="wp-get-the-excerpt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6" cms-no-export>
-                  <div class="blog-1">
-                    <div class="blog-photo">
-                      <img src="img/blog/blog-2.jpg" alt="blog" class="img-fluid">
-                      <div class="profile-user">
-                        <img src="img/avatar/avatar-2.jpg" alt="user">
-                      </div>
-                    </div>
-                    <div class="detail">
-                      <div class="post-meta clearfix">
-                        <ul>
-                          <li>
-                            <strong><a href="#">Teseira</a></strong>
-                          </li>
-                          <li class="mr-0">
-                            <span>May 31, 2017</span>
-                          </li>
-                          <li class="float-right mr-0">
-                            <a href="#"><i class="flaticon-interface"></i></a>15
-                          </li>
-                          <li class="float-right">
-                            <a href="#"><i class="flaticon-time"></i></a>5k
-                          </li>
-                        </ul>
-                      </div>
-                      <h3> <a href="blog-single-sidebar-right.html">Selling Your Real House</a> </h3>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-none d-xl-block d-lg-block" cms-no-export>
-                  <div class="blog-1">
-                    <div class="blog-photo">
-                      <img src="img/blog/blog-3.jpg" alt="blog" class="img-fluid">
-                      <div class="profile-user">
-                        <img src="img/avatar/avatar-3.jpg" alt="user">
-                      </div>
-                    </div>
-                    <div class="detail">
-                      <div class="post-meta clearfix">
-                        <ul>
-                          <li>
-                            <strong><a href="#" cms-post-link>John Doe</a></strong>
-                          </li>
-                          <li class="mr-0">
-                            <span>May 31, 2017</span>
-                          </li>
-                          <li class="float-right mr-0">
-                            <a href="#" cms-post-link><i class="flaticon-interface"></i></a>15
-                          </li>
-                          <li class="float-right">
-                            <a href="#" cms-post-link><i class="flaticon-time"></i></a>5k
-                          </li>
-                        </ul>
-                      </div>
-                      <h3> <a href="blog-single-sidebar-right.html" cms-post-link>Find Your Dream Real Estate</a> </h3>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="partners" wp-cz-section="pam_sc_partners" wp-cz-section-panel="pam_theme_settings" wp-cz-section-title="Section Partners" wp-cz-section-priority="80" wp-cz-section-prefix="true" cms-editable="display" cms-editable-type="show" cms-editable-label="Display Section Partners" cms-editable-section="pam_sc_partners">
-            <div class="container">
-              <h4 cms-editable="title_h4" cms-editable-type="content" cms-editable-label="Titulo da Seção" cms-editable-section="pam_sc_partners">Brands</h4>
-              <div class="slick-slider-area">
-                <div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
-                  <div class="slick-slide-item" cms-post="query" cms-post-type="partners" cms-post-type-register cms-post-type-name="Partners" cms-post-type-name-singular="Partner" cms-post-items-container="this">
-                    <img src="img/brand/brand-1.png" alt="brand" class="img-fluid" cms-post-image>
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <img src="img/brand/brand-2.png" alt="brand" class="img-fluid">
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <img src="img/brand/brand-3.png" alt="brand" class="img-fluid">
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <img src="img/brand/brand-4.png" alt="brand" class="img-fluid">
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <img src="img/brand/brand-5.png" alt="brand" class="img-fluid">
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <img src="img/brand/brand-6.png" alt="brand" class="img-fluid">
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <img src="img/brand/brand-2.png" alt="brand" class="img-fluid">
-                  </div>
-                  <div class="slick-slide-item" cms-no-export>
-                    <img src="img/brand/brand-4.png" alt="brand" class="img-fluid">
-                  </div>
-                </div>
-                <div class="slick-prev slick-arrow-buton">
-                  <i class="fa fa-angle-left"></i>
-                </div>
-                <div class="slick-next slick-arrow-buton">
-                  <i class="fa fa-angle-right"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </div>
-    <!-- Footer start -->
-    <footer class="footer" data-pgc-lock>
-      <div class="container footer-inner">
-        <div class="row">
-          <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
-            <div class="footer-item" wp-register-sidebar="Footer 01" wp-register-sidebar-id="footer_01" wp-register-sidebar-before-title="<h4 class=&quot;widgettitle&quot;>" wp-register-sidebar-after-title="</h4>" wp-dynamic-sidebar="footer_01" wp-register-sidebar-before="<div id=&quot;%1$s&quot; class=&quot;widget %2$s&quot;>" wp-register-sidebar-after="</div>">
-              <h4>Contact Us</h4>
-              <ul class="contact-info">
-                <li>
-                  Address: 20/F Green Road, Dhanmondi, Dhaka
+													<h6>Creative Director</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="blog content-area" cms-editable="display_pam_sc_blog" cms-editable-type="show" cms-editable-label="Display Section Blog" cms-editable-section="pam_sc_blog" wp-cz-control-description="Marque para exibir a seção">
+						<div class="container">
+							<!-- Main title -->
+							<div class="main-title" cms-editable="display_pam_sc_blog_load_page" cms-editable-type="page" cms-editable-label="Display Section Blog" cms-editable-section="pam_sc_blog">
+								<h1 cms-post-title>Latest news</h1>
+								<p cms-post-content>Check out some recent news posts.</p>
+							</div>
+							<div class="row wow fadeInUp delay-04s" wp-loop-show-empty-text="false" wp-loop="post_query" wp-loop-post-type="post" wp-loop-orderby="date" wp-loop-order="DESC" wp-loop-posts-per-page="3" wp-loop-post-status="publish" wp-loop-show-items="3">
+								<div class="col-lg-4 col-md-6" wp-loop-item wp-post-class wp-the-id>
+									<div class="blog-1">
+										<div class="blog-photo">
+											<img src="img/blog/blog-1.jpg" alt="blog" width="960" height="540" cms-post-image class="img-fluid">
+											<div class="profile-user">
+												<img src="img/avatar/avatar-1.jpg" alt="user" wp-get-avatar wp-get-avatar-size="45" width="45" height="45">
+											</div>
+										</div>
+										<div class="detail">
+											<div class="post-meta clearfix">
+												<ul>
+													<li> 
+														<strong><a href="#" cms-author-field="user_firstname" cms-author-field-type="content" cms-author-field-type-2="link" cms-author-field-2="user_url">Alex Teseira</a></strong>
+													</li>
+													<li class="mr-0">
+														<span wp-the-date="d/m/y" wp-the-date-set="content" wp-the-date-show-same="true">Feb 31, 2018</span>
+													</li>
+													<li class="float-right mr-0" cms-no-export>
+														<i class="fa fa-commenting-o" wp-comments-title wp-comments-title-set="after" wp-comments-title-multiple="%1$s"></i>
+													</li>
+													<li class="float-right">
+														<i class="fa fa-calendar" wp-the-author-posts wp-the-author-posts-set="after"></i>
+													</li>
+												</ul>
+											</div>
+											<h3> <a href="blog-single-sidebar-right.html" cms-post-link wp-the-title>Buying a Best House</a> </h3>
+											<p wp-call-function="wp_trim_words( get_the_content(), 15, ' ... ' );" wp-call-function-echo="true" wp-call-function-set="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6" cms-no-export>
+									<div class="blog-1">
+										<div class="blog-photo">
+											<img src="img/blog/blog-2.jpg" alt="blog" class="img-fluid">
+											<div class="profile-user">
+												<img src="img/avatar/avatar-2.jpg" alt="user">
+											</div>
+										</div>
+										<div class="detail">
+											<div class="post-meta clearfix">
+												<ul>
+													<li>
+														<strong><a href="#">Teseira</a></strong>
+													</li>
+													<li class="mr-0">
+														<span>May 31, 2017</span>
+													</li>
+													<li class="float-right mr-0">
+														<a href="#"><i class="flaticon-interface"></i></a>15
+													</li>
+													<li class="float-right">
+														<a href="#"><i class="flaticon-time"></i></a>5k
+													</li>
+												</ul>
+											</div>
+											<h3> <a href="blog-single-sidebar-right.html">Selling Your Real House</a> </h3>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 d-none d-xl-block d-lg-block" cms-no-export>
+									<div class="blog-1">
+										<div class="blog-photo">
+											<img src="img/blog/blog-3.jpg" alt="blog" class="img-fluid">
+											<div class="profile-user">
+												<img src="img/avatar/avatar-3.jpg" alt="user">
+											</div>
+										</div>
+										<div class="detail">
+											<div class="post-meta clearfix">
+												<ul>
+													<li>
+														<strong><a href="#" cms-post-link>John Doe</a></strong>
+													</li>
+													<li class="mr-0">
+														<span>May 31, 2017</span>
+													</li>
+													<li class="float-right mr-0">
+														<a href="#" cms-post-link><i class="flaticon-interface"></i></a>15
+													</li>
+													<li class="float-right">
+														<a href="#" cms-post-link><i class="flaticon-time"></i></a>5k
+													</li>
+												</ul>
+											</div>
+											<h3> <a href="blog-single-sidebar-right.html" cms-post-link>Find Your Dream Real Estate</a> </h3>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="partners" wp-cz-section="pam_sc_partners" wp-cz-section-panel="pam_theme_settings" wp-cz-section-title="Section Partners" wp-cz-section-priority="80" cms-editable="display_pam_sc_partners" cms-editable-type="show" cms-editable-label="Display Section Partners" cms-editable-section="pam_sc_partners">
+						<div class="container">
+							<h4 wp-cz-control="title_h4" wp-cz-control-label="Titulo da Seção" wp-cz-control-section="pam_sc_partners" wp-cz-control-type="text" wp-cz-theme-mod="title_h4" wp-cz-control-description="Descrição da Seção" wp-cz-theme-mod-check="true">Parceiros</h4>
+							<div class="slick-slider-area">
+								<div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
+									<div class="slick-slide-item" cms-post="query" cms-post-type="partners" cms-post-type-register cms-post-type-name="Partners" cms-post-type-name-singular="Partner" cms-post-items-container="this">
+										<img src="img/brand/brand-1.png" alt="brand" class="img-fluid" cms-post-image>
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<img src="img/brand/brand-2.png" alt="brand" class="img-fluid">
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<img src="img/brand/brand-3.png" alt="brand" class="img-fluid">
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<img src="img/brand/brand-4.png" alt="brand" class="img-fluid">
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<img src="img/brand/brand-5.png" alt="brand" class="img-fluid">
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<img src="img/brand/brand-6.png" alt="brand" class="img-fluid">
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<img src="img/brand/brand-2.png" alt="brand" class="img-fluid">
+									</div>
+									<div class="slick-slide-item" cms-no-export>
+										<img src="img/brand/brand-4.png" alt="brand" class="img-fluid">
+									</div>
+								</div>
+								<div class="slick-prev slick-arrow-buton">
+									<i class="fa fa-angle-left"></i>
+								</div>
+								<div class="slick-next slick-arrow-buton">
+									<i class="fa fa-angle-right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<!-- Footer start -->
+		<footer class="footer site-footer" id="masterfooter" wp-if-is-404="!">
+			<div class="container footer-inner">
+				<div class="row">
+					<div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
+						<div class="footer-item">
+							<h4>Contact Us</h4>
+							<ul class="contact-info">
+								<li>
+									Address: 20/F Green Road, Dhanmondi, Dhaka
 </li>
-                <li>
-                  Email:
-                  <a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
-                </li>
-                <li>
-                  Phone:
-                  <a href="tel:+55-417-634-7071">+0477 85X6 552</a>
-                </li>
-                <li>
-                  Fax: +0477 85X6 552
+								<li>
+									Email:
+									<a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+								</li>
+								<li>
+									Phone:
+									<a href="tel:+55-417-634-7071">+0477 85X6 552</a>
+								</li>
+								<li>
+									Fax: +0477 85X6 552
 </li>
-              </ul>
-              <ul class="social-list clearfix">
-                <li>
-                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#" class="rss"><i class="fa fa-instagram"></i></a>
-                </li>
-                <li>
-                  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-            <div class="footer-item" wp-register-sidebar="Footer 02" wp-register-sidebar-id="footer_02" wp-register-sidebar-before-title="<h4 class=&quot;widgettitle&quot;>" wp-register-sidebar-after-title="</h4>" wp-dynamic-sidebar="footer_03" wp-register-sidebar-before="<div id=&quot;%1$s&quot; class=&quot;widget %2$s&quot;>" wp-register-sidebar-after="</div>" wp-dynamic-sidebar-set="element">
-              <h4>
+							</ul>
+							<ul class="social-list clearfix">
+								<li>
+									<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#" class="rss"><i class="fa fa-instagram"></i></a>
+								</li>
+								<li>
+									<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+						<div class="footer-item">
+							<h4>
               Useful Links </h4>
-              <ul class="links">
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Home</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>About Us</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Services</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>properties Details</a>
-                </li>
-                <li>
-                  <a href="login.html" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>My Account</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>properties Details</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-            <div class="footer-item" wp-register-sidebar="Footer 03" wp-register-sidebar-id="footer_03" wp-register-sidebar-before-title="<h4 class=&quot;widgettitle&quot;>" wp-register-sidebar-after-title="</h4>" wp-dynamic-sidebar="footer_02" wp-register-sidebar-before="<div id=&quot;%1$s&quot; class=&quot;widget %2$s&quot;>" wp-register-sidebar-after="</div>">
-              <h4>
-              Useful Links </h4>
-              <ul class="links">
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Home</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>About Us</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Services</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>properties Details</a>
-                </li>
-                <li>
-                  <a href="login.html" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>My Account</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>properties Details</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="footer-item clearfix">
-              <h4>Subscribe</h4>
-              <div class="Subscribe-box">
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                <form action="#" method="GET" id="teste">
-                  <p> <input type="text" class="form-contact" name="email" placeholder="Enter Address"> </p>
-                  <p> <button type="submit" name="submitNewsletter" class="btn btn-block button-theme">
-                      Subscribe
+							<ul class="links">
+								<li>
+									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Home</a>
+								</li>
+								<li>
+									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>About Us</a>
+								</li>
+								<li>
+									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Services</a>
+								</li>
+								<li>
+									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>properties Details</a>
+								</li>
+								<li>
+									<a href="login.html" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>My Account</a>
+								</li>
+								<li>
+									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Privacy Policy</a>
+								</li>
+								<li>
+									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>properties Details</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+						<div class="footer-item clearfix">
+							<h4>
+                        Gallery </h4>
+							<ul class="gallery">
+								<li>
+									<a href="#"> <img src="img/sub-properties/sub-properties-1.jpg" alt="sub-properties"> </a>
+								</li>
+								<li>
+									<a href="#"> <img src="img/sub-properties/sub-properties-2.jpg" alt="sub-properties"> </a>
+								</li>
+								<li>
+									<a href="#"> <img src="img/sub-properties/sub-properties-3.jpg" alt="sub-properties"> </a>
+								</li>
+								<li>
+									<a href="#"> <img src="img/sub-properties/sub-properties-4.jpg" alt="sub-properties"> </a>
+								</li>
+								<li>
+									<a href="#"> <img src="img/sub-properties/sub-properties-6.jpg" alt="sub-properties"> </a>
+								</li>
+								<li>
+									<a href="#"> <img src="img/sub-properties/sub-properties-5.jpg" alt="sub-properties"> </a>
+								</li>
+								<li>
+									<a href="#"> <img src="img/sub-properties/sub-properties-7.jpg" alt="sub-properties"> </a>
+								</li>
+								<li>
+									<a href="#"> <img src="img/sub-properties/sub-properties-8.jpg" alt="sub-properties"> </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+						<div class="footer-item clearfix">
+							<h4>Subscribe</h4>
+							<div class="Subscribe-box">
+								<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+								<form action="#" method="GET" id="teste" cms-form="teste" cms-form-send-email="true">
+									<p> <input type="text" class="form-contact" name="email" placeholder="Enter Address"> </p>
+									<p> <button type="submit" name="submitNewsletter" class="btn btn-block button-theme">
+											Subscribe
 </button> </p>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xl-12">
-            <p class="copy">© <?php echo date( 'Y' ); ?> <a href="#">Theme Vessel.</a> Trademarks and brands are the property of their respective owners.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer end -->
-    <!-- Full Page Search -->
-    <div id="full-page-search" data-pgc-lock>
-      <button type="button" class="close">×</button>
-      <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-        <input type="search" value="<?php the_search_query(); ?>" placeholder="Procurando por algo" name="s" id="textsearch2"/>
-        <button class="btn btn-sm button-theme" id="searchsubmit" type="submit" value="&lt;?php esc_attr_e( 'Search', 'pam' ); ?&gt;" name="submit">Procurar</button>
-      </form>
-    </div>
-    <!-- Full Page Search -->
-    <script src="js/jquery-2.2.0.min.js" wp-no-enqueue></script>
-    <script src="js/popper.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/bootstrap.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/bootstrap-submenu.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/rangeslider.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/jquery.mb.YTPlayer.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/wow.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/bootstrap-select.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/jquery.easing.1.3.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/jquery.scrollUp.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/leaflet.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/leaflet-providers.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/leaflet.markercluster.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/dropzone.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/slick.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/jquery.filterizr.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/jquery.magnific-popup.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/jquery.countdown.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
-    <script src="js/maps.js" wp-no-enqueue></script>
-    <script src="js/app.js" wp-no-enqueue></script>
-    <script src="js/ie10-viewport-bug-workaround.js" wp-no-enqueue></script>
-    <script src="js/ie10-viewport-bug-workaround.js" wp-no-enqueue></script>
-  </body>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-12">
+						<p class="copy">© <?php echo date( 'Y' ); ?> <a href="#">Theme Vessel.</a> Trademarks and brands are the property of their respective owners.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer end -->
+		<!-- Full Page Search -->
+		<div id="full-page-search" wp-with-prev-if>
+			<button type="button" class="close">×</button>
+			<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<input type="search" value="<?php the_search_query(); ?>" placeholder="Procurando por algo" name="s" id="textsearch2"/>
+				<button class="btn btn-sm button-theme" id="searchsubmit" type="submit" value="&lt;?php esc_attr_e( 'Search', 'pam' ); ?&gt;" name="submit">Procurar</button>
+			</form>
+		</div>
+		<!-- Full Page Search -->
+		<script src="js/jquery-2.2.0.min.js" wp-no-enqueue></script>
+		<script src="js/popper.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/bootstrap.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/bootstrap-submenu.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/rangeslider.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/jquery.mb.YTPlayer.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/wow.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/bootstrap-select.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/jquery.easing.1.3.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/jquery.scrollUp.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/jquery.mCustomScrollbar.concat.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/leaflet.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/leaflet-providers.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/leaflet.markercluster.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/dropzone.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/slick.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/jquery.filterizr.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/jquery.magnific-popup.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/jquery.countdown.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+		<script src="js/maps.js" wp-no-enqueue></script>
+		<script src="js/app.js" wp-no-enqueue></script>
+		<script src="js/ie10-viewport-bug-workaround.js" wp-no-enqueue></script>
+		<script src="js/ie10-viewport-bug-workaround.js" wp-no-enqueue></script>
+	</body>
 </html>
