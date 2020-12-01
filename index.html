@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR" wp-template wp-template-define-master-page="true" wp-template-export-as="index.php" wp-page-template="Main File" wp-page-template-field="The template for displaying" wp-template-preview-url="http://wordpress.localhost/">
 	<head>
-		<title>PAM Consultoria</title>
+		<title wp-site-name>PAM Consultoria</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<link rel='dns-prefetch' href='//maps.googleapis.com' wp-enqueue-style wp-enqueue-style-src="//maps.googleapis.com"/>
@@ -25,7 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css" wp-no-enqueue>
 		<script src="js/ie-emulation-modes-warning.js" wp-no-enqueue></script>
 		<script src="js/ie-emulation-modes-warning.js" wp-no-enqueue></script>
-		<meta name="description" content="Consultoria de Imoveis">
+		<meta name="description" content="Consultoria de Imoveis" wp-site-desc>
 		<meta name="author" content="MNH">
 	</head>
 	<body>
@@ -36,12 +36,12 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-8 col-sm-7">
 							<div class="list-inline">
-								<a href="tel:5511941101331" rel="nofollow noreferrer noopener" target="_self" wp-cz-control="pam_sc_header_phone_lnk" wp-cz-control-section="pam_header" wp-cz-control-type="url" wp-cz-control-2="pam_sc_header_phone" wp-cz-control-section-2="pam_header" wp-cz-control-type-2="text" wp-cz-theme-mod-set-attr="href" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-check="true" wp-cz-theme-mod-default="tel:5511930305500" wp-cz-theme-mod="pam_sc_header_phone_lnk" wp-cz-theme-mod-2-set-attr-append="true" wp-cz-theme-mod-2-set-attr="<i class=&quot;fa fa-phone&quot;></i>" wp-cz-theme-mod-default-2="<i class=&quot;fa fa-phone&quot;></i> +55 11 93030-5500" wp-cz-theme-mod-2="pam_sc_header_phone" wp-cz-control-label="Dados de Contato" wp-cz-control-description="Telefone Link" wp-cz-control-description-2="Telefone"><i class="fa fa-phone"></i> 5511941101331</a>
+								<a href="tel:5511941101331" rel="nofollow noreferrer noopener" target="_self" wp-cz-control="pam_sc_header_phone_lnk" wp-cz-control-section="pam_header" wp-cz-control-type="url" wp-cz-control-2="pam_sc_header_phone" wp-cz-control-section-2="pam_header" wp-cz-control-type-2="text" wp-cz-theme-mod-set-attr="href" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-check="true" wp-cz-theme-mod="pam_sc_header_phone_lnk" wp-cz-theme-mod-2-set-attr-append="true" wp-cz-theme-mod-2-set-attr="<i class=&quot;fa fa-phone&quot;></i>" wp-cz-theme-mod-default-2="<i class=&quot;fa fa-phone&quot;></i> +55 11 93030-5500" wp-cz-theme-mod-2="pam_sc_header_phone" wp-cz-control-label="Dados de Contato" wp-cz-control-description="Telefone Link" wp-cz-control-description-2="Telefone"><i class="fa fa-phone"></i> 5511941101331</a>
 								<a href="mailto:milton.higaki@gmail.com" rel="nofollow noreferrer noopener" target="_self" wp-cz-control="pam_sc_header_mail_link" wp-cz-control-section="pam_header" wp-cz-control-type="url" wp-cz-theme-mod-set="attr" wp-cz-theme-mod="pam_sc_header_mail_link" wp-cz-theme-mod-set-attr="href" wp-cz-control-2="pam_sc_header_mail" wp-cz-control-section-2="pam_header" wp-cz-control-type-2="text" wp-cz-theme-mod-2="pam_sc_header_mail" wp-cz-control-default-2="<i class=&quot;fa fa-envelope&quot;></i> contato@pamconsultoria.com.br" wp-cz-control-default="mailto:contato@pamconsultoria.com.br" wp-cz-theme-mod-check="true" wp-cz-control-description="E-Mail Link" wp-cz-control-description-2="E-Mail"><i class="fa fa-envelope"></i> milton.higaki@gmail.com</a>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-4 col-sm-5">
-							<ul class="pull-right top-social-media" wp-nav-menu="social" wp-nav-menu-theme-location="social">
+							<ul class="pull-right top-social-media" wp-nav-menu="social" wp-nav-menu-theme-location="social" wp-nav-menu-set="content">
 								<li>
 									<a href="#" class="facebook" rel="nofollow noreferrer noopener"><i class="fa fa-facebook"></i></a>
 								</li>
@@ -67,7 +67,7 @@
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav ml-auto" wp-nav-menu="primary" wp-nav-menu-theme-location="primary" wp-nav-menu-current-class="active" wp-nav-menu-depth="5" wp-nav-menu-type="bootstrap4">
+							<ul class="navbar-nav ml-auto" wp-nav-menu="primary" wp-nav-menu-theme-location="primary" wp-nav-menu-current-class="active" wp-nav-menu-type="bootstrap4" wp-nav-menu-depth="5">
 								<li class="nav-item dropdown active">
 									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Index </a>
@@ -294,9 +294,6 @@
 				</div>
 			</div>
 		</header>
-		<!-- Top header start -->
-		<!-- Top header end -->
-		<!-- Main header start -->
 		<div wp-site-content id="main" class="site-main">
 			<div id="primary">
 				<main id="site-main">
@@ -534,10 +531,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="featured-properties content-area-9" wp-cz-control-description="Marque para exibir a seção" wp-cz-control="display_pam_sc_features" wp-cz-control-label="Display Section Features" wp-cz-control-section="pam_sc_features" wp-cz-control-type="checkbox">
+					<div class="featured-properties content-area-9" cms-editable="display_pam_sc_features" cms-editable-type="show" cms-editable-label="Display Section Features" cms-editable-section="pam_sc_features">
 						<div class="container">
 							<!-- Main title -->
-							<div class="main-title" cms-editable="display_pam_sc_properties_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Novidades" cms-editable-section="pam_sc_features">
+							<div class="main-title" cms-editable="display_pam_sc_properties_load_page" cms-editable-label="Selecione a Pagina de Novidades" cms-editable-section="pam_sc_features" cms-editable-type="page">
 								<h1 wp-the-title>What are you looking for?</h1>
 								<p cms-post-excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
 							</div>
@@ -547,7 +544,7 @@
 										<div class="property-box">
 											<div class="property-thumbnail">
 												<a href="properties-details.html" class="property-img" cms-post-link> <div class="listing-badges">
-														<span wp-terms-template wp-terms-template-taxonomy="properties_status" class="featured" wp-acf-get-field="selecione_a_cor" wp-acf-get-field-set="style" wp-acf-get-field-set-style="background-color">Featured</span>
+														<span wp-terms-template wp-terms-template-taxonomy="properties_status" class="featured" wp-terms-template-range="0">Featured</span>
 													</div> <div class="price-ratings-box">
 														<p class="price" cms-post-field="preco" cms-post-field-type="content" cms-post-field-acf>
                                         $178,000 </p>
@@ -579,31 +576,29 @@
 											</div>
 											<div class="detail">
 												<h1 class="title"> <a href="properties-details.html" wp-the-title cms-post-link>Modern Family Home</a> </h1>
-												<div class="location">
-													<a href="properties-details.html" cms-post-field-if cms-post-field-type="link" cms-post-field-acf cms-post-field="endereco"> <i class="fa fa-map-marker" wp-acf-get-field-set="after" wp-acf-get-field="endereco"></i> </a>
+												<div class="location" wp-if-custom="get_field( 'endereco' )">
+													<a href="properties-details.html" cms-post-link> <i class="fa fa-map-marker" wp-acf-get-field="endereco" wp-acf-get-field-set="after"></i></a>
 												</div>
 												<ul class="facilities-list clearfix">
 													<li>
-														<i class="flaticon-furniture"></i>
+														<i class="flaticon-furniture" wp-meta-value wp-meta-value-key="informacoes_planta_quartos" wp-meta-value-set="after"></i>
 													</li>
 													<li>
-														<i class="flaticon-holidays"></i> 
-														<?php echo get_field( 'informacoes_planta_banheiros' ); ?>
+														<i class="flaticon-holidays" wp-acf-get-field="informacoes_planta_banheiros" wp-acf-get-field-set="after"></i>
 													</li>
 													<li>
 														<i class="flaticon-square" wp-acf-get-field="informacoes_planta_area" wp-acf-get-field-set="after"></i>
 													</li>
 													<li>
-														<i class="flaticon-vehicle"></i> 
-														<?php echo get_field( 'informacoes_planta_garagem' ); ?>
+														<i class="flaticon-vehicle" wp-acf-get-field="informacoes_planta_garagem" wp-acf-get-field-set="after"></i>
 													</li>
 												</ul>
 											</div>
 											<div class="footer clearfix">
 												<div class="pull-left days">
-													<p wp-the-modified-date wp-the-modified-date-set="content" wp-the-modified-date-before="<i class=&quot;flaticon-time&quot;></i>"><i class="flaticon-time"></i> 5 Days ago</p>
+													<p wp-the-modified-date="d/M/Y" wp-the-modified-date-before="<i class=&quot;flaticon-time&quot;></i>" wp-the-modified-date-set="content"><i class="flaticon-time"></i> 5 Days ago</p>
 												</div>
-												<ul class="pull-right">
+												<ul class="pull-right" cms-no-export>
 													<li>
 														<a href="#"><i class="flaticon-favorite"></i></a>
 													</li>
@@ -1281,7 +1276,7 @@
 										<div class="detail">
 											<div class="post-meta clearfix">
 												<ul>
-													<li> 
+													<li>
 														<strong><a href="#" cms-author-field="user_firstname" cms-author-field-type="content" cms-author-field-type-2="link" cms-author-field-2="user_url">Alex Teseira</a></strong>
 													</li>
 													<li class="mr-0">
@@ -1368,7 +1363,7 @@
 							<h4 wp-cz-control="title_h4" wp-cz-control-label="Titulo da Seção" wp-cz-control-section="pam_sc_partners" wp-cz-control-type="text" wp-cz-theme-mod="title_h4" wp-cz-control-description="Descrição da Seção" wp-cz-theme-mod-check="true">Parceiros</h4>
 							<div class="slick-slider-area">
 								<div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
-									<div class="slick-slide-item" cms-post="query" cms-post-type="partners" cms-post-type-register cms-post-type-name="Partners" cms-post-type-name-singular="Partner" cms-post-items-container="this">
+									<div class="slick-slide-item" wp-post-class wp-the-id wp-loop="partners_query" wp-loop-post-type-custom="partners" wp-loop-orderby="date" wp-loop-order="ASC" wp-loop-nopaging="true" wp-post-type="partners" wp-post-type-name="Partners" wp-post-type-name-singular="Partner" wp-post-type-public="true" wp-post-type-supports="title,editor,thumbnail,custom-fields" wp-post-type-show-in-menu="true" wp-post-type-rest="true" wp-post-type-taxonomies="category">
 										<img src="img/brand/brand-1.png" alt="brand" class="img-fluid" cms-post-image>
 									</div>
 									<div class="slick-slide-item" cms-no-export>
@@ -1428,7 +1423,7 @@
 									Fax: +0477 85X6 552
 </li>
 							</ul>
-							<ul class="social-list clearfix">
+							<ul class="social-list clearfix" wp-nav-menu="social" wp-nav-menu-theme-location="social" wp-if-has-nav-menu="social">
 								<li>
 									<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
 								</li>

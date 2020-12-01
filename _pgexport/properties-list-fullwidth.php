@@ -1,41 +1,5 @@
-<!DOCTYPE html>
-<html lang="zxx">
-  <head>
-    <title>Real House - Real Estate HTML Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <!-- External CSS libraries -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/leaflet.css" type="text/css">
-    <link rel="stylesheet" href="css/map.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="fonts/linearicons/linearicons.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" type="text/css" href="css/dropzone.css">
-    <link rel="stylesheet" type="text/css" href="css/slick.css">
-    <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/skins/red.css">
-    <!-- Favicon icon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <!-- Google fonts -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script  src="js/html5shiv.min.js"></script>
-    <script  src="js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+<?php get_header(); ?>
+
     <div class="page_loader"></div>
     <!-- Top header start -->
     <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
@@ -43,8 +7,8 @@
         <div class="row">
           <div class="col-lg-6 col-md-8 col-sm-7">
             <div class="list-inline">
-              <a href="tel:1-8X0-666-8X88"><i class="fa fa-phone"></i>Need Support? 1-8X0-666-8X88</a>
-              <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i>info@themevessel.com</a>
+              <a href="tel:1-8X0-666-8X88"><i class="fa fa-phone"></i><?php _e( 'Need Support? 1-8X0-666-8X88', 'pam' ); ?></a>
+              <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i><?php _e( 'info@themevessel.com', 'pam' ); ?></a>
             </div>
           </div>
           <div class="col-lg-6 col-md-4 col-sm-5">
@@ -74,7 +38,7 @@
     <header class="main-header">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand logo" href="index-2.html"> <img src="img/logos/logo-site.svg" alt="logo"> </a>
+          <a class="navbar-brand logo" href="index-2.html"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logos/logo-site.svg" alt="logo"> </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -82,156 +46,156 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Index </a>
+                            <?php _e( 'Index', 'pam' ); ?> </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li>
-                    <a class="dropdown-item" href="index-2.html">Index 1</a>
+                    <a class="dropdown-item" href="index-2.html"><?php _e( 'Index 1', 'pam' ); ?></a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="index-3.html">Index 2</a>
+                    <a class="dropdown-item" href="index-3.html"><?php _e( 'Index 2', 'pam' ); ?></a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="index-4.html">Index 3</a>
+                    <a class="dropdown-item" href="index-4.html"><?php _e( 'Index 3', 'pam' ); ?></a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="index-5.html">Index 4</a>
+                    <a class="dropdown-item" href="index-5.html"><?php _e( 'Index 4', 'pam' ); ?></a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="index-6.html">Index 5 (Video)</a>
+                    <a class="dropdown-item" href="index-6.html"><?php _e( 'Index 5 (Video)', 'pam' ); ?></a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Properties </a>
+                            <?php _e( 'Properties', 'pam' ); ?> </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">List Layout</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"><?php _e( 'List Layout', 'pam' ); ?></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="properties-list-rightside.html">Right Sidebar</a>
+                        <a class="dropdown-item" href="properties-list-rightside.html"><?php _e( 'Right Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-list-leftsidebar.html">Left Sidebar</a>
+                        <a class="dropdown-item" href="properties-list-leftsidebar.html"><?php _e( 'Left Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-list-fullwidth.html">Fullwidth</a>
+                        <a class="dropdown-item" href="properties-list-fullwidth.html"><?php _e( 'Fullwidth', 'pam' ); ?></a>
                       </li>
                     </ul>
                   </li>
                   <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Grid Layout</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"><?php _e( 'Grid Layout', 'pam' ); ?></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="properties-grid-rightside.html">Right Sidebar</a>
+                        <a class="dropdown-item" href="properties-grid-rightside.html"><?php _e( 'Right Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-grid-leftside.html">Left Sidebar</a>
+                        <a class="dropdown-item" href="properties-grid-leftside.html"><?php _e( 'Left Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-grid-fullwidth.html">Fullwidth</a>
+                        <a class="dropdown-item" href="properties-grid-fullwidth.html"><?php _e( 'Fullwidth', 'pam' ); ?></a>
                       </li>
                     </ul>
                   </li>
                   <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Map View</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"><?php _e( 'Map View', 'pam' ); ?></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="properties-map-rightside-list.html">Map List Right Sidebar</a>
+                        <a class="dropdown-item" href="properties-map-rightside-list.html"><?php _e( 'Map List Right Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-map-leftside-list.html">Map List Left Sidebar</a>
+                        <a class="dropdown-item" href="properties-map-leftside-list.html"><?php _e( 'Map List Left Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-map-rightside-grid.html">Map Grid Right Sidebar</a>
+                        <a class="dropdown-item" href="properties-map-rightside-grid.html"><?php _e( 'Map Grid Right Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-map-leftside-grid.html">Map Grid Left Sidebar</a>
+                        <a class="dropdown-item" href="properties-map-leftside-grid.html"><?php _e( 'Map Grid Left Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-map-full.html">Map FullWidth</a>
+                        <a class="dropdown-item" href="properties-map-full.html"><?php _e( 'Map FullWidth', 'pam' ); ?></a>
                       </li>
                     </ul>
                   </li>
                   <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Property Detail</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"><?php _e( 'Property Detail', 'pam' ); ?></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="properties-details.html">Property Detail 1</a>
+                        <a class="dropdown-item" href="properties-details.html"><?php _e( 'Property Detail 1', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-details-2.html">Property Detail 2</a>
+                        <a class="dropdown-item" href="properties-details-2.html"><?php _e( 'Property Detail 2', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="properties-details-3.html">Property Detail 3</a>
+                        <a class="dropdown-item" href="properties-details-3.html"><?php _e( 'Property Detail 3', 'pam' ); ?></a>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item dropdown megamenu-li">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php _e( 'Pages', 'pam' ); ?></a>
                 <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
                   <div class="megamenu-area">
                     <div class="row">
                       <div class="col-sm-6 col-lg-3">
                         <div class="megamenu-section">
-                          <h6 class="megamenu-title">Pages</h6>
-                          <a class="dropdown-item" href="about.html">About 1</a>
-                          <a class="dropdown-item" href="about-2.html">About 2</a>
-                          <a class="dropdown-item" href="properties-list-rightside.html">Properties List</a>
-                          <a class="dropdown-item" href="properties-grid-rightside.html">Properties Grid</a>
-                          <a class="dropdown-item" href="properties-comparison.html">Properties Comparison</a>
-                          <a class="dropdown-item" href="search-brand.html">Properties Brands</a>
-                          <a class="dropdown-item" href="services-1.html">Services 1</a>
-                          <a class="dropdown-item" href="services-2.html">Services 2</a>
-                          <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                          <a class="dropdown-item" href="elements.html">Elements</a>
+                          <h6 class="megamenu-title"><?php _e( 'Pages', 'pam' ); ?></h6>
+                          <a class="dropdown-item" href="about.html"><?php _e( 'About 1', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="about-2.html"><?php _e( 'About 2', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="properties-list-rightside.html"><?php _e( 'Properties List', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="properties-grid-rightside.html"><?php _e( 'Properties Grid', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="properties-comparison.html"><?php _e( 'Properties Comparison', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="search-brand.html"><?php _e( 'Properties Brands', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="services-1.html"><?php _e( 'Services 1', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="services-2.html"><?php _e( 'Services 2', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="coming-soon.html"><?php _e( 'Coming Soon', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="elements.html"><?php _e( 'Elements', 'pam' ); ?></a>
                         </div>
                       </div>
                       <div class="col-sm-6 col-lg-3">
                         <div class="megamenu-section">
-                          <h6 class="megamenu-title">Pages</h6>
-                          <a class="dropdown-item" href="agent-list.html">Agent List 1</a>
-                          <a class="dropdown-item" href="agent-list-2.html">Agent List 2</a>
-                          <a class="dropdown-item" href="agent-grid.html">Agent Grid 1</a>
-                          <a class="dropdown-item" href="agent-grid-2.html">Agent Grid 2</a>
-                          <a class="dropdown-item" href="agent-detail.html">Agent Detail</a>
-                          <a class="dropdown-item" href="pricing-tables.html">Pricing Tables 1</a>
-                          <a class="dropdown-item" href="pricing-tables-2.html">Pricing Tables 2</a>
-                          <a class="dropdown-item" href="pricing-tables-3.html">Pricing Tables 3</a>
-                          <a class="dropdown-item" href="typography.html">Typography</a>
-                          <a class="dropdown-item" href="typography-2.html">Typography 2</a>
+                          <h6 class="megamenu-title"><?php _e( 'Pages', 'pam' ); ?></h6>
+                          <a class="dropdown-item" href="agent-list.html"><?php _e( 'Agent List 1', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="agent-list-2.html"><?php _e( 'Agent List 2', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="agent-grid.html"><?php _e( 'Agent Grid 1', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="agent-grid-2.html"><?php _e( 'Agent Grid 2', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="agent-detail.html"><?php _e( 'Agent Detail', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="pricing-tables.html"><?php _e( 'Pricing Tables 1', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="pricing-tables-2.html"><?php _e( 'Pricing Tables 2', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="pricing-tables-3.html"><?php _e( 'Pricing Tables 3', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="typography.html"><?php _e( 'Typography', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="typography-2.html"><?php _e( 'Typography 2', 'pam' ); ?></a>
                         </div>
                       </div>
                       <div class="col-sm-6 col-lg-3">
                         <div class="megamenu-section">
-                          <h6 class="megamenu-title">Pages</h6>
-                          <a class="dropdown-item" href="contact.html">Contact 1</a>
-                          <a class="dropdown-item" href="contact-2.html">Contact 2</a>
-                          <a class="dropdown-item" href="contact-3.html">Contact 3</a>
-                          <a class="dropdown-item" href="gallery-3column.html">Gallery 3 column</a>
-                          <a class="dropdown-item" href="gallery-4column.html">Gallery 4 column</a>
-                          <a class="dropdown-item" href="gallery-6column.html">Gallery 6 column</a>
-                          <a class="dropdown-item" href="faq.html">Faq 1</a>
-                          <a class="dropdown-item" href="faq-2.html">Faq 2</a>
-                          <a class="dropdown-item" href="faq-3.html">Faq 3</a>
-                          <a class="dropdown-item" href="icon.html">Icon</a>
+                          <h6 class="megamenu-title"><?php _e( 'Pages', 'pam' ); ?></h6>
+                          <a class="dropdown-item" href="contact.html"><?php _e( 'Contact 1', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="contact-2.html"><?php _e( 'Contact 2', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="contact-3.html"><?php _e( 'Contact 3', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="gallery-3column.html"><?php _e( 'Gallery 3 column', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="gallery-4column.html"><?php _e( 'Gallery 4 column', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="gallery-6column.html"><?php _e( 'Gallery 6 column', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="faq.html"><?php _e( 'Faq 1', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="faq-2.html"><?php _e( 'Faq 2', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="faq-3.html"><?php _e( 'Faq 3', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="icon.html"><?php _e( 'Icon', 'pam' ); ?></a>
                         </div>
                       </div>
                       <div class="col-sm-6 col-lg-3">
                         <div class="megamenu-section">
-                          <h6 class="megamenu-title">Pages</h6>
-                          <a class="dropdown-item" href="my-profile.html">My profile</a>
-                          <a class="dropdown-item" href="my-properties.html">My Properties</a>
-                          <a class="dropdown-item" href="favorited-properties.html">Favorited Properties</a>
-                          <a class="dropdown-item" href="submit-property.html">Submit Property</a>
-                          <a class="dropdown-item" href="login.html">Login</a>
-                          <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                          <a class="dropdown-item" href="change-password.html">Change Password</a>
-                          <a class="dropdown-item" href="signup.html">Register</a>
-                          <a class="dropdown-item" href="404.html">Pages 404</a>
-                          <a class="dropdown-item" href="404-2.html">Pages 404 2</a>
+                          <h6 class="megamenu-title"><?php _e( 'Pages', 'pam' ); ?></h6>
+                          <a class="dropdown-item" href="my-profile.html"><?php _e( 'My profile', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="my-properties.html"><?php _e( 'My Properties', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="favorited-properties.html"><?php _e( 'Favorited Properties', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="submit-property.html"><?php _e( 'Submit Property', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="login.html"><?php _e( 'Login', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="forgot-password.html"><?php _e( 'Forgot Password', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="change-password.html"><?php _e( 'Change Password', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="signup.html"><?php _e( 'Register', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="404.html"><?php _e( 'Pages 404', 'pam' ); ?></a>
+                          <a class="dropdown-item" href="404-2.html"><?php _e( 'Pages 404 2', 'pam' ); ?></a>
                         </div>
                       </div>
                     </div>
@@ -240,62 +204,62 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Blog </a>
+                            <?php _e( 'Blog', 'pam' ); ?> </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Classic</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"><?php _e( 'Classic', 'pam' ); ?></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="blog-classic-sidebar-right.html">Right Sidebar</a>
+                        <a class="dropdown-item" href="blog-classic-sidebar-right.html"><?php _e( 'Right Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="blog-classic-sidebar-left.html">Left Sidebar</a>
+                        <a class="dropdown-item" href="blog-classic-sidebar-left.html"><?php _e( 'Left Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="blog-classic-fullwidth.html">FullWidth</a>
+                        <a class="dropdown-item" href="blog-classic-fullwidth.html"><?php _e( 'FullWidth', 'pam' ); ?></a>
                       </li>
                     </ul>
                   </li>
                   <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Columns</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"><?php _e( 'Columns', 'pam' ); ?></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="blog-columns-2col.html">2 Columns</a>
+                        <a class="dropdown-item" href="blog-columns-2col.html"><?php _e( '2 Columns', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="blog-columns-3col.html">3 Columns</a>
+                        <a class="dropdown-item" href="blog-columns-3col.html"><?php _e( '3 Columns', 'pam' ); ?></a>
                       </li>
                     </ul>
                   </li>
                   <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Masonry</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"><?php _e( 'Masonry', 'pam' ); ?></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="blog-masonry-2col.html">2 Masonry</a>
+                        <a class="dropdown-item" href="blog-masonry-2col.html"><?php _e( '2 Masonry', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="blog-masonry-3col.html">3 Masonry</a>
+                        <a class="dropdown-item" href="blog-masonry-3col.html"><?php _e( '3 Masonry', 'pam' ); ?></a>
                       </li>
                     </ul>
                   </li>
                   <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Blog Details</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"><?php _e( 'Blog Details', 'pam' ); ?></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="blog-single-sidebar-right.html">Right Sidebar</a>
+                        <a class="dropdown-item" href="blog-single-sidebar-right.html"><?php _e( 'Right Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="blog-single-sidebar-left.html">Left Sidebar</a>
+                        <a class="dropdown-item" href="blog-single-sidebar-left.html"><?php _e( 'Left Sidebar', 'pam' ); ?></a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="blog-single-fullwidth.html">Fullwidth</a>
+                        <a class="dropdown-item" href="blog-single-fullwidth.html"><?php _e( 'Fullwidth', 'pam' ); ?></a>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="submit-property.html" class="nav-link link-color"><i class="fa fa-plus"></i> Submit Property</a>
+                <a href="submit-property.html" class="nav-link link-color"><i class="fa fa-plus"></i> <?php _e( 'Submit Property', 'pam' ); ?></a>
               </li>
               <li class="nav-item">
                 <a href="#full-page-search" class="nav-link link-color"><i class="fa fa-search"></i></a>
@@ -308,48 +272,48 @@
     <div>
       <div class="search-banner">
         <div class="container">
-          <h3 class="search-title">Find Your Dream House</h3>
+          <h3 class="search-title"><?php _e( 'Find Your Dream House', 'pam' ); ?></h3>
           <form method="GET">
             <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <div class="form-group">
                   <select class="selectpicker search-fields" name="area">
-                    <option>Area</option>
-                    <option>2000</option>
-                    <option>1600</option>
-                    <option>1200</option>
-                    <option>800</option>
+                    <option><?php _e( 'Area', 'pam' ); ?></option>
+                    <option><?php _e( '2000', 'pam' ); ?></option>
+                    <option><?php _e( '1600', 'pam' ); ?></option>
+                    <option><?php _e( '1200', 'pam' ); ?></option>
+                    <option><?php _e( '800', 'pam' ); ?></option>
                   </select>
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <div class="form-group">
                   <select class="selectpicker search-fields" name="property-status">
-                    <option>Property Status</option>
-                    <option>For Sale</option>
-                    <option>For Rent</option>
+                    <option><?php _e( 'Property Status', 'pam' ); ?></option>
+                    <option><?php _e( 'For Sale', 'pam' ); ?></option>
+                    <option><?php _e( 'For Rent', 'pam' ); ?></option>
                   </select>
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <div class="form-group">
                   <select class="selectpicker search-fields" name="property-types">
-                    <option>Property Types</option>
-                    <option>Apartments</option>
-                    <option>Houses</option>
-                    <option>Commercial</option>
-                    <option>Garages</option>
+                    <option><?php _e( 'Property Types', 'pam' ); ?></option>
+                    <option><?php _e( 'Apartments', 'pam' ); ?></option>
+                    <option><?php _e( 'Houses', 'pam' ); ?></option>
+                    <option><?php _e( 'Commercial', 'pam' ); ?></option>
+                    <option><?php _e( 'Garages', 'pam' ); ?></option>
                   </select>
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <div class="form-group">
                   <select class="selectpicker search-fields" name="location">
-                    <option>Location</option>
-                    <option>United States</option>
-                    <option>United Kingdom</option>
-                    <option>American Samoa</option>
-                    <option>Belgium</option>
+                    <option><?php _e( 'Location', 'pam' ); ?></option>
+                    <option><?php _e( 'United States', 'pam' ); ?></option>
+                    <option><?php _e( 'United Kingdom', 'pam' ); ?></option>
+                    <option><?php _e( 'American Samoa', 'pam' ); ?></option>
+                    <option><?php _e( 'Belgium', 'pam' ); ?></option>
                   </select>
                 </div>
               </div>
@@ -358,22 +322,22 @@
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <div class="form-group">
                   <select class="selectpicker search-fields" name="max-area">
-                    <option>Max Area (Sq Ff)</option>
-                    <option>2800</option>
-                    <option>3200</option>
-                    <option>3600</option>
-                    <option>4000</option>
+                    <option><?php _e( 'Max Area (Sq Ff)', 'pam' ); ?></option>
+                    <option><?php _e( '2800', 'pam' ); ?></option>
+                    <option><?php _e( '3200', 'pam' ); ?></option>
+                    <option><?php _e( '3600', 'pam' ); ?></option>
+                    <option><?php _e( '4000', 'pam' ); ?></option>
                   </select>
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <div class="form-group">
                   <select class="selectpicker search-fields" name="max-area">
-                    <option>Min Area (Sq Ff)</option>
-                    <option>2800</option>
-                    <option>3200</option>
-                    <option>3600</option>
-                    <option>4000</option>
+                    <option><?php _e( 'Min Area (Sq Ff)', 'pam' ); ?></option>
+                    <option><?php _e( '2800', 'pam' ); ?></option>
+                    <option><?php _e( '3200', 'pam' ); ?></option>
+                    <option><?php _e( '3600', 'pam' ); ?></option>
+                    <option><?php _e( '4000', 'pam' ); ?></option>
                   </select>
                 </div>
               </div>
@@ -385,82 +349,82 @@
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <div class="form-group">
-                  <button class="search-button">Search</button>
+                  <button class="search-button"><?php _e( 'Search', 'pam' ); ?></button>
                 </div>
               </div>
             </div>
             <div class="clearfix"></div>
-            <a class="show-more-options" data-toggle="collapse" data-target="#options-content"> <i class="fa fa-plus-circle"></i> Show More Options </a>
+            <a class="show-more-options" data-toggle="collapse" data-target="#options-content"> <i class="fa fa-plus-circle"></i> <?php _e( 'Show More Options', 'pam' ); ?> </a>
             <div id="options-content" class="collapse">
               <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                   <div class="form-group">
                     <select class="selectpicker search-fields" name="bedrooms">
-                      <option>Bedrooms</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                      <option><?php _e( 'Bedrooms', 'pam' ); ?></option>
+                      <option><?php _e( '1', 'pam' ); ?></option>
+                      <option><?php _e( '2', 'pam' ); ?></option>
+                      <option><?php _e( '3', 'pam' ); ?></option>
+                      <option><?php _e( '4', 'pam' ); ?></option>
+                      <option><?php _e( '5', 'pam' ); ?></option>
                     </select>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                   <div class="form-group">
                     <select class="selectpicker search-fields" name="batrooms">
-                      <option>Bathroom</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                      <option><?php _e( 'Bathroom', 'pam' ); ?></option>
+                      <option><?php _e( '1', 'pam' ); ?></option>
+                      <option><?php _e( '2', 'pam' ); ?></option>
+                      <option><?php _e( '3', 'pam' ); ?></option>
+                      <option><?php _e( '4', 'pam' ); ?></option>
+                      <option><?php _e( '5', 'pam' ); ?></option>
                     </select>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                   <div class="form-group">
                     <select class="selectpicker search-fields" name="Balcony">
-                      <option>Balcony</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                      <option><?php _e( 'Balcony', 'pam' ); ?></option>
+                      <option><?php _e( '1', 'pam' ); ?></option>
+                      <option><?php _e( '2', 'pam' ); ?></option>
+                      <option><?php _e( '3', 'pam' ); ?></option>
+                      <option><?php _e( '4', 'pam' ); ?></option>
+                      <option><?php _e( '5', 'pam' ); ?></option>
                     </select>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                   <div class="form-group">
                     <select class="selectpicker search-fields" name="garage">
-                      <option>Garage</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                      <option><?php _e( 'Garage', 'pam' ); ?></option>
+                      <option><?php _e( '1', 'pam' ); ?></option>
+                      <option><?php _e( '2', 'pam' ); ?></option>
+                      <option><?php _e( '3', 'pam' ); ?></option>
+                      <option><?php _e( '4', 'pam' ); ?></option>
+                      <option><?php _e( '5', 'pam' ); ?></option>
                     </select>
                   </div>
                 </div>
               </div>
-              <label class="margin-t-10">Features</label>
+              <label class="margin-t-10"><?php _e( 'Features', 'pam' ); ?></label>
               <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <div class="checkbox checkbox-theme checkbox-circle">
                     <input id="checkbox1" type="checkbox">
                     <label for="checkbox1">
-                      Free Parking
+                      <?php _e( 'Free Parking', 'pam' ); ?>
 </label>
                   </div>
                   <div class="checkbox checkbox-theme checkbox-circle">
                     <input id="checkbox2" type="checkbox">
                     <label for="checkbox2">
-                      Air Condition
+                      <?php _e( 'Air Condition', 'pam' ); ?>
 </label>
                   </div>
                   <div class="checkbox checkbox-theme checkbox-circle">
                     <input id="checkbox3" type="checkbox">
                     <label for="checkbox3">
-                      Places to seat
+                      <?php _e( 'Places to seat', 'pam' ); ?>
 </label>
                   </div>
                 </div>
@@ -468,19 +432,19 @@
                   <div class="checkbox checkbox-theme checkbox-circle">
                     <input id="checkbox4" type="checkbox">
                     <label for="checkbox4">
-                      Swimming Pool
+                      <?php _e( 'Swimming Pool', 'pam' ); ?>
 </label>
                   </div>
                   <div class="checkbox checkbox-theme checkbox-circle">
                     <input id="checkbox5" type="checkbox">
                     <label for="checkbox5">
-                      Laundry Room
+                      <?php _e( 'Laundry Room', 'pam' ); ?>
 </label>
                   </div>
                   <div class="checkbox checkbox-theme checkbox-circle">
                     <input id="checkbox6" type="checkbox">
                     <label for="checkbox6">
-                      Window Covering
+                      <?php _e( 'Window Covering', 'pam' ); ?>
 </label>
                   </div>
                 </div>
@@ -488,13 +452,13 @@
                   <div class="checkbox checkbox-theme checkbox-circle">
                     <input id="checkbox7" type="checkbox">
                     <label for="checkbox7">
-                      Central Heating
+                      <?php _e( 'Central Heating', 'pam' ); ?>
 </label>
                   </div>
                   <div class="checkbox checkbox-theme checkbox-circle">
                     <input id="checkbox8" type="checkbox">
                     <label for="checkbox8">
-                      Alarm
+                      <?php _e( 'Alarm', 'pam' ); ?>
 </label>
                   </div>
                 </div>
@@ -512,19 +476,19 @@
                 <div class="row">
                   <div class="col-lg-6 col-md-5 col-sm-5 col-xs-2">
                     <div class="sorting-options">
-                      <span>View as:</span>
+                      <span><?php _e( 'View as:', 'pam' ); ?></span>
                       <a href="properties-list-fullwidth.html" class="change-view-btn active-view-btn"><i class="fa fa-th-list"></i></a>
                       <a href="properties-grid-fullwidth.html" class="change-view-btn"><i class="fa fa-th-large"></i></a>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-7 col-sm-7 col-xs-10 cod-pad">
                     <div class="sorting-options2">
-                      <span>Order by:</span>
+                      <span><?php _e( 'Order by:', 'pam' ); ?></span>
                       <select class="sorting">
-                        <option>Price High to Low</option>
-                        <option>Price: Low to High</option>
-                        <option>Newest Properties</option>
-                        <option>Oldest Properties</option>
+                        <option><?php _e( 'Price High to Low', 'pam' ); ?></option>
+                        <option><?php _e( 'Price: Low to High', 'pam' ); ?></option>
+                        <option><?php _e( 'Newest Properties', 'pam' ); ?></option>
+                        <option><?php _e( 'Oldest Properties', 'pam' ); ?></option>
                       </select>
                     </div>
                   </div>
@@ -535,11 +499,11 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-1.jpg" alt="properties" class="img-fluid" width="600" height="400"> <div class="listing-badges">
-                        <span class="featured">Featured</span>
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-1.jpg" alt="properties" class="img-fluid" width="600" height="400"> <div class="listing-badges">
+                        <span class="featured"><?php _e( 'Featured', 'pam' ); ?></span>
                       </div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -551,39 +515,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Park avenue</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Park avenue', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -600,9 +564,9 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-2.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-2.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening"><?php _e( 'For Sale', 'pam' ); ?></div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -614,39 +578,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Relaxing Apartment</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Relaxing Apartment', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -663,9 +627,9 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-3.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-3.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening"><?php _e( 'For Sale', 'pam' ); ?></div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -677,39 +641,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Modern Family Home</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Modern Family Home', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -726,11 +690,11 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-4.jpg" alt="properties" class="img-fluid"> <div class="listing-badges">
-                        <span class="featured">Featured</span>
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-4.jpg" alt="properties" class="img-fluid"> <div class="listing-badges">
+                        <span class="featured"><?php _e( 'Featured', 'pam' ); ?></span>
                       </div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -742,39 +706,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Park avenue</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Park avenue', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -791,9 +755,9 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-5.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-5.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening"><?php _e( 'For Sale', 'pam' ); ?></div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -805,39 +769,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Relaxing Apartment</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Relaxing Apartment', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -854,9 +818,9 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-1.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-1.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening"><?php _e( 'For Sale', 'pam' ); ?></div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -868,39 +832,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Modern Family Home</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Modern Family Home', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -917,9 +881,9 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-2.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-2.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening"><?php _e( 'For Sale', 'pam' ); ?></div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -931,39 +895,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Relaxing Apartment</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Relaxing Apartment', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -980,9 +944,9 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-3.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-3.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening"><?php _e( 'For Sale', 'pam' ); ?></div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -994,39 +958,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Modern Family Home</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Modern Family Home', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -1043,11 +1007,11 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-4.jpg" alt="properties" class="img-fluid"> <div class="listing-badges">
-                        <span class="featured">Featured</span>
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-4.jpg" alt="properties" class="img-fluid"> <div class="listing-badges">
+                        <span class="featured"><?php _e( 'Featured', 'pam' ); ?></span>
                       </div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -1059,39 +1023,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Park avenue</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Park avenue', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -1108,9 +1072,9 @@
               <div class="property-box-2 wow fadeInUp delay-03s">
                 <div class="row">
                   <div class="col-lg-4 col-md-5 col-pad">
-                    <a href="properties-details.html" class="property-img"> <img src="img/properties/properties-list-5.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening">For Sale</div> <div class="price-ratings-box">
+                    <a href="properties-details.html" class="property-img"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-list-5.jpg" alt="properties" class="img-fluid"> <div class="listing-time opening"><?php _e( 'For Sale', 'pam' ); ?></div> <div class="price-ratings-box">
                         <p class="price">
-                                        $178,000 </p>
+                                        <?php _e( '$178,000', 'pam' ); ?> </p>
                         <div class="ratings">
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -1122,39 +1086,39 @@
                   </div>
                   <div class="col-lg-8 col-md-7">
                     <div class="detail ">
-                      <h3 class="title"> <a href="properties-details.html">Relaxing Apartment</a> </h3>
-                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i>20-21 Kathal St. Tampa City, FL </a> </h5>
+                      <h3 class="title"> <a href="properties-details.html"><?php _e( 'Relaxing Apartment', 'pam' ); ?></a> </h3>
+                      <h5 class="location"> <a href="properties-details.html"> <i class="flaticon-location"></i><?php _e( '20-21 Kathal St. Tampa City, FL', 'pam' ); ?> </a> </h5>
                       <ul class="facilities-list clearfix">
                         <li>
                           <i class="flaticon-furniture"></i>
-                          <span>3 Beds</span>
+                          <span><?php _e( '3 Beds', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-holidays"></i>
-                          <span>1 Baths</span>
+                          <span><?php _e( '1 Baths', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-square"></i>
-                          <span>4800 sq ft</span>
+                          <span><?php _e( '4800 sq ft', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-vehicle"></i>
-                          <span>1 Garage</span>
+                          <span><?php _e( '1 Garage', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-monitor"></i>
-                          <span>1 TV</span>
+                          <span><?php _e( '1 TV', 'pam' ); ?></span>
                         </li>
                         <li>
                           <i class="flaticon-window"></i>
-                          <span>3 Balcony</span>
+                          <span><?php _e( '3 Balcony', 'pam' ); ?></span>
                         </li>
                       </ul>
                     </div>
-                    <a href="properties-details.html" class="btn button-theme">Details</a>
+                    <a href="properties-details.html" class="btn button-theme"><?php _e( 'Details', 'pam' ); ?></a>
                     <div class="footer">
                       <div class="pull-left days">
-                        <p><i class="flaticon-time"></i> 5 Days ago</p>
+                        <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
                       </div>
                       <ul class="pull-right">
                         <li>
@@ -1177,13 +1141,13 @@
                       <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
                     </li>
                     <li class="page-item">
-                      <a class="page-link active" href="#">1</a>
+                      <a class="page-link active" href="#"><?php _e( '1', 'pam' ); ?></a>
                     </li>
                     <li class="page-item">
-                      <a class="page-link" href="#">2</a>
+                      <a class="page-link" href="#"><?php _e( '2', 'pam' ); ?></a>
                     </li>
                     <li class="page-item">
-                      <a class="page-link" href="#">3</a>
+                      <a class="page-link" href="#"><?php _e( '3', 'pam' ); ?></a>
                     </li>
                     <li class="page-item">
                       <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
@@ -1208,21 +1172,21 @@
         <div class="row">
           <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
             <div class="footer-item">
-              <h4>Contact Us</h4>
+              <h4><?php _e( 'Contact Us', 'pam' ); ?></h4>
               <ul class="contact-info">
                 <li>
-                  Address: 20/F Green Road, Dhanmondi, Dhaka
+                  <?php _e( 'Address: 20/F Green Road, Dhanmondi, Dhaka', 'pam' ); ?>
 </li>
                 <li>
-                  Email: 
-                  <a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+                  <?php _e( 'Email:', 'pam' ); ?> 
+                  <a href="mailto:sales@hotelempire.com"><?php _e( 'info@themevessel.com', 'pam' ); ?></a>
                 </li>
                 <li>
-                  Phone: 
-                  <a href="tel:+55-417-634-7071">+0477 85X6 552</a>
+                  <?php _e( 'Phone:', 'pam' ); ?> 
+                  <a href="tel:+55-417-634-7071"><?php _e( '+0477 85X6 552', 'pam' ); ?></a>
                 </li>
                 <li>
-                  Fax: +0477 85X6 552
+                  <?php _e( 'Fax: +0477 85X6 552', 'pam' ); ?>
 </li>
               </ul>
               <ul class="social-list clearfix">
@@ -1247,28 +1211,28 @@
           <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
             <div class="footer-item">
               <h4>
-                        Useful Links </h4>
+                        <?php _e( 'Useful Links', 'pam' ); ?> </h4>
               <ul class="links">
                 <li>
-                  <a href="#"><i class="fa fa-angle-right"></i>Home</a>
+                  <a href="#"><i class="fa fa-angle-right"></i><?php _e( 'Home', 'pam' ); ?></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-angle-right"></i>About Us</a>
+                  <a href="#"><i class="fa fa-angle-right"></i><?php _e( 'About Us', 'pam' ); ?></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-angle-right"></i>Services</a>
+                  <a href="#"><i class="fa fa-angle-right"></i><?php _e( 'Services', 'pam' ); ?></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-angle-right"></i>properties Details</a>
+                  <a href="#"><i class="fa fa-angle-right"></i><?php _e( 'properties Details', 'pam' ); ?></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-angle-right"></i>My Account</a>
+                  <a href="#"><i class="fa fa-angle-right"></i><?php _e( 'My Account', 'pam' ); ?></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-angle-right"></i>Privacy Policy</a>
+                  <a href="#"><i class="fa fa-angle-right"></i><?php _e( 'Privacy Policy', 'pam' ); ?></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-angle-right"></i>properties Details</a>
+                  <a href="#"><i class="fa fa-angle-right"></i><?php _e( 'properties Details', 'pam' ); ?></a>
                 </li>
               </ul>
             </div>
@@ -1276,44 +1240,44 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
             <div class="footer-item clearfix">
               <h4>
-                        Gallery </h4>
+                        <?php _e( 'Gallery', 'pam' ); ?> </h4>
               <ul class="gallery">
                 <li>
-                  <a href="#"> <img src="img/sub-properties/sub-properties-1.jpg" alt="sub-properties"> </a>
+                  <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-1.jpg" alt="sub-properties"> </a>
                 </li>
                 <li>
-                  <a href="#"> <img src="img/sub-properties/sub-properties-2.jpg" alt="sub-properties"> </a>
+                  <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-2.jpg" alt="sub-properties"> </a>
                 </li>
                 <li>
-                  <a href="#"> <img src="img/sub-properties/sub-properties-3.jpg" alt="sub-properties"> </a>
+                  <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-3.jpg" alt="sub-properties"> </a>
                 </li>
                 <li>
-                  <a href="#"> <img src="img/sub-properties/sub-properties-4.jpg" alt="sub-properties"> </a>
+                  <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-4.jpg" alt="sub-properties"> </a>
                 </li>
                 <li>
-                  <a href="#"> <img src="img/sub-properties/sub-properties-6.jpg" alt="sub-properties"> </a>
+                  <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-6.jpg" alt="sub-properties"> </a>
                 </li>
                 <li>
-                  <a href="#"> <img src="img/sub-properties/sub-properties-5.jpg" alt="sub-properties"> </a>
+                  <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-5.jpg" alt="sub-properties"> </a>
                 </li>
                 <li>
-                  <a href="#"> <img src="img/sub-properties/sub-properties-7.jpg" alt="sub-properties"> </a>
+                  <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-7.jpg" alt="sub-properties"> </a>
                 </li>
                 <li>
-                  <a href="#"> <img src="img/sub-properties/sub-properties-8.jpg" alt="sub-properties"> </a>
+                  <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-8.jpg" alt="sub-properties"> </a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
             <div class="footer-item clearfix">
-              <h4>Subscribe</h4>
+              <h4><?php _e( 'Subscribe', 'pam' ); ?></h4>
               <div class="Subscribe-box">
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                <form action="#" method="GET">
+                <p><?php _e( 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.', 'pam' ); ?></p>
+                <form action="<?php echo esc_url( get_template_directory_uri() ); ?>/#" method="GET">
                   <p> <input type="text" class="form-contact" name="email" placeholder="Enter Address"> </p>
                   <p> <button type="submit" name="submitNewsletter" class="btn btn-block button-theme">
-                      Subscribe
+                      <?php _e( 'Subscribe', 'pam' ); ?>
 </button> </p>
                 </form>
               </div>
@@ -1322,7 +1286,7 @@
         </div>
         <div class="row">
           <div class="col-xl-12">
-            <p class="copy">© 2017 <a href="#">Theme Vessel.</a> Trademarks and brands are the property of their respective owners.</p>
+            <p class="copy"><?php _e( '© 2017', 'pam' ); ?> <a href="#"><?php _e( 'Theme Vessel.', 'pam' ); ?></a> <?php _e( 'Trademarks and brands are the property of their respective owners.', 'pam' ); ?></p>
           </div>
         </div>
       </div>
@@ -1333,33 +1297,8 @@
       <button type="button" class="close">×</button>
       <form action="http://theme-vessel-templates.theme-vessel.ey.r.appspot.com/real-house/index.html#">
         <input type="search" value="" placeholder="type keyword(s) here"/>
-        <button type="submit" class="btn btn-sm button-theme">Search</button>
+        <button type="submit" class="btn btn-sm button-theme"><?php _e( 'Search', 'pam' ); ?></button>
       </form>
     </div>
-    <script src="js/jquery-2.2.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-submenu.js"></script>
-    <script src="js/rangeslider.js"></script>
-    <script src="js/jquery.mb.YTPlayer.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.scrollUp.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script src="js/leaflet-providers.js"></script>
-    <script src="js/leaflet.markercluster.js"></script>
-    <script src="js/dropzone.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/jquery.filterizr.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/maps.js"></script>
-    <script src="js/app.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <!-- Custom javascript -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+
+<?php get_footer(); ?>

@@ -74,7 +74,8 @@
                     "<i class=\"fa fa-check-square-o\"><\/i> Salão de Jogos": "Salão de Jogos",
                     "<i class=\"fa fa-check-square-o\"><\/i> Churrasqueira": "Churrasqueira",
                     "<i class=\"fa fa-check-square-o\"><\/i> Aceita Pet": "Aceita Pet",
-                    "<i class=\"fa fa-check-square-o\"><\/i> Salão de festas": "Salão de festas"
+                    "<i class=\"fa fa-check-square-o\"><\/i> Salão de festas": "Salão de festas",
+                    "<i class=\"fa fa-check-square-o\"><\/i> Ar Condicionado": "Ar Condicionado"
                 },
                 "allow_custom": 0,
                 "default_value": [],
@@ -281,7 +282,7 @@
                 "key": "field_5fb3ff9fedf7c",
                 "label": "Mapa",
                 "name": "mapa",
-                "type": "text",
+                "type": "textarea",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -292,9 +293,9 @@
                 },
                 "default_value": "",
                 "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
             }
         ],
         "location": [
@@ -426,22 +427,6 @@
                 "placeholder": "",
                 "prepend": "",
                 "append": ""
-            },
-            {
-                "key": "field_5fb3ff631d663",
-                "label": "Mapa",
-                "name": "mapa",
-                "type": "oembed",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "width": "",
-                "height": ""
             }
         ],
         "location": [
@@ -567,7 +552,7 @@
         "fields": [
             {
                 "key": "field_5faf727b8aa5d",
-                "label": "Valores",
+                "label": "Detalhes",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -582,28 +567,42 @@
                 "endpoint": 1
             },
             {
-                "key": "field_5faf728e8aa5e",
-                "label": "Preço",
-                "name": "preco",
-                "type": "text",
+                "key": "field_5fba2e264b0e0",
+                "label": "Tipo do Imóvel",
+                "name": "tipo_do_imovel",
+                "type": "select",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fa8c30dc5758",
+                            "operator": "!=empty"
+                        }
+                    ]
+                ],
                 "wrapper": {
-                    "width": "30",
+                    "width": "20",
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "choices": {
+                    "locacao": "Locação",
+                    "venda": "Venda",
+                    "temporada": "Temporada"
+                },
+                "default_value": false,
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
             },
             {
-                "key": "field_5faf731eee74e",
-                "label": "IPTU",
-                "name": "iptu",
+                "key": "field_5fa8c30dc5758",
+                "label": "Estado",
+                "name": "estado",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -620,13 +619,115 @@
                 "maxlength": ""
             },
             {
-                "key": "field_5faf732cee74f",
-                "label": "Condominio",
-                "name": "condominio",
+                "key": "field_5faf728e8aa5e",
+                "label": "Valor",
+                "name": "valor",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fba2e264b0e0",
+                            "operator": "==",
+                            "value": "venda"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_5fba2e264b0e0",
+                            "operator": "==",
+                            "value": "locacao"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_5fba2e264b0e0",
+                            "operator": "==",
+                            "value": "temporada"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "20",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc551dc4a21d",
+                "label": "Valor Diária",
+                "name": "valor_diaria",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
+                "wrapper": {
+                    "width": "20",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5faf731eee74e",
+                "label": "Valor do IPTU",
+                "name": "valor_do_iptu",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fba2e264b0e0",
+                            "operator": "==",
+                            "value": "venda"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_5fba2e264b0e0",
+                            "operator": "==",
+                            "value": "locacao"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "20",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5faf732cee74f",
+                "label": "Condomínio",
+                "name": "valor_do_condominio",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fba2e264b0e0",
+                            "operator": "==",
+                            "value": "venda"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "20",
                     "class": "",
@@ -721,25 +822,6 @@
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "60",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5fa8c30dc5758",
-                "label": "Estado",
-                "name": "estado",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "20",
                     "class": "",
                     "id": ""
                 },
@@ -1121,44 +1203,6 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "servicos"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": ""
-    },
-    {
-        "key": "group_5fb5d27c68d41",
-        "title": "Status",
-        "fields": [
-            {
-                "key": "field_5fb5d29771c9d",
-                "label": "Selecione a Cor",
-                "name": "selecione_a_cor",
-                "type": "color_picker",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": ""
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "taxonomy",
-                    "operator": "==",
-                    "value": "properties_status"
                 }
             ]
         ],

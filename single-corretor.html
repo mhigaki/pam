@@ -36,9 +36,9 @@
     <![endif]-->
   </head>
   <body>
-    <div class="page_loader" wp-hide></div>
+    <div class="page_loader"></div>
     <!-- Top header start -->
-    <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2" wp-hide>
+    <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-8 col-sm-7">
@@ -71,7 +71,7 @@
     </header>
     <!-- Top header end -->
     <!-- Main header start -->
-    <header class="main-header" wp-hide>
+    <header class="main-header">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand logo" href="index-2.html"> <img src="img/logos/logo-site.svg" alt="logo"> </a>
@@ -315,7 +315,7 @@
         <div class="page-info">
           <div class="container">
             <div class="row">
-              <div data-pg-collapsed class="col-md-6">
+              <div class="col-md-6">
                 <div class="breadcrumb-area">
                   <ul cms-breadcrumbs="categories" cms-breadcrumbs-home cms-breadcrumbs-separator="span" cms-breadcrumbs-last-item="> li:nth-of-type(2)" cms-breadcrumbs-last-item-name="> li:nth-of-type(2)">
                     <li>
@@ -358,24 +358,24 @@
                 <div class="col-xl-7 col-lg-7 col-md-7 col-pad align-self-center">
                   <div class="detail">
                     <h5 cms-post-field="creci_numero" cms-post-field-type="content" cms-post-field-acf cms-post-field-if>CRECI Nº : </h5>
-                    <h4> <a href="#" cms-post-title cms-post-link>John Pitarshon</a> </h4>
+                    <h4 wp-the-title> <a href="#">John Pitarshon</a> </h4>
                     <div class="contact">
                       <ul>
                         <li wp-if-custom="get_field( 'endereco' )">
                           <span><b>Endereço</b>:</span>
-                          <a href="#" wp-acf-get-field="endereco"> 44 New Design Street,</a>
+                          <a href="#" wp-acf-get-field="endereco" wp-acf-get-field-set="element"> 44 New Design Street,</a>
                         </li>
                         <li wp-if-custom="get_field( 'e-mail' )">
                           <span><b>Email</b>:</span>
-                          <a href="mailto:info@themevessel.com" wp-acf-get-field="e-mail"> info@themevessel.com</a>
+                          <a href="mailto:info@themevessel.com" wp-acf-get-field="e-mail" wp-acf-get-field-set="element"> info@themevessel.com</a>
                         </li>
                         <li wp-if-custom="get_field( 'telefone_celular' )">
                           <span><b>Celular</b>:</span>
-                          <span href="tel:+554XX-634-7071" wp-acf-get-field="telefone_celular"> +55 4XX-634-7071</span>
+                          <span href="tel:+554XX-634-7071" wp-acf-get-field="telefone_celular" wp-acf-get-field-set="element"> +55 4XX-634-7071</span>
                         </li>
                         <li wp-if-custom="get_field( 'telefone_fixo' )">
                           <b>Telefone Fixo:</b>
-                          <span href="#" wp-acf-get-field="telefone_fixo"> +0477 85X6 552</span>
+                          <span href="#" wp-acf-get-field="telefone_fixo" wp-acf-get-field-set="element"> +0477 85X6 552</span>
                         </li>
                         <li class="invisible">
                           <span>Website:</span>
@@ -414,7 +414,7 @@
                 <!-- Contact 1 start -->
                 <div class="contact-2 widget reviews">
                   <h3 class="sidebar-title">Mande uma mensagem</h3>
-                  <form action="#" method="GET" enctype="multipart/form-data" id="reviews" cms-form="reviews" cms-form-send-email="true">
+                  <form action="#" method="post" enctype="multipart/form-data" id="reviews" cms-form="reviews" cms-form-send-email="true" cms-form-subject="Fale com o Corretor">
                     <div class="rowo">
                       <div class="form-group name">
                         <input class="form-control" type="text" name="name" placeholder="Seu Nome"/>
@@ -468,7 +468,7 @@
     <!-- Agent page start -->
     <!-- Agent page end -->
     <!-- Footer start -->
-    <footer class="footer" wp-hide>
+    <footer class="footer">
       <div class="container footer-inner">
         <div class="row">
           <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
@@ -594,7 +594,7 @@
     </footer>
     <!-- Footer end -->
     <!-- Full Page Search -->
-    <div id="full-page-search" wp-hide>
+    <div id="full-page-search">
       <button type="button" class="close">×</button>
       <form action="http://theme-vessel-templates.theme-vessel.ey.r.appspot.com/real-house/index.html#">
         <input type="search" value="" placeholder="type keyword(s) here"/>

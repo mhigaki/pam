@@ -42,8 +42,8 @@ function pam_setup() {
      */
     /* Pinegrow generated Image Sizes Begin */
 
-    add_image_size( 'corretores', 360, 300, true );
-    add_image_size( 'corretor', 500, 600, true );
+    add_image_size( 'agents', 360, 300, true );
+    add_image_size( 'agent', 500, 600, true );
     /* Pinegrow generated Image Sizes End */
     
     /*
@@ -91,9 +91,10 @@ function pam_init() {
 				'name' => __( 'Propriedades', 'pam' ),
 				'singular_name' => __( 'Propriedade', 'pam' )
 			),
+		'description' => __( 'Cadastro do Imóvel', 'pam' ),
 		'public' => true,
 		'hierarchical' => true,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields', 'excerpt' ),
+		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' ),
 		'has_archive' => true,
 		'show_in_rest' => true,
 		'show_in_menu' => true,
@@ -148,9 +149,10 @@ function pam_init() {
 				'singular_name' => __( 'Partner', 'pam' )
 			),
 		'public' => true,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
+		'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
 		'show_in_rest' => true,
-		'show_in_menu' => true
+		'show_in_menu' => true,
+		'taxonomies' => array( 'category' )
 	));
 
     register_post_type('servicos', array(
@@ -211,8 +213,8 @@ function pam_custom_image_sizes_names( $sizes ) {
     /* Pinegrow generated Image Sizes Names Begin */
 
     return array_merge( $sizes, array(
-        'corretores' => __( 'Corretores' ),
-        'corretor' => __( 'Corretor' )
+        'agents' => __( 'Corretores' ),
+        'agent' => __( 'Corretor' )
     ) );
 
     /* Pinegrow generated Image Sizes Names End */
@@ -247,7 +249,8 @@ function pam_customize_register( $wp_customize ) {
     /* Pinegrow generated Customizer Controls Begin */
 
     $wp_customize->add_section( 'pam_sc_header', array(
-		'title' => __( 'Header', 'pam' )
+		'title' => __( 'Header', 'pam' ),
+		'panel' => 'pam_theme_settings'
 	));
 
     $wp_customize->add_section( 'pam_header', array(
@@ -382,7 +385,6 @@ function pam_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( 'display_pam_sc_features', array(
 		'label' => __( 'Display Section Features', 'pam' ),
-		'description' => __( 'Marque para exibir a seção', 'pam' ),
 		'type' => 'checkbox',
 		'section' => 'pam_sc_features'
 	));

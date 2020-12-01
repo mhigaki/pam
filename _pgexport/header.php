@@ -21,7 +21,7 @@
                             <div class="col-lg-6 col-md-8 col-sm-7">
                                 <div class="list-inline">
                                     <?php if( get_theme_mod( 'pam_sc_header_phone_lnk' ) ) : ?>
-                                        <a href="<?php echo get_theme_mod( 'pam_sc_header_phone_lnk', 'tel:5511930305500' ); ?>" rel="nofollow noreferrer noopener" target="_self"><?php echo get_theme_mod( 'pam_sc_header_phone', '<i class="fa fa-phone"></i> +55 11 93030-5500' ); ?></a>
+                                        <a href="<?php echo get_theme_mod( 'pam_sc_header_phone_lnk', 'tel:5511941101331' ); ?>" rel="nofollow noreferrer noopener" target="_self"><?php echo get_theme_mod( 'pam_sc_header_phone', '<i class="fa fa-phone"></i> +55 11 93030-5500' ); ?></a>
                                     <?php endif; ?>
                                     <?php if( get_theme_mod( 'pam_sc_header_mail_link' ) ) : ?>
                                         <a href="<?php echo get_theme_mod( 'pam_sc_header_mail_link', 'mailto:milton.higaki@gmail.com' ); ?>" rel="nofollow noreferrer noopener" target="_self"><?php echo get_theme_mod( 'pam_sc_header_mail', '<i class="fa fa-envelope"></i> milton.higaki@gmail.com' ); ?></a>
@@ -29,12 +29,14 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-4 col-sm-5">
-                                <?php wp_nav_menu( array(
-                                    	'menu' => 'social',
-                                    	'menu_class' => 'pull-right top-social-media',
-                                    	'container' => '',
-                                    	'theme_location' => 'social'
-                                ) ); ?>
+                                <ul class="pull-right top-social-media">
+                                    <?php wp_nav_menu( array(
+                                        	'menu' => 'social',
+                                        	'menu_class' => 'pull-right top-social-media',
+                                        	'container' => '',
+                                        	'theme_location' => 'social'
+                                    ) ); ?>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -62,7 +64,4 @@
                 </div>
             </header>
         <?php endif; ?>
-        <!-- Top header start -->
-        <!-- Top header end -->
-        <!-- Main header start -->
         <div id="main" class="site-main">

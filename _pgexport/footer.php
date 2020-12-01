@@ -24,20 +24,14 @@
                                         <?php _e( 'Fax: +0477 85X6 552', 'pam' ); ?>
                                     </li>
                                 </ul>
-                                <ul class="social-list clearfix">
-                                    <li>
-                                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="rss"><i class="fa fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                                    </li>
-                                </ul>
+                                <?php if ( has_nav_menu( 'social' ) ) : ?>
+                                    <?php wp_nav_menu( array(
+                                        	'menu' => 'social',
+                                        	'menu_class' => 'social-list clearfix',
+                                        	'container' => '',
+                                        	'theme_location' => 'social'
+                                    ) ); ?>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">

@@ -20,31 +20,31 @@
                             <?php if ( get_field( 'creci_numero' ) ) : ?>
                                 <h5><?php echo get_field( 'creci_numero' ); ?></h5>
                             <?php endif; ?>
-                            <h4> <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a> </h4>
+                            <h4><?php the_title(); ?></h4>
                             <div class="contact">
                                 <ul>
                                     <?php if ( get_field( 'endereco' ) ) : ?>
                                         <li>
                                             <span><b><?php _e( 'Endereço', 'pam' ); ?></b>:</span>
-                                            <a href="#"><?php echo get_field( 'endereco' ); ?></a>
+                                            <?php echo get_field( 'endereco' ); ?>
                                         </li>
                                     <?php endif; ?>
                                     <?php if ( get_field( 'e-mail' ) ) : ?>
                                         <li>
                                             <span><b><?php _e( 'Email', 'pam' ); ?></b>:</span>
-                                            <a href="mailto:info@themevessel.com"><?php echo get_field( 'e-mail' ); ?></a>
+                                            <?php echo get_field( 'e-mail' ); ?>
                                         </li>
                                     <?php endif; ?>
                                     <?php if ( get_field( 'telefone_celular' ) ) : ?>
                                         <li>
                                             <span><b><?php _e( 'Celular', 'pam' ); ?></b>:</span>
-                                            <span href="tel:+554XX-634-7071"><?php echo get_field( 'telefone_celular' ); ?></span>
+                                            <?php echo get_field( 'telefone_celular' ); ?>
                                         </li>
                                     <?php endif; ?>
                                     <?php if ( get_field( 'telefone_fixo' ) ) : ?>
                                         <li>
                                             <b><?php _e( 'Telefone Fixo:', 'pam' ); ?></b>
-                                            <span href="#"><?php echo get_field( 'telefone_fixo' ); ?></span>
+                                            <?php echo get_field( 'telefone_fixo' ); ?>
                                         </li>
                                     <?php endif; ?>
                                     <li class="invisible">
@@ -92,7 +92,8 @@
                         <?php $mailer = new PG_Simple_Form_Mailer(); ?>
                         <?php $mailer->process( array(
                             	'form_id' => 'reviews_mailer_id',
-                            	'send_to_email' => true
+                            	'send_to_email' => true,
+                            	'title' => 'Fale com o Corretor'
                         ) ); ?>
                         <?php if( !$mailer->processed || $mailer->error) : ?>
                             <form action="<?php echo '#reviews_mailer_id'; ?>" method="post" enctype="multipart/form-data" id="reviews_mailer_id" onsubmit="event.stopImmediatePropagation();event.stopPropagation();">

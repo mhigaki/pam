@@ -142,7 +142,7 @@
 </div>
 <div class="section">
     <div class="map">
-        <iframe src="<?php echo get_field( 'mapa' ); ?>" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <?php echo get_field( 'mapa' ); ?>
     </div>
 </div>            
 

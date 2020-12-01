@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="zxx" wp-template wp-template-master="index.html" wp-template-post-template-name="Detalhes do Imovel" wp-template-preview-url="http://wordpress.localhost/properties/parque-viana-barueri/">
+<html lang="pt-BR" wp-template wp-template-master="index.html" wp-template-preview-url="http://wordpress.localhost/properties/casa-terrea-jd-silveira-barueri-sp/">
 	<head>
-		<title>PAM Consultoria</title>
+		<title>Real House - Real Estate HTML Template</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
-		<link rel='dns-prefetch' href='//maps.googleapis.com'/>
-		<link rel='dns-prefetch' href='//fonts.googleapis.com'/>
+		<!-- External CSS libraries -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.css">
@@ -18,15 +17,23 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
 		<link rel="stylesheet" type="text/css" href="css/dropzone.css">
 		<link rel="stylesheet" type="text/css" href="css/slick.css">
+		<!-- Custom stylesheet -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" href="css/skins/red.css">
+		<link rel="stylesheet" type="text/css" href="css/skins/red.css">
+		<!-- Favicon icon -->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<!-- Google fonts -->
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css">
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
 		<script src="js/ie-emulation-modes-warning.js"></script>
-		<script src="js/ie-emulation-modes-warning.js"></script>
-		<meta name="description" content="Consultoria Imobiliária">
-		<meta name="author" content="MNH">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+    <script  src="js/html5shiv.min.js"></script>
+    <script  src="js/respond.min.js"></script>
+    <![endif]-->
 	</head>
 	<body>
 		<div class="page_loader"></div>
@@ -297,7 +304,7 @@
 		<!-- Top header start -->
 		<!-- Top header end -->
 		<!-- Main header start -->
-		<div wp-site-content id="main" class="site-main">
+		<div wp-site-content>
 			<div class="sub-banner">
 				<div class="container">
 					<div class="page-name">
@@ -309,7 +316,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="breadcrumb-area">
-									<ul cms-breadcrumbs-separator="span" cms-breadcrumbs-last-item="> li:nth-of-type(2)" cms-breadcrumbs-last-item-name="> li:nth-of-type(2)" cms-breadcrumbs-home cms-breadcrumbs="categories">
+									<ul cms-breadcrumbs="categories" cms-breadcrumbs-home cms-breadcrumbs-separator="span" cms-breadcrumbs-last-item="> li:nth-of-type(2)" cms-breadcrumbs-last-item-name="> li:nth-of-type(2)">
 										<li>
 											<a href="index-2.html">Index</a>
 										</li>
@@ -335,332 +342,385 @@
 					</div>
 				</div>
 			</div>
-			<div class="properties-details-page content-area">
+			<div class="properties-details-page content-area-7">
 				<?php
 $endereco = get_field( 'endereco' );
-$cidade = get_field( 'cidade' );
-//code ?>
+$cidade = get_field( 'cidade' ); ?>
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-8 col-md-12" wp-post-class wp-the-id wp-loop-show-empty-text="false">
-							<div id="propertiesDetailsSlider" class="carousel properties-details-sliders slide mb-40">
-								<div class="heading-properties">
-									<div class="row">
-										<div class="col-md-12">
-											<div class="pull-left">
-												<h3>Beautiful Single Home</h3>
-												<p><i class="fa fa-map-marker"></i> 20/F Green Road, Dhanmondi, Dhaka</p>
-											</div>
-											<div class="p-r">
-												<h3>$420,00</h3>
-												<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- main slider carousel items -->
-								<div class="carousel-inner" wp-acf-get-field="slides_do_imovel" wp-acf-get-field-set="element">
-									<div class="active item carousel-item" data-slide-number="0">
-										<img src="img/properties/properties-1.jpg" class="img-fluid" alt="slider-properties">
-									</div>
-									<div class="item carousel-item" data-slide-number="1">
-										<img src="img/properties/properties-2.jpg" class="img-fluid" alt="slider-properties">
-									</div>
-									<div class="item carousel-item" data-slide-number="2">
-										<img src="img/properties/properties-3.jpg" class="img-fluid" alt="slider-properties">
-									</div>
-									<div class="item carousel-item" data-slide-number="4">
-										<img src="img/properties/properties-4.jpg" class="img-fluid" alt="slider-properties">
-									</div>
-									<div class="item carousel-item" data-slide-number="5">
-										<img src="img/properties/properties-5.jpg" class="img-fluid" alt="slider-properties">
-									</div>
-								</div>
-								<!-- main slider carousel nav controls -->
-								<ul class="carousel-indicators smail-properties list-inline nav nav-justified" cms-no-export>
-									<li class="list-inline-item active">
-										<a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#propertiesDetailsSlider"> <img src="img/properties/properties-1.jpg" class="img-fluid" alt="properties-small"> </a>
-									</li>
-									<li class="list-inline-item">
-										<a id="carousel-selector-1" data-slide-to="1" data-target="#propertiesDetailsSlider"> <img src="img/properties/properties-2.jpg" class="img-fluid" alt="properties-small"> </a>
-									</li>
-									<li class="list-inline-item">
-										<a id="carousel-selector-2" data-slide-to="2" data-target="#propertiesDetailsSlider"> <img src="img/properties/properties-3.jpg" class="img-fluid" alt="properties-small"> </a>
-									</li>
-									<li class="list-inline-item">
-										<a id="carousel-selector-3" data-slide-to="3" data-target="#propertiesDetailsSlider"> <img src="img/properties/properties-4.jpg" class="img-fluid" alt="properties-small"> </a>
-									</li>
-									<li class="list-inline-item">
-										<a id="carousel-selector-4" data-slide-to="4" data-target="#propertiesDetailsSlider"> <img src="img/properties/properties-5.jpg" class="img-fluid" alt="properties-small"> </a>
-									</li>
-								</ul>
-								<!-- main slider carousel items -->
-								<!-- Heading properties start -->
-								<div class="heading-properties">
-									<div class="row">
-										<div class="col-md-12">
-											<div class="pull-left">
-												<h3 cms-post-title>Modern Family Home</h3>
-												<p> <i class="fa fa-map-marker"></i> <?php echo "$endereco - $cidade" ?> </p>
-											</div>
-											<div class="pull-right">
-												<h3><span class="text-right" cms-post-field="preco" cms-post-field-type="content" cms-post-field-acf>$420,00</span></h3>
-												<h5 wp-terms-template wp-terms-template-taxonomy="properties_status" wp-terms-template-range="0">Per Night</h5>
+						<div class="col-lg-8 col-md-12 col-xs-12">
+							<div class="properties-details-section">
+								<div id="propertiesDetailsSlider" class="carousel properties-details-sliders slide mb-40">
+									<!-- Heading properties start -->
+									<div class="heading-properties-2">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="pull-left">
+													<h3 wp-the-title>Modern Family Home</h3>
+													<p> <i class="fa fa-map-marker"></i> <?php echo "$endereco - $cidade" ?> </p>
+												</div>
+												<div class="pull-right">
+													<h3><span class="text-right" cms-post-field="preco" cms-post-field-type="content" cms-post-field-acf>$420,00</span></h3>
+													<h5 wp-terms-template wp-terms-template-element="this" wp-terms-template-taxonomy="properties_status">Per Night</h5>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- Heading properties end -->
-							</div>
-							<div class="property-meta mb-40">
-								<ul>
-									<li wp-if-custom="get_field( 'informacoes_planta_quartos' )">
-										<i class="flaticon-furniture"></i>
-										<p wp-acf-get-field="informacoes_planta_quartos">3 Beds</p>
-									</li>
-									<li wp-if-custom="get_field( 'informacoes_planta_banheiros' )">
-										<i class="flaticon-holidays"></i>
-										<p wp-acf-get-field="informacoes_planta_banheiros">1 Beths</p>
-									</li>
-									<li wp-if-custom="get_field( 'informacoes_planta_area' )">
-										<i class="flaticon-square"></i>
-										<p wp-acf-get-field="informacoes_planta_area">3,034 Sq Ft</p>
-									</li>
-									<li wp-if-custom="get_field( 'informacoes_planta_garagem' )">
-										<i class="lnr lnr-car"></i>
-										<p wp-acf-get-field="informacoes_planta_garagem">1 Garages</p>
-									</li>
-								</ul>
-							</div>
-							<!-- Property meta start -->
-							<!-- Property meta end -->
-							<!-- Advanced search start -->
-							<!-- Advanced search end -->
-							<!-- Properties description start -->
-							<div class="properties-description mb-40">
-								<h3 class="heading-2">Descrição</h3>
-								<p wp-the-content wp-the-content-set="content" wp-the-content-strip-teaser="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra a. Aliquam pellentesque nibh et nibh feugiat gravida. Maecenas ultricies, diam vitae semper placerat, velit risus accumsan nisl, eget tempor lacus est vel nunc. Proin accumsan elit sed neque euismod fringilla. Curabitur lobortis nunc velit, et fermentum urna dapibus non. Vivamus magna lorem, elementum id gravida ac, laoreet tristique augue. Maecenas dictum lacus eu nunc porttitor, ut hendrerit arcu efficitur.</p>
-							</div>
-							<!-- Properties description end -->
-							<!-- Properties condition start -->
-							<div class="properties-condition mb-40">
-								<h3 class="heading-2">Área Privativa</h3>
-								<div class="row">
-									<div class="col-md-4 col-sm-4 col-xs-12">
-										<?php $cond_1 = get_field( 'cond_1' ); ?>
-										<?php if ( $cond_1 ) : ?>
-											<ul class="condition">
-												<?php foreach ( $cond_1 as $cond_1 ): ?>
-													<li>
-														<?php echo $cond_1 ; ?>
-													</li>
-												<?php endforeach; ?>
-											</ul>
-										<?php endif; ?>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-12">
-										<?php $cond_2 = get_field( 'cond_2' ); ?>
-										<?php if ( $cond_2 ) : ?>
-											<ul class="condition">
-												<?php foreach ( $cond_2 as $cond_2 ): ?>
-													<li>
-														<?php echo $cond_2 ; ?>
-													</li>
-												<?php endforeach; ?>
-											</ul>
-										<?php endif; ?>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-12">
-										<?php $cond_3 = get_field( 'cond_3' ); ?>
-										<?php if ( $cond_3 ) : ?>
-											<ul class="condition">
-												<?php foreach ( $cond_3 as $cond_3 ): ?>
-													<li>
-														<?php echo $cond_3 ; ?>
-													</li>
-												<?php endforeach; ?>
-											</ul>
-										<?php endif; ?>
+									<!-- Heading properties end -->
+									<!-- main slider carousel items -->
+									<div class="carousel-inner" wp-acf-get-field="slides_do_imovel" wp-acf-get-field-set="element">
+										<div class="active item carousel-item" data-slide-number="0">
+											<img src="img/properties/properties-1.jpg" class="img-fluid" alt="slider-properties">
+										</div>
+										<div class="item carousel-item" data-slide-number="1">
+											<img src="img/properties/properties-2.jpg" class="img-fluid" alt="slider-properties">
+										</div>
+										<div class="item carousel-item" data-slide-number="2">
+											<img src="img/properties/properties-3.jpg" class="img-fluid" alt="slider-properties">
+										</div>
+										<div class="item carousel-item" data-slide-number="4">
+											<img src="img/properties/properties-4.jpg" class="img-fluid" alt="slider-properties">
+										</div>
+										<div class="item carousel-item" data-slide-number="5">
+											<img src="img/properties/properties-5.jpg" class="img-fluid" alt="slider-properties">
+										</div>
 									</div>
 								</div>
-							</div>
-							<!-- Properties condition end -->
-							<!-- Properties amenities start -->
-							<div class="properties-amenities mb-40">
-								<h3 class="heading-2">Área Comum</h3>
-								<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<?php $col_01 = get_field('col_01'); if( $col_01 ): ?>
-										<ul class="amenities">
-											<?php foreach ( $col_01 as $col_01 ): ?>
-												<li>
-													<?php echo $col_01 ; ?>
-												</li>
-											<?php endforeach; ?>
-										</ul>
-									<?php endif; ?>
-									</div>
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<?php $col_02 = get_field('col_02');
-                    if( $col_02 ): ?>
-										<ul class="amenities">
-											<?php foreach( $col_02 as $col_02 ): ?>
-												<li>
-													<?php echo $col_02; ?>
-												</li>
-											<?php endforeach; ?>
-										</ul>
-									<?php endif; ?>
-									</div>
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<?php $col_03 = get_field('col_03');
-                    if( $col_03 ): ?>
-										<ul class="amenities">
-											<?php foreach( $col_03 as $col_03 ): ?>
-												<li>
-													<?php echo $col_03; ?>
-												</li>
-											<?php endforeach; ?>
-										</ul>
-									<?php endif; ?>
-									</div>
-									<!-- Properties amenities end -->
-									<!-- Inside properties start -->
-									<!-- Inside properties end -->
-									<!-- Location start -->
-									<!-- Location end -->
-								</div>
-							</div>
-							<!-- Floor plans start -->
-							<div class="floor-plans mb-50">
-								<h3 class="heading-2">Planta Baixa</h3>
-								<table>
-									<tbody>
-										<tr>
-											<td><strong>Metragem</strong></td>
-											<td><strong>Quartos</strong></td>
-											<td><strong>Banheiros</strong></td>
-											<td><strong>Vagas</strong></td>
-											<td><strong>Suítes</strong></td>
-										</tr>
-										<tr>
-											<td wp-acf-get-field="informacoes_planta_area">1</td>
-											<td wp-acf-get-field="informacoes_planta_quartos">3</td>
-											<td wp-acf-get-field="informacoes_planta_banheiros">2</td>
-											<td wp-acf-get-field="informacoes_planta_garagem">1</td>
-											<td wp-acf-get-field="informacoes_planta_suites">1</td>
-										</tr>
-									</tbody>
-								</table>
-								<img src="img/floor-plans.png" alt="floor-plans" class="img-fluid" cms-post-field="imagem_da_planta" cms-post-field-type="image" cms-post-field-acf width="600" height="300" cms-post-field-if>
-							</div>
-							<div class="inside-properties mb-50" wp-if-custom="get_field( 'video_do_imovel' )">
-								<h3 class="heading-2">Vídeo do Imóvel</h3>
-								<iframe src="https://www.youtube.com/embed/bo_efYhYU2A" allowfullscreen="" wp-acf-get-field="video_do_imovel"></iframe>
-							</div>
-							<div class="location mb-50" wp-if-custom="get_field( 'mapa_do_imovel' )">
-								<div class="map">
-									<h3 class="heading-2">Localização do Imóvel</h3>
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.4155049647743!2d-46.90053558502299!3d-23.517553484704614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03f9793f14bf%3A0x9d2a069967fa44f0!2sEstr.%20das%20Na%C3%A7%C3%B5es%2C%20411%20-%20Vila%20Iracema%2C%20Barueri%20-%20SP%2C%2006422-100!5e0!3m2!1spt-BR!2sbr!4v1605481299960!5m2!1spt-BR!2sbr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" wp-acf-get-field="mapa_do_imovel" wp-acf-get-field-set="element"></iframe>
-								</div>
-							</div>
-							<!-- Similar Properties start -->
-							<!-- Similar Properties end -->
-						</div>
-						<div class="col-lg-4 col-md-12">
-							<div class="sidebar-left">
 								<!-- Advanced search start -->
-								<!-- Posts by category start -->
-								<div class="posts-by-category widget">
-									<h3 class="sidebar-title">Categoria</h3>
-									<ul class="list-unstyled list-cat" cms-site-terms="properties_types" cms-site-terms-items="this" cms-site-terms-item-count="> li:nth-of-type(1) > a > span" cms-site-terms-item="> li:nth-of-type(1)" cms-site-terms-item-name="> li:nth-of-type(1) > a" cms-site-terms-register-types="properties" cms-site-terms-register-name="Cat" cms-site-terms-register-name-plural="cats">
-										<li>
-											<a href="#">Single Family <span>(45)</span></a>
-										</li>
-										<li cms-no-export wp-hide>
-											<a href="#">Apartment <span>(21)</span> </a>
-										</li>
-										<li cms-no-export wp-hide>
-											<a href="#">Condo <span>(23)</span></a>
-										</li>
-										<li cms-no-export wp-hide>
-											<a href="#">Multi Family <span>(19)</span></a>
-										</li>
-										<li cms-no-export wp-hide>
-											<a href="#">Villa <span>(19)</span></a>
-										</li>
-										<li cms-no-export wp-hide>
-											<a href="#">Other <span>(22) </span></a>
-										</li>
-									</ul>
-								</div>
-								<!-- Social media box start -->
-								<div class="social-media-box widget clearfix">
-									<h3 class="sidebar-title">Social Media</h3>
-									<ul class="social-list">
-										<li>
-											<a href="#" class="facebook-bg"> <i class="fa fa-facebook"></i> </a>
-										</li>
-										<li>
-											<a href="#" class="twitter-bg"> <i class="fa fa-twitter"></i> </a>
-										</li>
-										<li>
-											<a href="#" class="google-bg"> <i class="fa fa-google"></i> </a>
-										</li>
-										<li>
-											<a href="#" class="linkedin-bg"> <i class="fa fa-linkedin"></i> </a>
-										</li>
-										<li>
-											<a href="#" class="pinterest-bg"> <i class="fa fa-pinterest"></i> </a>
-										</li>
-									</ul>
-								</div>
-								<!-- Team 5 start -->
-								<div class="team-5 widget" cms-post="query" cms-post-type="corretor" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)">
-									<h3 class="sidebar-title">Contact Agent</h3>
-									<div class="media">
-										<a href="agent-detail.html" cms-post-link> <img src="img/avatar/avatar-1.jpg" alt="avatar" cms-post-image="thumbnail"> </a>
-										<div class="media-body align-self-center">
-											<h5> <a href="properties-details.html" cms-post-title cms-post-link>John Antony</a> </h5>
-											<p><i class="flaticon-technology-1"></i><a href="agent-detail.html" wp-meta-value wp-meta-value-key="telefone_celular" wp-meta-value-set="element" wp-meta-value-set-attr="href">1-8X0-666-8X88</a></p>
-											<p><i class="flaticon-envelope"></i><a href="tel:info@themevessel.com" wp-acf-get-field="e-mail" wp-acf-get-field-set-attr="mailto:" wp-acf-get-field-set="element">info@themevessel.com</a></p>
-										</div>
-									</div>
-									<div class="media mb-0" cms-no-export>
-										<a href="agent-detail.html"> <img src="img/avatar/avatar-2.jpg" alt="avatar"> </a>
-										<div class="media-body align-self-center">
-											<h5> <a href="properties-details.html">Karen Paran</a> </h5>
-											<p><i class="flaticon-technology-1"></i><a href="agent-detail.html">1-8X0-666-8X88</a></p>
-											<p><i class="flaticon-envelope"></i><a href="tel:info@themevessel.com">info@themevessel.com</a></p>
-										</div>
-									</div>
-								</div>
-								<!-- Financing calculator start -->
-								<div class="contact-1 financing-calculator widget" cms-no-export wp-hide>
-									<h5 class="sidebar-title">Mortgage Calculator</h5>
-									<form action="#" method="GET" enctype="multipart/form-data">
+								<div class="widget-2 advanced-search-2 d-lg-none d-xl-none">
+									<h3 class="sidebar-title">Advanced Search</h3>
+									<form method="GET">
 										<div class="form-group">
-											<label class="form-label">Property Price</label>
-											<input type="text" class="form-control" placeholder="$24.400">
+											<select class="selectpicker search-fields" name="all-status">
+												<option>All Status</option>
+												<option>For Sale</option>
+												<option>For Rent</option>
+											</select>
 										</div>
 										<div class="form-group">
-											<label class="form-label">Interest Rate (%)</label>
-											<input type="text" class="form-control" placeholder="12%">
+											<select class="selectpicker search-fields" name="all-type">
+												<option>All Type</option>
+												<option>Apartments</option>
+												<option>Houses</option>
+												<option>Commercial</option>
+												<option>Garages</option>
+											</select>
 										</div>
 										<div class="form-group">
-											<label class="form-label">Period In Months</label>
-											<input type="text" class="form-control" placeholder="6 Months">
+											<select class="selectpicker search-fields" name="commercial">
+												<option>Commercial</option>
+												<option>Residential</option>
+												<option>Land</option>
+												<option>Hotels</option>
+											</select>
 										</div>
 										<div class="form-group">
-											<label class="form-label">Down PaymenT</label>
-											<input type="text" class="form-control" placeholder="$32,300">
+											<select class="selectpicker search-fields" name="location">
+												<option>location</option>
+												<option>New York</option>
+												<option>Bangladesh</option>
+												<option>India</option>
+												<option>Canada</option>
+											</select>
+										</div>
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="form-group">
+													<select class="selectpicker search-fields" name="bedrooms">
+														<option>Bedrooms</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group">
+													<select class="selectpicker search-fields" name="bathroom">
+														<option>Bathroom</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="form-group">
+													<select class="selectpicker search-fields" name="balcony">
+														<option>Balcony</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group">
+													<select class="selectpicker search-fields" name="garage">
+														<option>Garage</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="range-slider">
+											<label>Area</label>
+											<div data-min="0" data-max="10000" data-min-name="min_area" data-max-name="max_area" data-unit="Sq ft" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="range-slider">
+											<label>Price</label>
+											<div data-min="0" data-max="150000" data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+											<div class="clearfix"></div>
 										</div>
 										<div class="form-group mb-0">
-											<button type="submit" class="btn button-theme btn-md btn-block">Cauculate</button>
+											<button class="search-button">Search</button>
 										</div>
 									</form>
 								</div>
-								<div class="widget search-area advanced-search d-none d-xl-block d-lg-block" cms-no-export>
+								<!-- Advanced search end -->
+								<!-- Tabbing box start -->
+								<div class="tabbing tabbing-box mb-40">
+									<ul class="nav nav-tabs" id="carTab" role="tablist">
+										<li class="nav-item">
+											<a class="active nav-link show" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="three" aria-selected="true">Detalhes</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">Planta</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="one" aria-selected="false">Descrição</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="4-tab" data-toggle="tab" href="#4" role="tab" aria-controls="4" aria-selected="true">Video</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="5-tab" data-toggle="tab" href="#5" role="tab" aria-controls="5" aria-selected="true">Mapa</a>
+										</li>
+									</ul>
+									<div class="tab-content" id="carTabContent">
+										<div class="active fade show tab-pane" id="one" role="tabpanel" aria-labelledby="three-tab">
+											<div class="property-details mb-40">
+												<h3 class="heading-2">Detalhes do Imóvel</h3>
+												<div class="row">
+													<div class="col-md-4 col-sm-6">
+														<ul>
+															<li>
+																<strong>ID:</strong>
+																<?php the_ID(); ?>
+															</li>
+															<li>
+																<strong>Preço:</strong>
+																<?php echo get_field( 'preco' ); ?>
+															</li>
+															<li>
+																<strong wp-acf-get-field="tipo_do_imovel" wp-acf-get-field-set="after">Property Type:</strong>
+															</li>
+															<li wp-if-custom="get_field( 'informacoes_planta_banheiros' )">
+																<strong wp-acf-get-field="informacoes_planta_banheiros" wp-acf-get-field-set="after">Banheiro:</strong>
+															</li>
+															<li wp-if-custom="get_field( 'informacoes_planta_quartos' )">
+																<strong wp-acf-get-field="informacoes_planta_quartos" wp-acf-get-field-set="after">Quartos:</strong>
+															</li>
+														</ul>
+													</div>
+													<div class="col-md-4 col-sm-6">
+														<ul>
+															<li wp-if-custom="get_field( 'informacoes_planta_area' )">
+																<strong wp-acf-get-field="informacoes_planta_area" wp-acf-get-field-set="after">Área(m²):</strong>
+															</li>
+															<li>
+																<strong>Land area:</strong>230 ft2
+															</li>
+															<li>
+																<strong>Construído em:</strong>2018
+															</li>
+															<li>
+																<strong>Available From:</strong>2018
+															</li>
+															<li wp-if-custom="get_field( 'informacoes_planta_garagem' )">
+																<strong wp-acf-get-field="informacoes_planta_garagem" wp-acf-get-field-set="after">Vagas:</strong>
+															</li>
+														</ul>
+													</div>
+													<div class="col-md-4 col-sm-6">
+														<ul>
+															<li>
+																<strong>Sold:</strong>Yes
+															</li>
+															<li wp-if-custom="get_field( 'cidade' )">
+																<strong wp-acf-get-field="cidade" wp-acf-get-field-set="after">Cidade:</strong>
+															</li>
+															<li>
+																<strong>Parking:</strong>Yes
+															</li>
+															<li>
+																<strong>Property Owner:</strong>Sohel Rana
+															</li>
+															<li wp-if-custom="get_field( 'cep' )">
+																<strong wp-acf-get-field="cep" wp-acf-get-field-set="after">CEP: </strong>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
+											<div class="floor-plans mb-50">
+												<h3 class="heading-2">Planta Baixa</h3>
+												<table>
+													<tbody class="text-center">
+														<tr>
+															<td><strong>Metragem</strong></td>
+															<td><strong>Quartos</strong></td>
+															<td><strong>Banheiros</strong></td>
+															<td><strong>Vagas</strong></td>
+															<td><strong>Suítes</strong></td>
+														</tr>
+														<tr class="text-center">
+															<td wp-acf-get-field="informacoes_planta_area">1</td>
+															<td wp-acf-get-field="informacoes_planta_quartos">3</td>
+															<td wp-acf-get-field="informacoes_planta_banheiros">2</td>
+															<td wp-acf-get-field="informacoes_planta_garagem">1</td>
+															<td wp-acf-get-field="informacoes_planta_suites">1</td>
+														</tr>
+													</tbody>
+												</table><div class="text-center">
+													<img src="img/floor-plans.png" alt="floor-plans" cms-post-field="imagem_da_planta" cms-post-field-type="image" cms-post-field-acf width="600" height="300" cms-post-field-if>
+												</div>
+												
+											</div>
+										</div>
+										<div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="one-tab">
+											<div class="properties-description mb-50">
+												<h3 class="heading-2">Descrição</h3>
+												<p wp-the-content wp-the-content-set="content" wp-the-content-strip-teaser="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra a. Aliquam pellentesque nibh et nibh feugiat gravida. Maecenas ultricies, diam vitae semper placerat, velit risus accumsan nisl, eget tempor lacus est vel nunc. Proin accumsan elit sed neque euismod fringilla. Curabitur lobortis nunc velit, et fermentum urna dapibus non. Vivamus magna lorem, elementum id gravida ac, laoreet tristique augue. Maecenas dictum lacus eu nunc porttitor, ut hendrerit arcu efficitur.</p>
+											</div>
+										</div>
+										<div class="tab-pane fade " id="4" role="tabpanel" aria-labelledby="4-tab">
+											<div class="inside-properties mb-50" wp-if-custom="get_field( 'video_do_imovel' )">
+												<h3 class="heading-2">Vídeo do Imóvel</h3>
+												<iframe src="https://www.youtube.com/embed/bo_efYhYU2A" allowfullscreen="" wp-acf-get-field="video_do_imovel" wp-acf-get-field-set="element"></iframe>
+											</div>
+										</div>
+										<div class="tab-pane fade " id="5" role="tabpanel" aria-labelledby="5-tab">
+											<div class="location mb-50" wp-if-custom="get_field( 'mapa_do_imovel' )">
+												<div class="map">
+													<h3 class="heading-2">Localização do Imóvel</h3>
+													<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.4155049647743!2d-46.90053558502299!3d-23.517553484704614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03f9793f14bf%3A0x9d2a069967fa44f0!2sEstr.%20das%20Na%C3%A7%C3%B5es%2C%20411%20-%20Vila%20Iracema%2C%20Barueri%20-%20SP%2C%2006422-100!5e0!3m2!1spt-BR!2sbr!4v1605481299960!5m2!1spt-BR!2sbr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" wp-acf-get-field="mapa_do_imovel" wp-acf-get-field-set="element"></iframe>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Properties condition start -->
+								<div class="properties-condition mb-40">
+									<h3 class="heading-2">Área Privativa</h3>
+									<div class="row">
+										<div class="col-md-4 col-sm-4 col-xs-12">
+											<?php $cond_1 = get_field( 'cond_1' ); ?>
+											<?php if ( $cond_1 ) : ?>
+												<ul class="condition">
+													<?php foreach ( $cond_1 as $cond_1 ): ?>
+														<li>
+															<?php echo $cond_1 ; ?>
+														</li>
+													<?php endforeach; ?>
+												</ul>
+											<?php endif; ?>
+										</div>
+										<div class="col-md-4 col-sm-4 col-xs-12">
+											<?php $cond_2 = get_field( 'cond_2' ); ?>
+											<?php if ( $cond_2 ) : ?>
+												<ul class="condition">
+													<?php foreach ( $cond_2 as $cond_2 ): ?>
+														<li>
+															<?php echo $cond_2 ; ?>
+														</li>
+													<?php endforeach; ?>
+												</ul>
+											<?php endif; ?>
+										</div>
+										<div class="col-md-4 col-sm-4 col-xs-12">
+											<?php $cond_3 = get_field( 'cond_3' ); ?>
+											<?php if ( $cond_3 ) : ?>
+												<ul class="condition">
+													<?php foreach ( $cond_3 as $cond_3 ): ?>
+														<li>
+															<?php echo $cond_3 ; ?>
+														</li>
+													<?php endforeach; ?>
+												</ul>
+											<?php endif; ?>
+										</div>
+									</div>
+								</div>
+								<!-- Properties condition end -->
+								<!-- Properties amenities start -->
+								<div class="properties-amenities mb-40">
+									<h3 class="heading-2">Área Comum</h3>
+									<div class="row">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+											<?php $col_01 = get_field('col_01'); if( $col_01 ): ?>
+											<ul class="amenities">
+												<?php foreach ( $col_01 as $col_01 ): ?>
+													<li>
+														<?php echo $col_01 ; ?>
+													</li>
+												<?php endforeach; ?>
+											</ul>
+										<?php endif; ?>
+										</div>
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+											<?php $col_02 = get_field('col_02');
+                    if( $col_02 ): ?>
+											<ul class="amenities">
+												<?php foreach( $col_02 as $col_02 ): ?>
+													<li>
+														<?php echo $col_02; ?>
+													</li>
+												<?php endforeach; ?>
+											</ul>
+										<?php endif; ?>
+										</div>
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+											<?php $col_03 = get_field('col_03');
+                    if( $col_03 ): ?>
+											<ul class="amenities">
+												<?php foreach( $col_03 as $col_03 ): ?>
+													<li>
+														<?php echo $col_03; ?>
+													</li>
+												<?php endforeach; ?>
+											</ul>
+										<?php endif; ?>
+										</div>
+										<!-- Properties amenities end -->
+										<!-- Inside properties start -->
+										<!-- Inside properties end -->
+										<!-- Location start -->
+										<!-- Location end -->
+									</div>
+								</div>
+								<!-- Properties amenities end -->
+								<!-- Comments start -->
+								<!-- Comments end -->
+								<!-- Contact 1 start -->
+								<!-- Contact 1 end -->
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12">
+							<div class="sidebar-left" wp-include-template-part wp-include-template-part-slug="sidebar" wp-include-template-part-name="right">
+								<!-- Advanced search start -->
+								<div class="widget search-area advanced-search d-none d-xl-block d-lg-block">
 									<h3 class="sidebar-title">Advanced Search</h3>
 									<form method="GET">
 										<div class="form-group">
@@ -811,24 +871,109 @@ $cidade = get_field( 'cidade' );
 										</div>
 									</form>
 								</div>
+								<!-- Posts by category start -->
+								<div class="posts-by-category widget">
+									<h3 class="sidebar-title">Category</h3>
+									<ul class="list-unstyled list-cat">
+										<li>
+											<a href="#">Single Family <span>(45)</span></a>
+										</li>
+										<li>
+											<a href="#">Apartment <span>(21)</span> </a>
+										</li>
+										<li>
+											<a href="#">Condo <span>(23)</span></a>
+										</li>
+										<li>
+											<a href="#">Multi Family <span>(19)</span></a>
+										</li>
+										<li>
+											<a href="#">Villa <span>(19)</span></a> 
+										</li>
+										<li>
+											<a href="#">Other <span>(22) </span></a>
+										</li>
+									</ul>
+								</div>
+								<!-- Social media box start -->
+								<div class="social-media-box widget clearfix">
+									<h3 class="sidebar-title">Social Media</h3>
+									<ul class="social-list">
+										<li>
+											<a href="#" class="facebook-bg"> <i class="fa fa-facebook"></i> </a>
+										</li>
+										<li>
+											<a href="#" class="twitter-bg"> <i class="fa fa-twitter"></i> </a>
+										</li>
+										<li>
+											<a href="#" class="google-bg"> <i class="fa fa-google"></i> </a>
+										</li>
+										<li>
+											<a href="#" class="linkedin-bg"> <i class="fa fa-linkedin"></i> </a>
+										</li>
+										<li>
+											<a href="#" class="pinterest-bg"> <i class="fa fa-pinterest"></i> </a>
+										</li>
+									</ul>
+								</div>
+								<!-- Team 5 start -->
+								<div class="team-5 widget">
+									<h3 class="sidebar-title">Contact Agent</h3>
+									<div class="media">
+										<a href="agent-detail.html"> <img src="img/avatar/avatar-1.jpg" alt="avatar"> </a>
+										<div class="media-body align-self-center">
+											<h5> <a href="properties-details.html">John Antony</a> </h5>
+											<p><i class="flaticon-technology-1"></i><a href="agent-detail.html">1-8X0-666-8X88</a></p>
+											<p><i class="flaticon-envelope"></i><a href="tel:info@themevessel.com">info@themevessel.com</a></p>
+										</div>
+									</div>
+									<div class="media mb-0">
+										<a href="agent-detail.html"> <img src="img/avatar/avatar-2.jpg" alt="avatar"> </a>
+										<div class="media-body align-self-center">
+											<h5> <a href="properties-details.html">Karen Paran</a> </h5>
+											<p><i class="flaticon-technology-1"></i><a href="agent-detail.html">1-8X0-666-8X88</a></p>
+											<p><i class="flaticon-envelope"></i><a href="tel:info@themevessel.com">info@themevessel.com</a></p>
+										</div>
+									</div>
+								</div>
+								<!-- Financing calculator start -->
+								<div class="contact-1 financing-calculator widget">
+									<h5 class="sidebar-title">Mortgage Calculator</h5>
+									<form action="#" method="GET" enctype="multipart/form-data">
+										<div class="form-group">
+											<label class="form-label">Property Price</label>
+											<input type="text" class="form-control" placeholder="$24.400">
+										</div>
+										<div class="form-group">
+											<label class="form-label">Interest Rate (%)</label>
+											<input type="text" class="form-control" placeholder="12%">
+										</div>
+										<div class="form-group">
+											<label class="form-label">Period In Months</label>
+											<input type="text" class="form-control" placeholder="6 Months">
+										</div>
+										<div class="form-group">
+											<label class="form-label">Down PaymenT</label>
+											<input type="text" class="form-control" placeholder="$32,300">
+										</div>
+										<div class="form-group mb-0">
+											<button type="submit" class="btn button-theme btn-md btn-block">Cauculate</button>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- Main header end -->
-			<!-- Sub banner start -->
-			<!-- Sub Banner end -->
-			<!-- Properties details page start -->
-			<!-- Properties details page end -->
-			<!-- Footer start -->
-			<!-- Footer end -->
-			<!-- Full Page Search -->
-			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-			<!-- Custom javascript -->
 		</div>
+		<!-- Main header end -->
+		<!-- Sub banner start -->
+		<!-- Sub Banner end -->
+		<!-- Properties details page start -->
+		<!-- Properties details page end -->
 		<!-- Footer start -->
-		<footer class="footer site-footer" id="masterfooter">
+		<footer class="footer">
 			<div class="container footer-inner">
 				<div class="row">
 					<div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
@@ -839,11 +984,11 @@ $cidade = get_field( 'cidade' );
 									Address: 20/F Green Road, Dhanmondi, Dhaka
 </li>
 								<li>
-									Email:
+									Email: 
 									<a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
 								</li>
 								<li>
-									Phone:
+									Phone: 
 									<a href="tel:+55-417-634-7071">+0477 85X6 552</a>
 								</li>
 								<li>
@@ -858,7 +1003,10 @@ $cidade = get_field( 'cidade' );
 									<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
 								</li>
 								<li>
-									<a href="#" class="rss"><i class="fa fa-instagram"></i></a>
+									<a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+								</li>
+								<li>
+									<a href="#" class="rss"><i class="fa fa-rss"></i></a>
 								</li>
 								<li>
 									<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
@@ -867,30 +1015,30 @@ $cidade = get_field( 'cidade' );
 						</div>
 					</div>
 					<div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-						<div class="footer-item" wp-the-widget="WP_Widget_Pages" wp-the-widget-before-widget="<div class=&quot;footer-item&quot;>" wp-the-widget-after-widget="</div>" wp-the-widget-before-title="<h4>" wp-the-widget-after-title="</h4>" wp-the-widget-set="content">
+						<div class="footer-item">
 							<h4>
-              Useful Links </h4>
+                        Useful Links </h4>
 							<ul class="links">
 								<li>
-									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Home</a>
+									<a href="#"><i class="fa fa-angle-right"></i>Home</a>
 								</li>
 								<li>
-									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>About Us</a>
+									<a href="#"><i class="fa fa-angle-right"></i>About Us</a>
 								</li>
 								<li>
-									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Services</a>
+									<a href="#"><i class="fa fa-angle-right"></i>Services</a>
 								</li>
 								<li>
-									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>properties Details</a>
+									<a href="#"><i class="fa fa-angle-right"></i>properties Details</a>
 								</li>
 								<li>
-									<a href="login.html" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>My Account</a>
+									<a href="#"><i class="fa fa-angle-right"></i>My Account</a>
 								</li>
 								<li>
-									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>Privacy Policy</a>
+									<a href="#"><i class="fa fa-angle-right"></i>Privacy Policy</a>
 								</li>
 								<li>
-									<a href="#" rel="nofollow noreferrer noopener"><i class="fa fa-angle-right"></i>properties Details</a>
+									<a href="#"><i class="fa fa-angle-right"></i>properties Details</a>
 								</li>
 							</ul>
 						</div>
@@ -932,7 +1080,7 @@ $cidade = get_field( 'cidade' );
 							<h4>Subscribe</h4>
 							<div class="Subscribe-box">
 								<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-								<form action="#" method="GET" id="teste" cms-form="teste" cms-form-send-email="true">
+								<form action="#" method="GET">
 									<p> <input type="text" class="form-contact" name="email" placeholder="Enter Address"> </p>
 									<p> <button type="submit" name="submitNewsletter" class="btn btn-block button-theme">
 											Subscribe
@@ -944,7 +1092,7 @@ $cidade = get_field( 'cidade' );
 				</div>
 				<div class="row">
 					<div class="col-xl-12">
-						<p class="copy">© <?php echo date( 'Y' ); ?> <a href="#">Theme Vessel.</a> Trademarks and brands are the property of their respective owners.</p>
+						<p class="copy">© 2017 <a href="#">Theme Vessel.</a> Trademarks and brands are the property of their respective owners.</p>
 					</div>
 				</div>
 			</div>
@@ -953,12 +1101,11 @@ $cidade = get_field( 'cidade' );
 		<!-- Full Page Search -->
 		<div id="full-page-search">
 			<button type="button" class="close">×</button>
-			<form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<input type="search" value="<?php the_search_query(); ?>" placeholder="Procurando por algo" name="s" id="textsearch2"/>
-				<button class="btn btn-sm button-theme" id="searchsubmit" type="submit" value="&lt;?php esc_attr_e( 'Search', 'pam' ); ?&gt;" name="submit">Procurar</button>
+			<form action="http://theme-vessel-templates.theme-vessel.ey.r.appspot.com/real-house/index.html#">
+				<input type="search" value="" placeholder="type keyword(s) here"/>
+				<button type="submit" class="btn btn-sm button-theme">Search</button>
 			</form>
 		</div>
-		<!-- Full Page Search -->
 		<script src="js/jquery-2.2.0.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -980,7 +1127,9 @@ $cidade = get_field( 'cidade' );
 		<script src="js/jquery.countdown.js"></script>
 		<script src="js/maps.js"></script>
 		<script src="js/app.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="js/ie10-viewport-bug-workaround.js"></script>
+		<!-- Custom javascript -->
 		<script src="js/ie10-viewport-bug-workaround.js"></script>
 	</body>
 </html>
