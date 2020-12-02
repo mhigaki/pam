@@ -43,7 +43,7 @@ function pam_setup() {
     /* Pinegrow generated Image Sizes Begin */
 
     add_image_size( 'agents', 360, 300, true );
-    add_image_size( 'agent', 500, 600, true );
+    add_image_size( 'agent', 305, 365, true );
     /* Pinegrow generated Image Sizes End */
     
     /*
@@ -96,7 +96,6 @@ function pam_init() {
 		'hierarchical' => true,
 		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' ),
 		'has_archive' => true,
-		'show_in_rest' => true,
 		'show_in_menu' => true,
 		'menu_icon' => 'dashicons-admin-multisite',
 		'taxonomies' => array( 'category' )
@@ -248,11 +247,6 @@ function pam_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
-    $wp_customize->add_section( 'pam_sc_header', array(
-		'title' => __( 'Header', 'pam' ),
-		'panel' => 'pam_theme_settings'
-	));
-
     $wp_customize->add_section( 'pam_header', array(
 		'title' => __( 'Header', 'pam' ),
 		'panel' => 'pam_theme_settings',
@@ -313,53 +307,6 @@ function pam_customize_register( $wp_customize ) {
 		'priority' => '80'
 	));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
-
-    $wp_customize->add_setting( 'pam_sc_header_phone_lnk', array(
-		'type' => 'theme_mod',
-		'sanitize_callback' => $pgwp_sanitize
-	));
-
-    $wp_customize->add_control( 'pam_sc_header_phone_lnk', array(
-		'label' => __( 'Dados de Contato', 'pam' ),
-		'description' => __( 'Telefone Link', 'pam' ),
-		'type' => 'url',
-		'section' => 'pam_header'
-	));
-
-    $wp_customize->add_setting( 'pam_sc_header_phone', array(
-		'type' => 'theme_mod',
-		'sanitize_callback' => $pgwp_sanitize
-	));
-
-    $wp_customize->add_control( 'pam_sc_header_phone', array(
-		'description' => __( 'Telefone', 'pam' ),
-		'type' => 'text',
-		'section' => 'pam_header'
-	));
-
-    $wp_customize->add_setting( 'pam_sc_header_mail_link', array(
-		'type' => 'theme_mod',
-		'default' => __( 'mailto:contato@pamconsultoria.com.br', 'pam' ),
-		'sanitize_callback' => $pgwp_sanitize
-	));
-
-    $wp_customize->add_control( 'pam_sc_header_mail_link', array(
-		'description' => __( 'E-Mail Link', 'pam' ),
-		'type' => 'url',
-		'section' => 'pam_header'
-	));
-
-    $wp_customize->add_setting( 'pam_sc_header_mail', array(
-		'type' => 'theme_mod',
-		'default' => '<i class="fa fa-envelope"></i> contato@pamconsultoria.com.br',
-		'sanitize_callback' => $pgwp_sanitize
-	));
-
-    $wp_customize->add_control( 'pam_sc_header_mail', array(
-		'description' => __( 'E-Mail', 'pam' ),
-		'type' => 'text',
-		'section' => 'pam_header'
-	));
 
     $wp_customize->add_setting( 'pam_brand_logo', array(
 		'type' => 'theme_mod',
@@ -551,6 +498,8 @@ if ( ! function_exists( 'pam_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
+    wp_enqueue_script( 'pam-ieemulationmodeswarning', get_template_directory_uri() . '/js/ie-emulation-modes-warning.js', null, null, false );
+
     wp_enqueue_script( 'pam-popper', get_template_directory_uri() . '/js/popper.min.js', null, null, true );
 
     wp_enqueue_script( 'pam-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', null, null, true );
@@ -581,11 +530,13 @@ if ( ! function_exists( 'pam_enqueue_scripts' ) ) :
 
     wp_enqueue_script( 'pam-slick', get_template_directory_uri() . '/js/slick.min.js', null, null, true );
 
-    wp_enqueue_script( 'pam-jqueryfilterizr', get_template_directory_uri() . '/js/jquery.filterizr.js', null, null, true );
+    wp_enqueue_script( 'filter', get_template_directory_uri() . '/js/jquery.filterizr.js', null, null, true );
 
     wp_enqueue_script( 'pam-jquerymagnificpopup', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', null, null, true );
 
     wp_enqueue_script( 'pam-jquerycountdown', get_template_directory_uri() . '/js/jquery.countdown.js', null, null, true );
+
+    wp_enqueue_script( 'pam-ieviewportbugworkaround', get_template_directory_uri() . '/js/ie10-viewport-bug-workaround.js', null, null, true );
 
     /* Pinegrow generated Enqueue Scripts End */
 
@@ -620,6 +571,8 @@ if ( ! function_exists( 'pam_enqueue_scripts' ) ) :
     wp_enqueue_style( 'pam-red', get_template_directory_uri() . '/css/skins/red.css', null, null, 'all' );
 
     wp_enqueue_style( 'pam-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700', null, null, 'all' );
+
+    wp_enqueue_style( 'pam-ieviewportbugworkaround', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css', null, null, 'all' );
 
     wp_deregister_style( 'pam-style-1' );
     wp_enqueue_style( 'pam-style-1', get_bloginfo('stylesheet_url'), false, null, 'all');

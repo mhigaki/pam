@@ -15,61 +15,52 @@
 		</form>
 	</div>
 	<!-- Popular posts start -->
-	<div class="widget popular-posts">
-		<h3 class="sidebar-title"><?php _e( 'Popular Posts', 'pam' ); ?></h3>
-		<div class="media">
-			<div class="media-left">
-				<img class="media-object" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-7.jpg" alt="sub-properties">
-			</div>
-			<div class="media-body">
-				<h3 class="media-heading"> <a href="#"><?php _e( 'Modern Design Building', 'pam' ); ?></a> </h3>
-				<p><?php _e( '22 April, 2018', 'pam' ); ?></p>
-				<strong><?php _e( '$345,000', 'pam' ); ?></strong>
-			</div>
+	<?php
+		$post_query_args = array(
+			'post_type' => 'post',
+			'posts_per_page' => 5,
+			'paged' => get_query_var( 'paged' ) ?: 1,
+			'order' => 'DESC',
+			'orderby' => 'modified'
+		)
+	?>
+	<?php $post_query = new WP_Query( $post_query_args ); ?>
+	<?php if ( $post_query->have_posts() ) : ?>
+		<div class="widget popular-posts">
+			<h3 class="sidebar-title"><?php _e( 'Postagens Recentes', 'pam' ); ?></h3>
+			<?php while ( $post_query->have_posts() ) : $post_query->the_post(); ?>
+				<div <?php post_class( 'media' ); ?> id="post-<?php the_ID(); ?>">
+					<div class="media-left">
+						<?php echo PG_Image::getPostImage( null, 'thumbnail', array(
+								'class' => 'media-object'
+						), 'both', null ) ?>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"> <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a> </h3>
+						<p><?php the_modified_date(); ?></p>
+					</div>
+				</div>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
 		</div>
-		<div class="media">
-			<div class="media-left">
-				<img class="media-object" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-6.jpg" alt="sub-properties">
-			</div>
-			<div class="media-body">
-				<h3 class="media-heading"> <a href="#"><?php _e( 'Real Eatate Expo 2018', 'pam' ); ?></a> </h3>
-				<p><?php _e( '22 April, 2018', 'pam' ); ?></p>
-				<strong><?php _e( '$345,000', 'pam' ); ?></strong>
-			</div>
-		</div>
-		<div class="media">
-			<div class="media-left">
-				<img class="media-object" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/sub-properties/sub-properties-3.jpg" alt="sub-properties">
-			</div>
-			<div class="media-body">
-				<h3 class="media-heading"> <a href="#"><?php _e( 'Villa in Coral Gables', 'pam' ); ?></a> </h3>
-				<p><?php _e( '22 April, 2018', 'pam' ); ?></p>
-				<strong><?php _e( '$345,000', 'pam' ); ?></strong>
-			</div>
-		</div>
-	</div>
+	<?php endif; ?>
 	<!-- Posts by Start -->
-	<?php $terms = get_terms( array(
-			'taxonomy' => 'post_tag',
-			'orderby' => 'name',
-			'order' => 'ASC',
-			'hide_empty' => true
-	) ) ?>
 	<div class="posts-by-category widget">
-		<h3 class="sidebar-title"><?php _e( 'Category', 'pam' ); ?></h3>
-		<?php if( !empty( $terms ) ) : ?>
-			<ul class="list-unstyled list-cat">
-				<?php $term_i = 0; ?>
-				<?php foreach( $terms as $term ) : ?>
-					<?php if( $term_i >= 0 && $term_i <= 5 ) : ?>
-						<li>
-							<a href="<?php echo esc_url( get_term_link( $term ) ); ?>" rel="tag"><?php echo $term->name; ?></a>
-						</li>
-					<?php endif; ?>
-				<?php endforeach; ?>
-				<?php $term_i++; ?>
-			</ul>
-		<?php endif; ?>
+		<h3 class="sidebar-title"><?php _e( 'Categorias', 'pam' ); ?></h3>
+		<ul class="list-unstyled list-cat">
+			<?php wp_list_categories( array(
+					'orderby' => 'name',
+					'order' => 'ASC',
+					'style' => 'list',
+					'show_count' => true,
+					'use_desc_for_title' => false,
+					'hierarchical' => false,
+					'title_li' => '',
+					'number' => '5',
+					'current_category' => 'blog',
+					'taxonomy' => 'category'
+			) ); ?>
+		</ul>
 	</div>
 	<!-- Tags box Start -->
 	<div class="widget tags-box">

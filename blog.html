@@ -326,10 +326,10 @@
 			<div class="blog-body content-area">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-8 col-md-12" cms-post="query" cms-post-type="post" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-count="3" wp-if-have-posts cms-post-show-empty-text="false">
+						<div class="col-lg-8 col-md-12" cms-post="query" cms-post-type="post" cms-post-show-empty-text="false" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-count="3" cms-post-type-order="modified DESC">
 							<div class="blog-1" wp-loop-item wp-post-class wp-the-id>
 								<div class="blog-photo">
-									<img src="img/blog/blog-1.jpg" alt="blog-img" cms-post-image class="img-fluid" width="900" height="500">
+									<img src="img/blog/blog-1.jpg" alt="blog-img" class="img-fluid" width="900" height="500" wp-the-post-thumbnail="array(0,400),true" wp-the-post-thumbnail-if="true" wp-the-post-thumbnail-sizes="max-width(320px) 85vw, max-width(640px) 510px, max-width(768px) 90vw, max-width(1024px) 70vw, max-width(1280px) 730px, 730px">
 									<div class="profile-user">
 										<img src="img/avatar/avatar-1.jpg" alt="user" wp-get-avatar wp-get-avatar-size="45" width="45" height="45">
 									</div>
@@ -341,7 +341,7 @@
 												<strong cms-author-field="display_name" cms-author-field-type="content"><a href="#">Alex Teseira</a></strong>
 											</li>
 											<li class="mr-0">
-												<span wp-the-date="l, M, d, Y" wp-the-date-set="content" wp-the-date-show-same="true">Feb 31, 2018</span>
+												<span wp-the-modified-date wp-the-modified-date-set="content">Feb 31, 2018</span>
 											</li>
 											<li class="float-right mr-0" cms-no-export>
 												<i class="fa fa-commenting-o" wp-comments-title wp-comments-title-set="after" wp-comments-title-multiple="%1$s"></i>
@@ -353,20 +353,20 @@
 									</div>
 									<h3> <a href="blog-single-sidebar-right.html" cms-post-link wp-the-title rel="nofollow noreferrer noopener">Buying a Best House</a> </h3>
 									<p wp-get-the-excerpt>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with</p>
-									<a class="read-more" href="blog-single-sidebar-right.html" cms-post-link rel="nofollow noreferrer noopener">Saiba Mais</a>
+									<a class="read-more" href="blog-single-sidebar-right.html" rel="nofollow noreferrer noopener">Saiba Mais</a>
 								</div>
 							</div>
 							<div class="pagination-box hidden-mb-45 text-center">
 								<nav aria-label="Page navigation example">
-									<ul class="pagination" cms-pagination cms-pagination-fields cms-pagination-repeat-item="> li:nth-of-type(2)" cms-pagination-prev="> li:nth-of-type(1) > .page-link" cms-pagination-next="> li:nth-of-type(3) > .page-link" cms-pagination-field-hide cms-pagination-repeat-item-active-class="active">
+									<ul class="pagination" wp-if-custom="PG_Pagination::isPaginated()">
 										<li class="page-item">
-											<a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
+											<a class="page-link" href="#" wp-pagination-field wp-pagination-field-item="prev_link" wp-pagination-field-query wp-pagination-field-if><i class="fa fa-angle-left"></i></a>
 										</li>
-										<li class="active page-item">
+										<li class="active page-item" wp-pagination-field wp-pagination-field-query wp-pagination-field-active-class="active" wp-pagination-field-item="repeat">
 											<a class="page-link" href="#">#</a>
 										</li>
 										<li class="page-item">
-											<a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+											<a class="page-link" href="#" wp-pagination-field wp-pagination-field-item="next_link" wp-pagination-field-query wp-pagination-field-if><i class="fa fa-angle-right"></i></a>
 										</li>
 									</ul>
 								</nav>
@@ -388,19 +388,19 @@
 									</form>
 								</div>
 								<!-- Popular posts start -->
-								<div class="widget popular-posts">
-									<h3 class="sidebar-title">Popular Posts</h3>
+								<div class="widget popular-posts" cms-post="query" cms-post-type="post" cms-post-type-count="5" cms-post-show-empty-text="false" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-order="modified DESC">
+									<h3 class="sidebar-title">Postagens Recentes</h3>
 									<div class="media">
 										<div class="media-left">
-											<img class="media-object" src="img/sub-properties/sub-properties-7.jpg" alt="sub-properties">
+											<img class="media-object" src="img/sub-properties/sub-properties-7.jpg" alt="sub-properties" cms-post-image="thumbnail">
 										</div>
 										<div class="media-body">
-											<h3 class="media-heading"> <a href="#">Modern Design Building</a> </h3>
-											<p>22 April, 2018</p>
-											<strong>$345,000</strong>
+											<h3 class="media-heading"> <a href="#" cms-post-link wp-the-title>Modern Design Building</a> </h3>
+											<p wp-the-modified-date wp-the-modified-date-set="content">22 April, 2018</p>
+											<strong cms-no-export>$345,000</strong>
 										</div>
 									</div>
-									<div class="media">
+									<div class="media" cms-no-export>
 										<div class="media-left">
 											<img class="media-object" src="img/sub-properties/sub-properties-6.jpg" alt="sub-properties">
 										</div>
@@ -410,7 +410,7 @@
 											<strong>$345,000</strong>
 										</div>
 									</div>
-									<div class="media">
+									<div class="media" cms-no-export>
 										<div class="media-left">
 											<img class="media-object" src="img/sub-properties/sub-properties-3.jpg" alt="sub-properties">
 										</div>
@@ -422,10 +422,10 @@
 									</div>
 								</div>
 								<!-- Posts by Start -->
-								<div class="posts-by-category widget" cms-site-terms-item-count=".list-unstyled > li:nth-of-type(1) > a > span" cms-site-terms-item-name=".list-unstyled > li:nth-of-type(1) > a" cms-site-terms-item=".list-unstyled > li:nth-of-type(1)" cms-site-terms-items=".list-unstyled" cms-site-terms-range="0-5" cms-site-terms-register-types="properties" cms-site-terms-register-name-plural="Testes" cms-site-terms-register-name="Teste" cms-site-terms="post_tag">
-									<h3 class="sidebar-title">Category</h3>
+								<div class="posts-by-category widget">
+									<h3 class="sidebar-title">Categorias</h3>
 									<ul class="list-unstyled list-cat">
-										<li>
+										<li wp-list-categories wp-list-categories-orderby="name" wp-list-categories-order="ASC" wp-list-categories-style="list" wp-list-categories-use-desc-for-title="false" wp-list-categories-title-li="''" wp-list-categories-show-count="true" wp-list-categories-number="5" wp-list-categories-current-category="blog" wp-list-categories-hierarchical="false" wp-list-categories-taxonomy="category">
 											<a href="#">Single Family <span>(45)</span></a>
 										</li>
 										<li cms-no-export wp-hide>

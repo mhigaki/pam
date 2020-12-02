@@ -294,7 +294,7 @@ $cidade = get_field( 'cidade' ); ?>
                                                             </li>
                                                             <li>
                                                                 <strong><?php _e( 'Preço:', 'pam' ); ?></strong>
-                                                                <?php echo get_field( 'preco' ); ?>
+                                                                <?php echo get_field( 'valor' ); ?>
                                                             </li>
                                                             <li>
                                                                 <strong><?php _e( 'Property Type:', 'pam' ); ?></strong>
@@ -323,7 +323,7 @@ $cidade = get_field( 'cidade' ); ?>
                                                                 </li>
                                                             <?php endif; ?>
                                                             <li>
-                                                                <strong><?php _e( 'Land area:', 'pam' ); ?></strong>
+                                                                <strong><?php _e( 'Área Construída:', 'pam' ); ?></strong>
                                                                 <?php _e( '230 ft2', 'pam' ); ?>
                                                             </li>
                                                             <li>

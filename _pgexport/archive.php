@@ -1,9 +1,14 @@
+<?php
+/*
+ The template for displaying: Archive Pages.
+ */
+?>
 <?php get_header(); ?>
 
 <div class="sub-banner">
     <div class="container">
         <div class="page-name">
-            <h1><?php wp_title(); ?></h1>
+            <h1><?php post_type_archive_title(); ?></h1>
         </div>
     </div>
     <div class="page-info">
@@ -11,21 +16,19 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="breadcrumb-area">
-                        <?php $breadcrumbs = PG_Helper::getBreadcrumbs( 'categories', true, 'Home'); ?>
+                        <?php $breadcrumbs = PG_Helper::getBreadcrumbs( 'parents', true, 'Home'); ?>
                         <?php if( !empty( $breadcrumbs ) ) : ?>
-                            <ul cms-breadcrumbs-home cms-breadcrumbs-separator="span" cms-breadcrumbs-last-item="> li:nth-of-type(2)" cms-breadcrumbs-last-item-name="> li:nth-of-type(2)">
+                            <ul cms-breadcrumbs-home cms-breadcrumbs-last-item="> li:nth-of-type(1)" cms-breadcrumbs-last-item-name="a">
+                                <?php $breadcrumb = $breadcrumbs[ count( $breadcrumbs ) - 1 ]; ?>
                                 <li>
                                     <?php for( $breadcrumbs_i = 0; $breadcrumbs_i < count( $breadcrumbs ) - 1; $breadcrumbs_i++) : ?>
                                         <?php $breadcrumb = $breadcrumbs[ $breadcrumbs_i ]; ?>
                                         <a href="<?php echo esc_url( $breadcrumb[ 'link' ] ); ?>"><?php echo $breadcrumb[ 'name' ]; ?></a>
-                                        <?php if( $breadcrumbs_i < count( $breadcrumbs ) - 1 ) : ?>
-                                            <span>/</span>
-                                        <?php endif; ?>
                                     <?php endfor; ?>
                                 </li>
-                                <?php $breadcrumb = $breadcrumbs[ count( $breadcrumbs ) - 1 ]; ?>
                                 <li>
-                                    <?php echo $breadcrumb[ 'name' ]; ?>
+                                    <span>/</span>
+                                    <?php _e( 'Properties Listing', 'pam' ); ?>
                                 </li>
                             </ul>
                         <?php endif; ?>
@@ -48,44 +51,34 @@
         </div>
     </div>
 </div>
-<div class="properties-section content-area">
+<div class="blog-body content-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 <!-- Option bar start -->
                 <div class="option-bar d-none d-xl-block d-lg-block d-md-block d-sm-block">
                     <div class="row">
-                        <div class="col-lg-6 col-md-7 col-sm-7 col-xs-10 cod-pad">
-                            <div class="sorting-options2">
-                                <?php the_widget( 'WP_Widget_Archives', array(
-                                    	'title' => __( 'Order by:', 'pam' ),
-                                    	'count' => true,
-                                    	'dropdown' => true
-                                    ), array(
-                                    	'before_widget' => '<div class="sorting-options2">',
-                                    	'after_widget' => '</div>',
-                                    	'before_title' => '<span>',
-                                    	'after_title' => '</span>'
-                                ) ); ?>
-                            </div>
+                        <div class="col-md-7 col-sm-7 col-xs-10 cod-pad">
+                            <?php the_widget( 'WP_Widget_Archives', array(
+                                	'title' => __( 'Ordenar por:', 'pam' ),
+                                	'count' => true,
+                                	'dropdown' => true
+                                ), array(
+                                	'before_widget' => '<div class="sorting-options2">',
+                                	'after_widget' => '</div>',
+                                	'before_title' => '<span>',
+                                	'after_title' => '<span>'
+                            ) ); ?>
                         </div>
                     </div>
                 </div>
                 <!-- Option bar end -->
                 <!-- Property box 2 start -->
-                <?php
-                    $arquivos_args = array(
-                    	'post_type' => 'properties',
-                    	'posts_per_page' => 4,
-                    	'posts_per_archive_page' => '4'
-                    )
-                ?>
-                <?php $arquivos = new WP_Query( $arquivos_args ); ?>
-                <?php if ( $arquivos->have_posts() ) : ?>
-                    <div <?php post_class( 'row' ); ?> id="post-<?php the_ID(); ?>">
-                        <?php while ( $arquivos->have_posts() ) : $arquivos->the_post(); ?>
+                <?php if ( have_posts() ) : ?>
+                    <div <?php post_class( 'row' ); ?>>
+                        <?php while ( have_posts() ) : the_post(); ?>
                             <div class="col-lg-6 col-md-6">
-                                <div class="blog-1">
+                                <div class="blog-1" id="post-<?php the_ID(); ?>">
                                     <div class="blog-photo">
                                         <?php echo PG_Image::getPostImage( null, 'large', array(
                                             	'class' => 'img-fluid'
@@ -114,12 +107,11 @@
                                             </ul>
                                         </div>
                                         <h3> <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a> </h3>
-                                        <p><?php echo get_the_excerpt(); ?></p>
+                                        <p><?php echo wp_trim_words( get_the_content(), 15, ' ... ' ); ?></p>
                                     </div>
                                 </div>
                             </div>
                         <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
                     </div>
                 <?php endif; ?>
                 <!-- properties 2 end -->

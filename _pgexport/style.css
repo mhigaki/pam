@@ -5,11 +5,12 @@ Author: MNH
 Author URI: http://higatech.xyz/
 Description: PAM Consultoria - Consultoria de imóveis
 Version: 2.0
-Requires PHP: 7.3
+Requires PHP: 7.0
 Tested up to: 5.5.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pam
+* Tags: widgets, css
 */
 .wp-caption {
 }

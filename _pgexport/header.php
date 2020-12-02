@@ -3,9 +3,6 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="<?php bloginfo( 'charset' ); ?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie10-viewport-bug-workaround.css">
-        <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/ie-emulation-modes-warning.js"></script>
-        <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/ie-emulation-modes-warning.js"></script>
         <meta name="author" content="MNH">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <?php wp_head(); ?>
@@ -14,18 +11,14 @@
         <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>
         <div class="page_loader"></div>
         <?php if ( !is_404() ) : ?>
-            <header id="masterhead" class="site-header">
+            <header class="site-header">
                 <div class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 col-md-8 col-sm-7">
                                 <div class="list-inline">
-                                    <?php if( get_theme_mod( 'pam_sc_header_phone_lnk' ) ) : ?>
-                                        <a href="<?php echo get_theme_mod( 'pam_sc_header_phone_lnk', 'tel:5511941101331' ); ?>" rel="nofollow noreferrer noopener" target="_self"><?php echo get_theme_mod( 'pam_sc_header_phone', '<i class="fa fa-phone"></i> +55 11 93030-5500' ); ?></a>
-                                    <?php endif; ?>
-                                    <?php if( get_theme_mod( 'pam_sc_header_mail_link' ) ) : ?>
-                                        <a href="<?php echo get_theme_mod( 'pam_sc_header_mail_link', 'mailto:milton.higaki@gmail.com' ); ?>" rel="nofollow noreferrer noopener" target="_self"><?php echo get_theme_mod( 'pam_sc_header_mail', '<i class="fa fa-envelope"></i> milton.higaki@gmail.com' ); ?></a>
-                                    <?php endif; ?>
+                                    <a href="#"><i class="fa fa-phone"></i></a>
+                                    <a href="#"><i class="fa fa-envelope"></i></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-4 col-sm-5">
@@ -64,4 +57,4 @@
                 </div>
             </header>
         <?php endif; ?>
-        <div id="main" class="site-main">
+        <main>

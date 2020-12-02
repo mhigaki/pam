@@ -1,8 +1,8 @@
 
-        </div>
+        </main>
         <!-- Footer start -->
         <?php if ( !is_404() ) : ?>
-            <footer class="footer site-footer" id="masterfooter">
+            <footer class="footer site-footer">
                 <div class="container footer-inner">
                     <div class="row">
                         <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
@@ -142,8 +142,6 @@
         <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-2.2.0.min.js"></script>
         <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/maps.js"></script>
         <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/app.js"></script>
-        <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/ie10-viewport-bug-workaround.js"></script>
-        <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/ie10-viewport-bug-workaround.js"></script>
         <?php wp_footer(); ?>
     </body>
 </html>

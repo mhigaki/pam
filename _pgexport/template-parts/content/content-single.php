@@ -8,7 +8,7 @@
 						<div class="blog-1 blog-big">
 							<?php echo PG_Image::getPostImage( null, 'large', array(
 									'class' => 'img-fluid'
-							), 'both', null ) ?>
+							), null, null ) ?>
 							<div class="blog-photo">
 								<div class="profile-user">
 									<?php echo get_avatar( get_the_author_meta( 'ID' ), '45' ); ?>
@@ -22,10 +22,6 @@
 										</li>
 										<li class="mr-0">
 											<span><?php echo get_the_time( get_option( 'date_format' ) ) ?></span>
-										</li>
-										<li class="float-right mr-0">
-											<i class="fa fa-commenting-o"></i>
-											<?php printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s', get_comments_number(), 'comments title', 'pam' ), number_format_i18n( get_comments_number() ), get_the_title() ); ?>
 										</li>
 										<li class="float-right">
 											<i class="fa fa-calendar"></i>

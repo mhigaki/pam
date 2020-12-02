@@ -3732,13 +3732,12 @@ footer {
 }
 
 /* * CATEGORY AREA START * */
-.category {
+/* .category {
     overflow: hidden;
     position: relative;
     text-align: center;
     margin: 0 0 15px 0;
-}
-
+} */
 .category:hover:before {
     position: absolute;
     top: 0;
@@ -3747,7 +3746,8 @@ footer {
     height: 100%;
     display: block;
     content: "";
-    background-color: #000;
+
+    /* background-color: #000 */
     opacity: 0.4;
     z-index: -11;
     transition: 0.3s ease-out;
@@ -7823,9 +7823,3 @@ table th {
         height: 316px;
     }
 }
-
-
-
-
-
-

@@ -9,13 +9,13 @@
 <div class="sub-banner">
     <div class="container">
         <div class="page-name">
-            <h1><?php wp_title( '' ); ?></h1>
+            <h1><?php wp_title( '&raquo;', true, 'LEFT' ); ?></h1>
         </div>
     </div>
     <div class="page-info">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="breadcrumb-area">
                         <?php $breadcrumbs = PG_Helper::getBreadcrumbs( 'parents', true, 'Home'); ?>
                         <?php if( !empty( $breadcrumbs ) ) : ?>
@@ -37,14 +37,11 @@
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="contact-info">
                         <ul>
                             <li>
-                                <?php if( get_theme_mod( 'sub-banner_telefone' ) ) : ?>
-                                    <i class="fa fa-phone"></i>
-                                    <?php echo get_theme_mod( 'sub-banner_telefone' ); ?>
-                                <?php endif; ?>
+                                <i class="fa fa-phone"></i>
                             </li>
                             <li>
                                 <a href="contact.html" class="btn btn-md button-theme"><?php _e( 'Contact us', 'pam' ); ?></a>
@@ -66,7 +63,7 @@
                     <div class="media">
                         <i class="flaticon-technology-1"></i>
                         <div class="media-body">
-                            <h5 class="mt-0"><?php _e( 'Phone:', 'pam' ); ?></h5>
+                            <h5 class="mt-0"><?php _e( 'Telefone:', 'pam' ); ?></h5>
                             <p><?php echo get_field( 'telefone' ); ?></p>
                         </div>
                     </div>

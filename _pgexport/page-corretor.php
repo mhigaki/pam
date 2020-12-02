@@ -78,7 +78,7 @@
                     <div <?php post_class( 'col-xl-4 col-lg-4 col-md-6 col-sm-6' ); ?> id="post-<?php the_ID(); ?>">
                         <div class="team-2">
                             <div class="team-photo">
-                            <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php $image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id( '0' ), 'corretor' );
+                            <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php $image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id( '0' ), 'medium' );
 if( $image_attributes ) : ?><img src="<?php echo $image_attributes[0]; ?>" alt="avatar-4" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" class="img-fluid"><?php endif; ?> </a>
                             </div>
                             <div class="team-details">

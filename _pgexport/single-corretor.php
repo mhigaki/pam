@@ -10,8 +10,9 @@
                 <div <?php post_class( 'row team-4' ); ?> id="corretor-<?php the_ID(); ?>">
                     <div class="col-xl-5 col-lg-5 col-md-5 col-pad ">
                         <div class="photo">
-                            <?php echo PG_Image::getPostImage( null, 'corretor', array(
-                                	'class' => 'img-fluid'
+                            <?php echo PG_Image::getPostImage( null, 'medium', array(
+                                	'class' => 'img-fluid',
+                                	'sizes' => 'max-width(320px) 84vw, max-width(640px) 508px, max-width(768px) 70vw, max-width(1024px) 29vw, max-width(1280px) 303px, 303px'
                             ), null, null ) ?>
                         </div>
                     </div>
