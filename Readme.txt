@@ -1,60 +1,11 @@
 # Desenvolvimento Web
 
-Tema devenvolvido e convertido para Wordpress
-
+Tema HTML5 desenvolvido e convertido para Wordpress
 Tema: PAM Consultoria
 
-## Sobre
+## WordPress modelos comuns
 
-Importante a criação de Pagina:
-
-Empresa
-	Serviços
-	Contato
-	Corretores
-	
-* Associar o modelo de acordo com o assunto das páginas:-
-
-	Serviço > Modelo Serviços
-
-# Features
-
-- SASS: Utilizes the SASS sources from all assets as well as own SASS files. Makes it easy to replace colors, fonts, stylings etc. directly from Pinegrow visual CSS editor. (Learn more about how-to easily [Customize Bootstrap 4](https://pinegrow.com/docs/bootstrap-visual-editor/customize-bootstrap-4-themes/) with Pinegrow.)
-- Options Panel: Let you add custom code right from your WordPress customization panel. You can also control the slider settings.
-- Jetpack ready: Comes with basic theme support for the famous plugin bundle by Automattic. No extra styles or settings but you can use both in combination.
-- WooCommerce support: The WordPress Starter Theme supports WooCommerce plugin. WooCommerce is the #1 e-commerce system for WordPress (more than 1.000.000 active installs).
-- Template parts
-- Built-in slider: Standard Bootstrap 4.x slider component.
-- Dedicated page templates for Page Builders plugins.
-- Many useful extra utility features are directly included (security hotfix, "emojis" remover and more ...) > see inc/custom.php
-- Default Theme export fully validated via the Theme Check plugin. [https://fr.wordpress.org/plugins/theme-check/](https://fr.wordpress.org/plugins/theme-check/)
-- Released under GNU General Public License v2, The WordPress Starter Theme 2 is free to use for personal and commercial projects which are compatible with this license.
-- And more ...
-
-# What are the benefits of using the WordPress Starter Theme?
-
-- Skip the boring parts of theme development: all standard templates and boilerplate code are ready. The Starter Theme lets you go straight to building and customising your theme.
-- The Starter Theme lets you use a visual approach to designing and coding WordPress themes through the power of Pinegrow’s tools for visually editing HTML and CSS.
-- The Starter Theme uses template parts (a WordPress recommended best practice).
-- The most common templates from the WordPress template hierarchy are immediately available as well as basic templates for the most popular e-commerce plugins: WooCommerce.
-- There is no CSS bloat. The CSS is intentionally minimalist and is not meant to be awesome. It only provides what is necessary fora basic display of the default layout + the WordPress CSS essentials. With Pinegrow, you can easily customize the theme.css to fit your needs.
-- The Starter Theme is fully compliant with the WordPress theme guidelines.
-- You can use the Starter Theme to create as many projects as you want and distribute them in any way you please.
-
-# What is inside the package?
-
-- Partial templates
-- Minimum CSS styling to ease customization
-- Common templates and custom page templates (see list below)
-- Basic Woocommerce store
-- Jetpack ready
-- Fully cutomizable (layout, CSS  with SASS version included, features…)
-- 100% Bootstrap (Currently v4.2.1)
-- Translation ready / I18n
-
-## WordPress common templates
-
-Read more about [WordPress common templates](https://developer.wordpress.org/themes/basics/template-files/) and the [WordPress templates hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+Saiba mais sobre ==> [WordPress common templates](https://developer.wordpress.org/themes/basics/template-files/) and the [WordPress templates hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
 
 - index.html > index.php
 - archive.html > archive.php
@@ -64,39 +15,29 @@ Read more about [WordPress common templates](https://developer.wordpress.org/the
 - search.html > search.php
 - woocommerce.html > woocommerce.php
 
-## Custom Page templates
+## Modelo > Páginas Perosonalizadas
 
-- page-woocommerce.html > page-woocommerce.php (page template)
-- page-without-sidebars.html > page-without-sidebars.php (page template)
-- page-builders-canvas.html > page-builders-canvas.php (page template)
-- page-builders-full-width.html > page-builders-full-width.php (page template)
+- page-empresa.html 		> page-empresa.php (page template)
+- page-servicos.html 		> page-servicos.php (page template)
+- page-contato.html 		> page-contato.php (page template)
+- page-corretores.html 	> page-corretores.php (page template)
 
+# Como usar o template tema: PAM Consultoria
 
+O processo é bastante simples: basta puxar o projeto em seu computador (usando um cliente Git ou baixando o arquivo zip) e começar a ajustar os arquivos (layout, css, mais ações wordpress ...) de acordo com suas necessidades e gosto usando Pinegrow PRO/WP e ... exporte seu tema!
 
-# How-to use the WordPress Starter Theme 2
+Leia a documentação [AQUI](https://github.com/mhigaki/pam/wiki)
+Download - (https://github.com/mhigaki/pam.git)
 
-The process is fairly simple: Just pull the project on your computer (using a Git client or by downloading the zip file) and start tweaking the files (layout, css, more wordpress actions ...) as per your needs & liking using Pinegrow PRO/WP and ... export your theme!
+# Plugins Recomendados:
 
-Read the documentation [HERE](https://github.com/Pinegrow/PGWPBootstrap4StarterTheme/wiki) 
-
-
-# Recommended Plugins
-
-- Widget Logic [https://wordpress.org/plugins/widget-logic/](https://wordpress.org/plugins/widget-logic/)
+- Advanced Custom Fields
+- What Template
+- Theme Check
+- ACF Theme Code
+- Classic Editor classic-editor
 
 # License
+
 The WordPress Starter Theme is created by the Pinegrow Team and is distributed under the terms of the GNU GPL version 2
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-
-# Credits
-- Understrap: [https://understrap.com](https://understrap.com)
-- WooCommerce: [https://woocommerce.com/](https://woocommerce.com/)
-- Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
-- _s (aka underscores): [https://underscores.me/](https://underscores.me//)
-- jQuery: https://jquery.org | (Code licensed under MIT)
-
-# How-to contribute to the code and provide fixes and/or features?
-
-See our [Contribution Guidelines](https://github.com/Pinegrow/PGWPBootstrap4StarterTheme/blob/master/CONTRIBUTING.md), [Code of conduct](https://github.com/Pinegrow/PGWPBootstrap4StarterTheme/blob/master/CODE-OF-CONDUCT.md) and [Issue Template](https://github.com/Pinegrow/PGWPBootstrap4StarterTheme/blob/master/ISSUE_TEMPLATE.md).
-
-
