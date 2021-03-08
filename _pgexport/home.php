@@ -31,23 +31,23 @@
     <div class="container">
         <div class="row">
             <?php
-                $post_query_args = array(
-                	'post_type' => 'post',
-                	'posts_per_page' => 3,
-                	'paged' => get_query_var( 'paged' ) ?: 1,
-                	'order' => 'DESC',
-                	'orderby' => 'modified'
+                $post_blog_args = array(
+                  'post_type' => 'post',
+                  'posts_per_page' => 4,
+                  'paged' => get_query_var( 'paged' ) ?: 1,
+                  'order' => 'DESC',
+                  'orderby' => 'date'
                 )
             ?>
-            <?php $post_query = new WP_Query( $post_query_args ); ?>
-            <?php if ( $post_query->have_posts() ) : ?>
+            <?php $post_blog = new WP_Query( $post_blog_args ); ?>
+            <?php if ( $post_blog->have_posts() ) : ?>
                 <div class="col-lg-8 col-md-12">
-                    <?php while ( $post_query->have_posts() ) : $post_query->the_post(); ?>
+                    <?php while ( $post_blog->have_posts() ) : $post_blog->the_post(); ?>
                         <div <?php post_class( 'blog-1' ); ?> id="post-<?php the_ID(); ?>">
                             <div class="blog-photo">
                                 <?php echo PG_Image::getPostImage( null, array(0,400),true, array(
-                                    	'class' => 'img-fluid',
-                                    	'sizes' => 'max-width(320px) 85vw, max-width(640px) 510px, max-width(768px) 90vw, max-width(1024px) 70vw, max-width(1280px) 730px, 730px'
+                                      'class' => 'img-fluid',
+                                      'sizes' => 'max-width(320px) 85vw, max-width(640px) 510px, max-width(768px) 90vw, max-width(1024px) 70vw, max-width(1280px) 730px, 730px'
                                 ), null, null ) ?>
                                 <div class="profile-user">
                                     <?php echo get_avatar( get_the_author_meta( 'ID' ), '45' ); ?>
@@ -81,17 +81,17 @@
                                 <ul class="pagination">
                                     <li class="page-item">
                                         <?php if( PG_Pagination::getCurrentPage() > 1 ) : ?>
-                                            <a class="page-link" <?php echo PG_Pagination::getPreviousHrefAttribute(); ?>><i class="fa fa-angle-left"></i></a>
+                                            <a class="page-link" <?php echo PG_Pagination::getPreviousHrefAttribute( $post_blog ); ?>><i class="fa fa-angle-left"></i></a>
                                         <?php endif; ?>
                                     </li>
-                                    <?php for( $page_num = 1; $page_num <= PG_Pagination::getMaxPages(); $page_num++) : ?>
+                                    <?php for( $page_num = 1; $page_num <= PG_Pagination::getMaxPages( $post_blog ); $page_num++) : ?>
                                         <li class="<?php if( $page_num == PG_Pagination::getCurrentPage() ) echo 'active'; ?> page-item">
                                             <a class="page-link" href="<?php echo esc_url( get_pagenum_link( $page_num ) ) ?>"><?php echo $page_num ?></a>
                                         </li>
                                     <?php endfor; ?>
                                     <li class="page-item">
-                                        <?php if( PG_Pagination::getCurrentPage() < PG_Pagination::getMaxPages() ) : ?>
-                                            <a class="page-link" <?php echo PG_Pagination::getNextHrefAttribute(); ?>><i class="fa fa-angle-right"></i></a>
+                                        <?php if( PG_Pagination::getCurrentPage() < PG_Pagination::getMaxPages( $post_blog ) ) : ?>
+                                            <a class="page-link" <?php echo PG_Pagination::getNextHrefAttribute( $post_blog ); ?>><i class="fa fa-angle-right"></i></a>
                                         <?php endif; ?>
                                     </li>
                                 </ul>
@@ -101,7 +101,7 @@
                 </div>
             <?php endif; ?>
             <div class="col-lg-4 col-md-12">
-                <?php get_template_part( 'sidebar', 'right' ); ?>
+                <?php get_sidebar( 'right' ); ?>
             </div>
         </div>
     </div>

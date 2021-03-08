@@ -61,10 +61,10 @@
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <?php
                             $sliders_query_args = array(
-                            	'post_type' => 'sliders',
-                            	'post_status' => 'publish',
-                            	'nopaging' => true,
-                            	'posts_per_page' => 3
+                              'post_type' => 'sliders',
+                              'post_status' => 'publish',
+                              'nopaging' => true,
+                              'posts_per_page' => 3
                             )
                         ?>
                         <?php $sliders_query = new WP_Query( $sliders_query_args ); ?>
@@ -74,7 +74,7 @@
                                 <?php while ( $sliders_query->have_posts() ) : $sliders_query->the_post(); ?>
                                     <div class="carousel-item<?php if( $sliders_query_item_number == 0) echo ' active'; ?>">
                                         <?php echo PG_Image::getPostImage( null, 'large', array(
-                                            	'class' => 'd-block w-100'
+                                              'class' => 'd-block w-100'
                                         ), 'both', null ) ?>
                                     </div>
                                     <?php $sliders_query_item_number++; ?>
@@ -95,6 +95,8 @@
             </div>
         </div>
     </div>
-</div>            
+</div>
+<?php get_template_part( 'template-parts/content/content-area', 'services' ); ?>
+<?php get_template_part( 'template-parts/content/content-area', 'team-2' ); ?>
 
 <?php get_footer(); ?>

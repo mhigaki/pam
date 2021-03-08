@@ -67,12 +67,12 @@
             <div class="col-lg-8">
                 <?php
                     $servicos_query_args = array(
-                    	'post_type' => 'servicos',
-                    	'post_status' => 'publish',
-                    	'posts_per_page' => 6,
-                    	'order' => 'ASC',
-                    	'orderby' => 'rand',
-                    	'cache_results' => false
+                      'post_type' => 'servicos',
+                      'post_status' => 'publish',
+                      'posts_per_page' => 6,
+                      'order' => 'ASC',
+                      'orderby' => 'rand',
+                      'cache_results' => false
                     )
                 ?>
                 <?php $servicos_query = new WP_Query( $servicos_query_args ); ?>

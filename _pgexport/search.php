@@ -20,7 +20,7 @@
                             <div <?php post_class( 'col-lg-6 col-md-6' ); ?> id="post-<?php the_ID(); ?>">
                                 <div class="blog-1 blog-big">
                                     <?php echo PG_Image::getPostImage( null, 'large', array(
-                                        	'class' => 'img-fluid'
+                                          'class' => 'img-fluid'
                                     ), 'both', null ) ?>
                                     <div class="blog-photo">
                                         <div class="profile-user">

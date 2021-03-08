@@ -26,10 +26,10 @@
                                 </ul>
                                 <?php if ( has_nav_menu( 'social' ) ) : ?>
                                     <?php wp_nav_menu( array(
-                                        	'menu' => 'social',
-                                        	'menu_class' => 'social-list clearfix',
-                                        	'container' => '',
-                                        	'theme_location' => 'social'
+                                          'menu' => 'social',
+                                          'menu_class' => 'social-list clearfix',
+                                          'container' => '',
+                                          'theme_location' => 'social'
                                     ) ); ?>
                                 <?php endif; ?>
                             </div>
@@ -100,8 +100,8 @@
                                     <p><?php _e( 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.', 'pam' ); ?></p>
                                     <?php $mailer = new PG_Simple_Form_Mailer(); ?>
                                     <?php $mailer->process( array(
-                                        	'form_id' => 'teste_mailer_id',
-                                        	'send_to_email' => true
+                                          'form_id' => 'teste_mailer_id',
+                                          'send_to_email' => true
                                     ) ); ?>
                                     <?php if( !$mailer->processed || $mailer->error) : ?>
                                         <form action="<?php echo '#teste_mailer_id'; ?>" method="post" id="teste_mailer_id" onsubmit="event.stopImmediatePropagation();event.stopPropagation();">

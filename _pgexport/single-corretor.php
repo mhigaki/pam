@@ -11,8 +11,8 @@
                     <div class="col-xl-5 col-lg-5 col-md-5 col-pad ">
                         <div class="photo">
                             <?php echo PG_Image::getPostImage( null, 'medium', array(
-                                	'class' => 'img-fluid',
-                                	'sizes' => 'max-width(320px) 84vw, max-width(640px) 508px, max-width(768px) 70vw, max-width(1024px) 29vw, max-width(1280px) 303px, 303px'
+                                  'class' => 'img-fluid',
+                                  'sizes' => 'max-width(320px) 84vw, max-width(640px) 508px, max-width(768px) 70vw, max-width(1024px) 29vw, max-width(1280px) 303px, 303px'
                             ), null, null ) ?>
                         </div>
                     </div>
@@ -92,9 +92,9 @@
                         <h3 class="sidebar-title"><?php _e( 'Mande uma mensagem', 'pam' ); ?></h3>
                         <?php $mailer = new PG_Simple_Form_Mailer(); ?>
                         <?php $mailer->process( array(
-                            	'form_id' => 'reviews_mailer_id',
-                            	'send_to_email' => true,
-                            	'title' => 'Fale com o Corretor'
+                              'form_id' => 'reviews_mailer_id',
+                              'send_to_email' => true,
+                              'title' => 'Fale com o Corretor'
                         ) ); ?>
                         <?php if( !$mailer->processed || $mailer->error) : ?>
                             <form action="<?php echo '#reviews_mailer_id'; ?>" method="post" enctype="multipart/form-data" id="reviews_mailer_id" onsubmit="event.stopImmediatePropagation();event.stopPropagation();">

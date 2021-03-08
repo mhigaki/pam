@@ -87,9 +87,9 @@
                 <h3 class="heading"><?php _e( 'Entre em contato conosco', 'pam' ); ?></h3>
                 <?php $mailer = new PG_Simple_Form_Mailer(); ?>
                 <?php $mailer->process( array(
-                    	'form_id' => 'contact_form_mailer_id',
-                    	'send_to_email' => true,
-                    	'title' => 'Formulário de Contato'
+                      'form_id' => 'contact_form_mailer_id',
+                      'send_to_email' => true,
+                      'title' => 'Formulário de Contato'
                 ) ); ?>
                 <?php if( !$mailer->processed || $mailer->error) : ?>
                     <form action="<?php echo '#contact_form_mailer_id'; ?>" method="post" enctype="multipart/form-data" id="contact_form_mailer_id" onsubmit="event.stopImmediatePropagation();event.stopPropagation();">

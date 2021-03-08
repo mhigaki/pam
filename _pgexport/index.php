@@ -8,13 +8,13 @@
 <div class="banner" id="banner">
     <?php
         $sliders_query_args = array(
-        	'post_type' => 'sliders',
-        	'post_status' => 'publish',
-        	'nopaging' => true,
-        	'posts_per_page' => 3,
-        	'order' => 'ASC',
-        	'orderby' => 'rand',
-        	'cache_results' => false
+          'post_type' => 'sliders',
+          'post_status' => 'publish',
+          'nopaging' => true,
+          'posts_per_page' => 3,
+          'order' => 'ASC',
+          'orderby' => 'rand',
+          'cache_results' => false
         )
     ?>
     <?php $sliders_query = new WP_Query( $sliders_query_args ); ?>
@@ -25,8 +25,8 @@
                 <?php while ( $sliders_query->have_posts() ) : $sliders_query->the_post(); ?>
                     <div class="carousel-item banner-max-height<?php if( $sliders_query_item_number == 0) echo ' active'; ?> <?php echo join( ' ', get_post_class( '' ) ) ?>" id="post-<?php the_ID(); ?>">
                         <?php echo PG_Image::getPostImage( null, 'large', array(
-                            	'class' => 'd-block w-100',
-                            	'alt' => __( 'Banner', 'pam' )
+                              'class' => 'd-block w-100',
+                              'alt' => __( 'Banner', 'pam' )
                         ), null, null ) ?>
                         <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                             <div class="carousel-content container">
@@ -368,8 +368,8 @@
             <?php if ( get_theme_mod( 'display_pam_sc_properties_load_page' ) ) : ?>
                 <?php
                     $display_pam_sc_properties_load_page_query_args = array(
-                    	'page_id' => get_theme_mod('display_pam_sc_properties_load_page'),
-                    	'posts_per_page' => 1
+                      'page_id' => get_theme_mod('display_pam_sc_properties_load_page'),
+                      'posts_per_page' => 1
                     )
                 ?>
                 <?php $display_pam_sc_properties_load_page_query = new WP_Query( $display_pam_sc_properties_load_page_query_args ); ?>
@@ -385,10 +385,10 @@
             <?php endif; ?>
             <?php
                 $properties_query_args = array(
-                	'post_type' => 'properties',
-                	'posts_per_page' => 5,
-                	'order' => 'ASC',
-                	'orderby' => 'date'
+                  'post_type' => 'properties',
+                  'posts_per_page' => 5,
+                  'order' => 'ASC',
+                  'orderby' => 'date'
                 )
             ?>
             <?php $properties_query = new WP_Query( $properties_query_args ); ?>
@@ -471,8 +471,8 @@
             <?php if ( get_theme_mod( 'display_pam_sc_service_load_page' ) ) : ?>
                 <?php
                     $display_pam_sc_service_load_page_query_args = array(
-                    	'page_id' => get_theme_mod('display_pam_sc_service_load_page'),
-                    	'posts_per_page' => 1
+                      'page_id' => get_theme_mod('display_pam_sc_service_load_page'),
+                      'posts_per_page' => 1
                     )
                 ?>
                 <?php $display_pam_sc_service_load_page_query = new WP_Query( $display_pam_sc_service_load_page_query_args ); ?>
@@ -490,11 +490,11 @@
             <?php endif; ?>
             <?php
                 $servicos_query_args = array(
-                	'post_type' => 'servicos',
-                	'posts_per_page' => 4,
-                	'paged' => get_query_var( 'paged' ) ?: 1,
-                	'order' => 'ASC',
-                	'orderby' => 'rand'
+                  'post_type' => 'servicos',
+                  'posts_per_page' => 4,
+                  'paged' => get_query_var( 'paged' ) ?: 1,
+                  'order' => 'ASC',
+                  'orderby' => 'rand'
                 )
             ?>
             <?php $servicos_query = new WP_Query( $servicos_query_args ); ?>
@@ -521,8 +521,8 @@
 <?php if ( get_theme_mod( 'display_pam_sc_categories' ) ) : ?>
     <?php
         $display_pam_sc_categories_load_page_query_args = array(
-        	'page_id' => get_theme_mod('display_pam_sc_categories_load_page'),
-        	'posts_per_page' => 1
+          'page_id' => get_theme_mod('display_pam_sc_categories_load_page'),
+          'posts_per_page' => 1
         )
     ?>
     <?php $display_pam_sc_categories_load_page_query = new WP_Query( $display_pam_sc_categories_load_page_query_args ); ?>
@@ -602,8 +602,8 @@
             <?php if ( get_theme_mod( 'display_pam_sc_team_load_page' ) ) : ?>
                 <?php
                     $display_pam_sc_team_load_page_query_args = array(
-                    	'page_id' => get_theme_mod('display_pam_sc_team_load_page'),
-                    	'posts_per_page' => 1
+                      'page_id' => get_theme_mod('display_pam_sc_team_load_page'),
+                      'posts_per_page' => 1
                     )
                 ?>
                 <?php $display_pam_sc_team_load_page_query = new WP_Query( $display_pam_sc_team_load_page_query_args ); ?>
@@ -622,10 +622,10 @@
             <div class="row">
                 <?php
                     $corretor_query_args = array(
-                    	'post_type' => 'corretor',
-                    	'posts_per_page' => 4,
-                    	'order' => 'ASC',
-                    	'orderby' => 'date'
+                      'post_type' => 'corretor',
+                      'posts_per_page' => 4,
+                      'order' => 'ASC',
+                      'orderby' => 'date'
                     )
                 ?>
                 <?php $corretor_query = new WP_Query( $corretor_query_args ); ?>
@@ -636,7 +636,7 @@
                             <div class="team-1">
                                 <div class="team-photo">
                                     <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php echo PG_Image::getPostImage( null, 'corretor', array(
-                                            	'class' => 'img-fluid'
+                                              'class' => 'img-fluid'
                                         ), null, null ) ?> </a>
                                 </div>
                                 <div class="team-details">
@@ -682,8 +682,8 @@
             <?php if ( get_theme_mod( 'display_pam_sc_testemonials_load_page' ) ) : ?>
                 <?php
                     $display_pam_sc_testemonials_load_page_query_args = array(
-                    	'page_id' => get_theme_mod('display_pam_sc_testemonials_load_page'),
-                    	'posts_per_page' => 1
+                      'page_id' => get_theme_mod('display_pam_sc_testemonials_load_page'),
+                      'posts_per_page' => 1
                     )
                 ?>
                 <?php $display_pam_sc_testemonials_load_page_query = new WP_Query( $display_pam_sc_testemonials_load_page_query_args ); ?>
@@ -700,11 +700,11 @@
                 <div class="row slick-carousel" data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
                     <?php
                         $testemonials_query_args = array(
-                        	'post_type' => 'testemonials',
-                        	'posts_per_page' => 2,
-                        	'paged' => get_query_var( 'paged' ) ?: 1,
-                        	'order' => 'ASC',
-                        	'orderby' => 'date'
+                          'post_type' => 'testemonials',
+                          'posts_per_page' => 2,
+                          'paged' => get_query_var( 'paged' ) ?: 1,
+                          'order' => 'ASC',
+                          'orderby' => 'date'
                         )
                     ?>
                     <?php $testemonials_query = new WP_Query( $testemonials_query_args ); ?>
@@ -718,7 +718,7 @@
                                     </div>
                                     <div class="media">
                                         <a href="#"> <?php echo PG_Image::getPostImage( null, 'large', array(
-                                                	'class' => 'img-fluid'
+                                                  'class' => 'img-fluid'
                                             ), 'both', null ) ?> </a>
                                         <div class="media-body align-self-center">
                                             <h5><?php the_title(); ?></h5>
@@ -743,8 +743,8 @@
             <?php if ( get_theme_mod( 'display_pam_sc_blog_load_page' ) ) : ?>
                 <?php
                     $display_pam_sc_blog_load_page_query_args = array(
-                    	'page_id' => get_theme_mod('display_pam_sc_blog_load_page'),
-                    	'posts_per_page' => 1
+                      'page_id' => get_theme_mod('display_pam_sc_blog_load_page'),
+                      'posts_per_page' => 1
                     )
                 ?>
                 <?php $display_pam_sc_blog_load_page_query = new WP_Query( $display_pam_sc_blog_load_page_query_args ); ?>
@@ -760,11 +760,11 @@
             <?php endif; ?>
             <?php
                 $post_query_args = array(
-                	'post_type' => 'post',
-                	'post_status' => 'publish',
-                	'posts_per_page' => 3,
-                	'order' => 'DESC',
-                	'orderby' => 'date'
+                  'post_type' => 'post',
+                  'post_status' => 'publish',
+                  'posts_per_page' => 3,
+                  'order' => 'DESC',
+                  'orderby' => 'date'
                 )
             ?>
             <?php $post_query = new WP_Query( $post_query_args ); ?>
@@ -776,7 +776,7 @@
                             <div class="blog-1">
                                 <div class="blog-photo">
                                     <?php echo PG_Image::getPostImage( null, 'large', array(
-                                        	'class' => 'img-fluid'
+                                          'class' => 'img-fluid'
                                     ), null, null ) ?>
                                     <div class="profile-user">
                                         <?php echo get_avatar( get_the_author_meta( 'ID' ), '45' ); ?>
@@ -819,10 +819,10 @@
                 <div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
                     <?php
                         $partners_query_args = array(
-                        	'post_type' => 'partners',
-                        	'nopaging' => true,
-                        	'order' => 'ASC',
-                        	'orderby' => 'date'
+                          'post_type' => 'partners',
+                          'nopaging' => true,
+                          'order' => 'ASC',
+                          'orderby' => 'date'
                         )
                     ?>
                     <?php $partners_query = new WP_Query( $partners_query_args ); ?>
@@ -831,7 +831,7 @@
                             <?php PG_Helper::rememberShownPost(); ?>
                             <div <?php post_class( 'slick-slide-item' ); ?> id="post-<?php the_ID(); ?>">
                                 <?php echo PG_Image::getPostImage( null, 'large', array(
-                                    	'class' => 'img-fluid'
+                                      'class' => 'img-fluid'
                                 ), 'both', null ) ?>
                             </div>
                         <?php endwhile; ?>

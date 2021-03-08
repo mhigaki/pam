@@ -39,10 +39,10 @@
             <div class="col-lg-8 col-md-12">
                 <?php
                     $post_query_args = array(
-                    	'post_type' => 'post',
-                    	'nopaging' => true,
-                    	'order' => 'ASC',
-                    	'orderby' => 'date'
+                      'post_type' => 'post',
+                      'nopaging' => true,
+                      'order' => 'ASC',
+                      'orderby' => 'date'
                     )
                 ?>
                 <?php $post_query = new WP_Query( $post_query_args ); ?>
@@ -54,7 +54,7 @@
                                 <div class="blog-1">
                                     <div class="blog-photo">
                                         <?php echo PG_Image::getPostImage( null, 'large', array(
-                                            	'class' => 'img-fluid'
+                                              'class' => 'img-fluid'
                                         ), 'both', null ) ?>
                                         <div class="profile-user">
                                             <?php echo get_avatar( get_the_author_meta( 'ID' ), '45' ); ?>

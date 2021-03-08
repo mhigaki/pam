@@ -64,11 +64,11 @@
         <div class="row">
             <?php
                 $corretor_query_args = array(
-                	'post_type' => 'corretor',
-                	'post_status' => 'publish',
-                	'posts_per_page' => 6,
-                	'order' => 'ASC',
-                	'orderby' => 'rand'
+                  'post_type' => 'corretor',
+                  'post_status' => 'publish',
+                  'posts_per_page' => 6,
+                  'order' => 'ASC',
+                  'orderby' => 'rand'
                 )
             ?>
             <?php $corretor_query = new WP_Query( $corretor_query_args ); ?>

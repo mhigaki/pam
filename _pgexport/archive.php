@@ -60,14 +60,14 @@
                     <div class="row">
                         <div class="col-md-7 col-sm-7 col-xs-10 cod-pad">
                             <?php the_widget( 'WP_Widget_Archives', array(
-                                	'title' => __( 'Ordenar por:', 'pam' ),
-                                	'count' => true,
-                                	'dropdown' => true
+                                  'title' => __( 'Ordenar por:', 'pam' ),
+                                  'count' => true,
+                                  'dropdown' => true
                                 ), array(
-                                	'before_widget' => '<div class="sorting-options2">',
-                                	'after_widget' => '</div>',
-                                	'before_title' => '<span>',
-                                	'after_title' => '<span>'
+                                  'before_widget' => '<div class="sorting-options2">',
+                                  'after_widget' => '</div>',
+                                  'before_title' => '<span>',
+                                  'after_title' => '<span>'
                             ) ); ?>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                                 <div class="blog-1" id="post-<?php the_ID(); ?>">
                                     <div class="blog-photo">
                                         <?php echo PG_Image::getPostImage( null, 'large', array(
-                                            	'class' => 'img-fluid'
+                                              'class' => 'img-fluid'
                                         ), 'both', null ) ?>
                                         <div class="profile-user">
                                             <?php echo get_avatar( get_the_author_meta( 'ID' ), '45' ); ?>
