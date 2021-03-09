@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <?php get_template_part( 'template-parts/content/content-error-404' ); ?>
+                <?php get_template_part( 'template-parts/content/content', 'error-404' ); ?>
             </div>
         </div>
     </div>

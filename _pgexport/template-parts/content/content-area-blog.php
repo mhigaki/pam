@@ -2,106 +2,45 @@
   <div class="container">
     <!-- Main title -->
     <div class="main-title">
-      <h1><?php _e( 'Latest news', 'pam' ); ?></h1>
-      <p><?php _e( 'Check out some recent news posts.', 'pam' ); ?></p>
+      <h1><?php echo get_theme_mod( 'main_title_h1', __( 'Latest news', 'pam' ) ); ?></h1>
+      <p><?php echo get_theme_mod( 'main_title_p', __( 'Check out some recent news posts.', 'pam' ) ); ?></p>
     </div>
-    <div class="row wow fadeInUp delay-04s">
-      <div class="col-lg-4 col-md-6">
-        <div class="blog-1">
-          <div class="blog-photo">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/blog/blog-1.jpg" alt="blog" class="img-fluid">
-            <div class="profile-user">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/avatar/avatar-1.jpg" alt="user">
+    <?php
+      $post_query_args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'order' => 'DESC',
+        'orderby' => 'date'
+      )
+    ?>
+    <?php $post_query = new WP_Query( $post_query_args ); ?>
+    <?php if ( $post_query->have_posts() ) : ?>
+      <div class="row wow fadeInUp delay-04s">
+        <?php while ( $post_query->have_posts() ) : $post_query->the_post(); ?>
+          <?php PG_Helper::rememberShownPost(); ?>
+          <div <?php post_class( 'col-lg-4 col-md-6' ); ?> id="post-<?php the_ID(); ?>">
+            <div class="blog-1">
+              <div class="blog-photo">
+                <?php echo PG_Image::getPostImage( null, 'large', array(
+                    'class' => 'img-fluid',
+                    'sizes' => 'max-width(320px) 85vw, max-width(640px) 510px, max-width(768px) 70vw, max-width(1024px) 34vw, max-width(1280px) 350px, 350px'
+                ), 'both', null ) ?>
+                <div class="profile-user">
+                  <?php echo get_avatar( get_the_author_meta( 'ID' ), '45' ); ?>
+                </div>
+              </div>
+              <div class="detail">
+                <?php get_template_part( 'template-parts/post/post-meta' ); ?>
+                <h3> <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a> </h3>
+                <?php echo wp_trim_words( get_the_content(), 20, ' ... ' ); ?>
+              </div>
             </div>
           </div>
-          <div class="detail">
-            <div class="post-meta clearfix">
-              <ul>
-                <li>
-                  <strong><a href="#"><?php _e( 'Antony', 'pam' ); ?></a></strong>
-                </li>
-                <li class="mr-0">
-                  <span><?php _e( 'Feb 31, 2018', 'pam' ); ?></span>
-                </li>
-                <li class="float-right mr-0">
-                  <a href="#"><i class="flaticon-interface"></i></a>
-                  <?php _e( '15', 'pam' ); ?>
-                </li>
-                <li class="float-right">
-                  <a href="#"><i class="flaticon-time"></i></a>
-                  <?php _e( '5k', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <h3> <a href="blog-single-sidebar-right.html"><?php _e( 'Buying a Best House', 'pam' ); ?></a> </h3>
-            <p><?php _e( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard', 'pam' ); ?></p>
-          </div>
-        </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="blog-1">
-          <div class="blog-photo">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/blog/blog-2.jpg" alt="blog" class="img-fluid">
-            <div class="profile-user">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/avatar/avatar-2.jpg" alt="user">
-            </div>
-          </div>
-          <div class="detail">
-            <div class="post-meta clearfix">
-              <ul>
-                <li>
-                  <strong><a href="#"><?php _e( 'Teseira', 'pam' ); ?></a></strong>
-                </li>
-                <li class="mr-0">
-                  <span><?php _e( 'May 31, 2017', 'pam' ); ?></span>
-                </li>
-                <li class="float-right mr-0">
-                  <a href="#"><i class="flaticon-interface"></i></a>
-                  <?php _e( '15', 'pam' ); ?>
-                </li>
-                <li class="float-right">
-                  <a href="#"><i class="flaticon-time"></i></a>
-                  <?php _e( '5k', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <h3> <a href="blog-single-sidebar-right.html"><?php _e( 'Selling Your Real House', 'pam' ); ?></a> </h3>
-            <p><?php _e( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard', 'pam' ); ?></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 d-none d-xl-block d-lg-block">
-        <div class="blog-1">
-          <div class="blog-photo">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/blog/blog-3.jpg" alt="blog" class="img-fluid">
-            <div class="profile-user">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/avatar/avatar-3.jpg" alt="user">
-            </div>
-          </div>
-          <div class="detail">
-            <div class="post-meta clearfix">
-              <ul>
-                <li>
-                  <strong><a href="#"><?php _e( 'John Doe', 'pam' ); ?></a></strong>
-                </li>
-                <li class="mr-0">
-                  <span><?php _e( 'May 31, 2017', 'pam' ); ?></span>
-                </li>
-                <li class="float-right mr-0">
-                  <a href="#"><i class="flaticon-interface"></i></a>
-                  <?php _e( '15', 'pam' ); ?>
-                </li>
-                <li class="float-right">
-                  <a href="#"><i class="flaticon-time"></i></a>
-                  <?php _e( '5k', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <h3> <a href="blog-single-sidebar-right.html"><?php _e( 'Find Your Dream Real Estate', 'pam' ); ?></a> </h3>
-            <p><?php _e( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard', 'pam' ); ?></p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php else : ?>
+      <p><?php _e( 'Sorry, no posts matched your criteria.', 'pam' ); ?></p>
+    <?php endif; ?>
   </div>
 </div>

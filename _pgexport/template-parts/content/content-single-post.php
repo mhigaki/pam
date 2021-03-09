@@ -8,20 +8,7 @@
     </div>
   </div>
   <div class="detail">
-    <div class="post-meta clearfix">
-      <ul>
-        <li>
-          <strong><?php echo get_the_author_meta( 'display_name', false ) ?></strong>
-        </li>
-        <li class="mr-0">
-          <span><?php echo get_the_time( get_option( 'date_format' ) ) ?></span>
-        </li>
-        <li class="float-right">
-          <i class="fa fa-calendar"></i>
-          <?php the_author_posts(); ?>
-        </li>
-      </ul>
-    </div>
+    <?php get_template_part( 'template-parts/post/post', 'meta' ); ?>
     <h3> <?php the_title(); ?> </h3>
     <p><?php the_content(); ?></p>
   </div>

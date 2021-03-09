@@ -2,8 +2,8 @@
   <div class="container">
     <!-- Main title -->
     <div class="main-title">
-      <h1><?php _e( 'Most Popular Places', 'pam' ); ?></h1>
-      <p><?php _e( 'Find Property In Your City', 'pam' ); ?></p>
+      <h1><?php echo get_theme_mod( 'pam_sc_categories_main_title_h1', __( 'Most Popular Places', 'pam' ) ); ?></h1>
+      <p><?php echo get_theme_mod( 'pam_sc_categories_main_title_p', __( 'Find Property In Your City', 'pam' ) ); ?></p>
     </div>
     <div class="row wow">
       <div class="col-lg-7 col-md-12 col-sm-12">

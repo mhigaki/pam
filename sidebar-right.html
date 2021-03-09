@@ -336,19 +336,21 @@
                   </div>
                 </div>
                 <div class="detail">
-                  <div class="post-meta clearfix">
+                  <div class="post-meta clearfix" wp-template-part wp-template-part-slug="template-parts/post/post" wp-template-part-name="meta">
                     <ul>
                       <li>
-                        <strong><a href="#">Alex Teseira</a></strong>
+                        <strong><a href="#" cms-author-field="user_firstname" cms-author-field-type="content">Alex Teseira</a></strong>
                       </li>
                       <li class="mr-0">
-                        <span>Feb 31, 2018</span>
+                        <span wp-the-date="M d, Y" wp-the-date-show-same="true" wp-the-date-set="content">Feb 31, 2018</span>
                       </li>
                       <li class="float-right mr-0">
-                        <i class="fa fa-commenting-o"></i>
+                        <a href="#"><i class="fa fa-commenting-o"></i></a>
+                        <span wp-comments-title="1" wp-comments-title-multiple="%1$s" wp-comments-title-set="element">15</span>
                       </li>
                       <li class="float-right">
-                        <i class="fa fa-calendar"></i>
+                        <a href="#"><i class="fa fa-calendar"></i></a>
+                        <span wp-call-function="echo count_user_posts( get_the_author_meta( 'ID', false ), 'post', true)">5k</span>
                       </li>
                     </ul>
                   </div>
@@ -601,7 +603,7 @@
                   </form>
                 </div>
                 <!-- Popular posts start -->
-                <div class="widget popular-posts" cms-post="query" cms-post-type="post" cms-post-type-count="3" cms-post-show-empty-text="false" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-order="date DESC" cms-post-type-paginate="false" cms-post-type-ignore-shown cms-post-type-sticky="none" cms-post-type-load-posts="featured_image">
+                <div class="widget popular-posts" cms-post="query" cms-post-type="post" cms-post-type-count="3" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-order="date DESC" cms-post-type-paginate="false" cms-post-type-sticky="ignore" cms-post-type-query-name="post_recents" cms-post-type-ignore-shown>
                   <h3 class="sidebar-title">Postagens Recentes</h3>
                   <div class="media">
                     <div class="media-left">
@@ -662,7 +664,7 @@
                 <div class="widget tags-box">
                   <h3 class="sidebar-title">Tags</h3>
                   <ul class="tags">
-                    <li wp-tag-cloud wp-tag-cloud-orderby="name" wp-tag-cloud-order="ASC" wp-tag-cloud-taxonomy="post_tag" wp-tag-cloud-set="content" wp-tag-cloud-number="10">
+                    <li wp-tag-cloud wp-tag-cloud-orderby="name" wp-tag-cloud-order="ASC" wp-tag-cloud-number="10" wp-tag-cloud-format="list" wp-tag-cloud-largest="14">
                       <a href="#">Image</a>
                     </li>
                     <li cms-no-export>

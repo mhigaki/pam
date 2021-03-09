@@ -36,9 +36,9 @@
     <![endif]-->
   </head>
   <body>
-    <div class="page_loader" data-pg-collapsed></div>
+    <div class="page_loader"></div>
     <!-- Top header start -->
-    <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2" data-pg-collapsed>
+    <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-8 col-sm-7">
@@ -71,7 +71,7 @@
     </header>
     <!-- Top header end -->
     <!-- Main header start -->
-    <header class="main-header" data-pg-collapsed>
+    <header class="main-header">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand logo" href="index-2.html"> <img src="img/logos/logo-site.svg" alt="logo"> </a>
@@ -305,8 +305,8 @@
         </nav>
       </div>
     </header>
-    <div wp-site-content data-pg-collapsed>
-      <div class="sub-banner" data-pg-collapsed>
+    <div wp-site-content>
+      <div class="sub-banner">
         <div class="container">
           <div class="page-name">
             <h1 wp-title wp-title-set="content" wp-title-sep="''">Sobre a Empresa</h1>
@@ -343,7 +343,7 @@
           </div>
         </div>
       </div>
-      <div class="about-real-estate" data-pg-collapsed>
+      <div class="about-real-estate">
         <div class="container">
           <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
@@ -430,7 +430,7 @@
           </div>
         </div>
       </div>
-      <div class="services-2 content-area-5 bg-grea-3" wp-cz-section="pam_sc_services" wp-cz-section-prefix="true" wp-cz-section-title="Section Services" wp-cz-section-panel="pam_theme_settings" wp-template-part-name="services-2" wp-include-template-part wp-include-template-part-slug="template-parts/content/content-area" wp-include-template-part-name="services" data-pg-collapsed>
+      <div class="services-2 content-area-5 bg-grea-3" wp-template-part-name="services-2" wp-include-template-part wp-include-template-part-slug="template-parts/content/content-area" wp-include-template-part-name="services">
         <div class="container">
           <!-- Main title -->
           <div class="main-title">
@@ -472,21 +472,21 @@
           </div>
         </div>
       </div>
-      <div class="our-team-2 content-area" data-pg-collapsed wp-cz-section="pam_sc_team" wp-cz-section-prefix="true" wp-cz-section-title="Section Team" wp-cz-section-panel="pam_theme_settings" wp-template-part-name="team-2" wp-include-template-part wp-include-template-part-slug="template-parts/content/content-area" wp-include-template-part-name="team-2" data-pgc="pam.sc.team-2" data-pgc-field="part">
+      <div class="our-team-2 content-area" wp-cz-section="pam_sc_team" wp-cz-section-title="Section Team" wp-cz-section-panel="pam_theme_settings" wp-template-part wp-template-part-slug="template-parts/content/content-area" wp-template-part-name="team-2" wp-cz-control="display_pam_sc_team" wp-cz-control-label="Display Section Team" wp-cz-control-section="pam_sc_team" wp-cz-control-type="checkbox" data-pgc="pam.sc.team-2" data-pgc-field="part">
         <div class="container">
           <!-- Main title -->
           <div class="main-title">
-            <h1>Our Agent</h1>
-            <p>Meet out small team that make those great products.</p>
+            <h1 cms-editable="pam_sc_team_main_title_h1" cms-editable-type="content" cms-editable-label="Titulo" cms-editable-section="pam_sc_team">Our Agent</h1>
+            <p cms-editable="pam_sc_team_main_title_p" cms-editable-type="content" cms-editable-label="Sub-titulo" cms-editable-section="pam_sc_team">Meet out small team that make those great products.</p>
           </div>
-          <div class="row">
+          <div class="row" cms-post="query" cms-post-type="corretor" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)">
             <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s">
               <div class="team-1">
                 <div class="team-photo">
-                  <a href="#"> <img src="img/avatar/avatar-7.jpg" alt="agent-2" class="img-fluid"> </a>
+                  <a href="#"> <img src="img/avatar/avatar-7.jpg" alt="agent-2" class="img-fluid" cms-post-image> </a>
                 </div>
                 <div class="team-details">
-                  <h5><a href="#">Martin Smith</a></h5>
+                  <h5><a href="#" wp-the-title cms-post-link>Martin Smith</a></h5>
                   <h6>Web Developer</h6>
                   <ul class="social-list clearfix">
                     <li>
@@ -505,7 +505,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s">
+            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s" cms-no-export>
               <div class="team-1">
                 <div class="team-photo">
                   <a href="#"> <img src="img/avatar/avatar-6.jpg" alt="agent-2" class="img-fluid"> </a>
@@ -530,7 +530,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s">
+            <div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s" cms-no-export>
               <div class="team-1">
                 <div class="team-photo">
                   <a href="#"> <img src="img/avatar/avatar-8.jpg" alt="agent-2" class="img-fluid"> </a>
@@ -555,7 +555,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s">
+            <div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s" cms-no-export>
               <div class="team-1">
                 <div class="team-photo">
                   <a href="#"> <img src="img/avatar/avatar-5.jpg" alt="agent-2" class="img-fluid"> </a>
@@ -584,7 +584,7 @@
         </div>
       </div>
     </div>
-    <div class="services-2 content-area-5" data-pg-collapsed>
+    <div class="services-2 content-area-5">
       <div class="container">
         <!-- Main title -->
         <div class="main-title">
@@ -634,7 +634,7 @@
     <!-- Services 2 start -->
     <!-- Services 2 end -->
     <!-- Our team 2 start -->
-    <div class="our-team-2 content-area-3" data-pg-collapsed>
+    <div class="our-team-2 content-area-3">
       <div class="container">
         <!-- Main title -->
         <div class="main-title">
@@ -805,7 +805,7 @@
     </div>
     <!-- Our team 2 end -->
     <!-- Counters strat -->
-    <div class="counters overview-bgi" data-pg-collapsed>
+    <div class="counters overview-bgi">
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-6 wow fadeInLeft delay-04s">
@@ -857,7 +857,7 @@
     </div>
     <!-- Counters end -->
     <!-- Testimonial 3 start -->
-    <div class="testimonial-3 mb-50" data-pg-collapsed>
+    <div class="testimonial-3 mb-50">
       <div class="container">
         <div class="main-title">
           <h1>Our Testimonial</h1>
@@ -958,7 +958,7 @@
     </div>
     <!-- Testimonial 3 end -->
     <!-- Partners strat -->
-    <div class="partners" data-pg-collapsed>
+    <div class="partners">
       <div class="container">
         <h4>Brands $ Partners</h4>
         <div class="slick-slider-area">
@@ -997,7 +997,7 @@
         </div>
       </div>
     </div>
-    <footer class="footer" data-pg-collapsed>
+    <footer class="footer">
       <div class="container footer-inner">
         <div class="row">
           <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
@@ -1125,37 +1125,37 @@
     <!-- Footer start -->
     <!-- Footer end -->
     <!-- Full Page Search -->
-    <div id="full-page-search" data-pg-collapsed>
+    <div id="full-page-search">
       <button type="button" class="close">×</button>
       <form action="http://theme-vessel-templates.theme-vessel.ey.r.appspot.com/real-house/index.html#">
         <input type="search" value="" placeholder="type keyword(s) here"/>
         <button type="submit" class="btn btn-sm button-theme">Search</button>
       </form>
     </div>
-    <script src="js/jquery-2.2.0.min.js" data-pg-collapsed></script>
-    <script src="js/popper.min.js" data-pg-collapsed></script>
-    <script src="js/bootstrap.min.js" data-pg-collapsed></script>
-    <script src="js/bootstrap-submenu.js" data-pg-collapsed></script>
-    <script src="js/rangeslider.js" data-pg-collapsed></script>
-    <script src="js/jquery.mb.YTPlayer.js" data-pg-collapsed></script>
-    <script src="js/wow.min.js" data-pg-collapsed></script>
-    <script src="js/bootstrap-select.min.js" data-pg-collapsed></script>
-    <script src="js/jquery.easing.1.3.js" data-pg-collapsed></script>
-    <script src="js/jquery.scrollUp.js" data-pg-collapsed></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js" data-pg-collapsed></script>
-    <script src="js/leaflet.js" data-pg-collapsed></script>
-    <script src="js/leaflet-providers.js" data-pg-collapsed></script>
-    <script src="js/leaflet.markercluster.js" data-pg-collapsed></script>
-    <script src="js/dropzone.js" data-pg-collapsed></script>
-    <script src="js/slick.min.js" data-pg-collapsed></script>
-    <script src="js/jquery.filterizr.js" data-pg-collapsed></script>
-    <script src="js/jquery.magnific-popup.min.js" data-pg-collapsed></script>
-    <script src="js/jquery.countdown.js" data-pg-collapsed></script>
-    <script src="js/maps.js" data-pg-collapsed></script>
-    <script src="js/app.js" data-pg-collapsed></script>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-submenu.js"></script>
+    <script src="js/rangeslider.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.scrollUp.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-providers.js"></script>
+    <script src="js/leaflet.markercluster.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.filterizr.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/app.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js" data-pg-collapsed></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
     <!-- Custom javascript -->
-    <script src="js/ie10-viewport-bug-workaround.js" data-pg-collapsed></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

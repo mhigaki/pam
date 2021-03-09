@@ -26,10 +26,11 @@
     <script src="js/ie-emulation-modes-warning.js" wp-enqueue-script></script>
     <meta name="description" content="Consultoria de Imoveis" wp-site-desc>
     <meta name="author" content="MNH">
+    <link rel="stylesheet" href="css/custom.css" wp-enqueue-style>
   </head>
   <body>
     <div class="page_loader"></div>
-    <header class="site-header" wp-if-is-404="!">
+    <header class="site-header">
       <div class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2" wp-template-part-name="top" wp-include-template-part wp-include-template-part-slug="template-parts/header/header" wp-include-template-part-name="top" data-pg-collapsed data-pgc="header_top" data-pgc-field="part">
         <div class="container">
           <div class="row">
@@ -58,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="main-header" wp-template-part-name="main" wp-include-template-part wp-include-template-part-slug="template-parts/header/header" wp-include-template-part-name="main" data-pgc="header_main" data-pgc-field="part" data-pg-collapsed>
+      <div class="main-header" wp-template-part-name="main" wp-include-template-part wp-include-template-part-slug="template-parts/header/header" wp-include-template-part-name="main" data-pg-collapsed data-pgc="header_main" data-pgc-field="part">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand logo" href="index-2.html" wp-href="url"> <img src="img/logos/logo-site.svg" wp-cz-control="pam_brand_logo" wp-cz-control-label="Logo PAM" wp-cz-control-section="title_tagline" wp-cz-control-type="media" wp-cz-control-mime-type="image" wp-cz-theme-mod="pam_brand_logo" wp-cz-theme-mod-set-attr="src" wp-cz-theme-mod-set-get-image wp-if-get-theme-mod="pam_brand_logo" wp-cz-theme-mod-no-prefix="true" wp-cz-theme-mod-set="attr" wp-cz-control-input-class="style-svg" class="style-svg"> </a>
@@ -889,36 +890,36 @@
           </div>
         </div>
       </div>
-      <div class="services-2 content-area-5 bg-grea-3" cms-editable="display_pam_sc_services" cms-editable-type="show" cms-editable-label="Display Section Service" cms-editable-section="pam_sc_services" wp-cz-control-description="Marque para exibir a seção" data-pg-collapsed>
+      <div class="services-2 content-area-5 bg-grea-3" wp-cz-control-description="Marque para exibir a seção" wp-if-get-theme-mod="display_pam_sc_services" wp-include-template-part wp-include-template-part-slug="template-parts/content/content-area" wp-include-template-part-name="services-2">
         <div class="container">
           <!-- Main title -->
-          <div class="main-title" cms-editable="display_pam_sc_service_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_services">
-            <h1 wp-the-title>What are you looking for?</h1>
-            <p cms-post-excerpt cms-post-excerpt-if>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
+          <div class="main-title">
+            <h1>What are you looking for?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
           </div>
-          <div class="row wow" cms-post="query" cms-post-type="servicos" cms-post-type-count="4" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-order="rand">
+          <div class="row wow">
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft delay-04s">
               <div class="service-info-5">
-                <i class="flaticon-apartment" cms-post-field="icon_services" cms-post-field-type="class" cms-post-field-acf cms-post-field-class-replace="flaticon-apartment"></i>
-                <h4 cms-post-title>Apartments</h4>
-                <p cms-post-content>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft delay-04s" cms-no-export>
-              <div class="service-info-5">
-                <i class="flaticon-internet"></i>
-                <h4 cms-post-title>Houses</h4>
+                <i class="flaticon-apartment"></i>
+                <h4>Apartments</h4>
                 <p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInRight delay-04s" cms-no-export>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft delay-04s">
+              <div class="service-info-5">
+                <i class="flaticon-internet"></i>
+                <h4>Houses</h4>
+                <p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInRight delay-04s">
               <div class="service-info-5">
                 <i class="flaticon-vehicle"></i>
                 <h4>Garages</h4>
                 <p>Lorem ipsum dolor sit amet, consectur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInRight delay-04s" cms-no-export>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 wow fadeInRight delay-04s">
               <div class="service-info-5">
                 <i class="flaticon-coins"></i>
                 <h4>Commercial</h4>
@@ -926,17 +927,17 @@
               </div>
             </div>
           </div>
-          <div class="text-center read-more-2" cms-no-export>
+          <div class="text-center read-more-2">
             <a href="services-1.html" class="btn-white" rel="nofollow noreferrer noopener" target="_self">Saiba Mais</a>
           </div>
         </div>
       </div>
-      <div class="categories content-area-8" cms-editable="display_pam_sc_categories" cms-editable-type="show" cms-editable-label="Display Section Categories" cms-editable-section="pam_sc_categories" wp-cz-control-description="Marque para exibir a seção" cms-editable-2="display_pam_sc_categories_load_page" cms-editable-label-2="Selecione a Pagina de Categorias" cms-editable-section-2="pam_sc_categories" cms-editable-type-2="page" data-pg-collapsed>
+      <div class="categories content-area-8" wp-cz-control-description="Marque para exibir a seção" cms-template-part="template-parts/content/content-area-categories" wp-if-get-theme-mod="display_pam_sc_categories">
         <div class="container">
           <!-- Main title -->
           <div class="main-title">
-            <h1 wp-the-title>What are you looking for?</h1>
-            <p cms-post-excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
+            <h1>What are you looking for?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
           </div>
           <div class="row wow">
             <div class="col-lg-7 col-md-12 col-sm-12">
@@ -946,7 +947,7 @@
                     <div class="category_bg_box cat-1-bg">
                       <div class="category-overlay">
                         <div class="category-content">
-                          <h3 class="category-title"> <a href="#" wp-terms-template="188" wp-terms-template-taxonomy="properties_types">Apartment</a> </h3>
+                          <h3 class="category-title"> <a href="#">Apartment</a> </h3>
                           <a href="properties-list-rightside.html" class="category-subtitle">14 Properties</a>
                         </div>
                       </div>
@@ -1044,10 +1045,10 @@
           </div>
         </div>
       </div>
-      <div class="our-team-2 content-area" cms-editable="display_pam_sc_team" cms-editable-type="show" cms-editable-label="Display Section Team" cms-editable-section="pam_sc_team" wp-cz-control-description="Marque para exibir a seção" data-pg-collapsed>
+      <div class="our-team-2 content-area" wp-cz-control-description="Marque para exibir a seção" cms-template-part="template-parts/content/content-area-team-2" data-pg-collapsed wp-if-get-theme-mod="display_pam_sc_team">
         <div class="container">
           <!-- Main title -->
-          <div class="main-title" cms-editable="display_pam_sc_team_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_team">
+          <div class="main-title">
             <h1 wp-the-title>What are you looking for?</h1>
             <p cms-post-excerpt cms-post-excerpt-if>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.</p>
           </div>
@@ -1155,36 +1156,36 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-3" cms-editable="display_pam_sc_testemonials" cms-editable-type="show" cms-editable-label="Display Section Testemonial" cms-editable-section="pam_sc_testemonial" wp-cz-control-description="Marque para exibir a seção" data-pg-collapsed>
+      <div class="testimonial-3" wp-cz-control-description="Marque para exibir a seção" wp-include-template-part wp-include-template-part-slug="template-parts/content/content-area" wp-include-template-part-name="testemonial-3" data-pg-collapsed wp-if-get-theme-mod="display_pam_sc_team">
         <div class="container">
-          <div class="main-title" cms-editable="display_pam_sc_testemonials_load_page" cms-editable-type="page" cms-editable-label="Selecione a Pagina de Serviços" cms-editable-section="pam_sc_testemonial">
-            <h1 wp-the-title>What are you looking for?</h1>
+          <div class="main-title">
+            <h1>What are you looking for?</h1>
           </div>
           <div class="slick-slider-area">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-              <div class="slick-slide-item" cms-post="query" cms-post-type="testemonials" cms-post-type-register cms-post-type-count="2" cms-post-type-name="Testemonials" cms-post-type-name-singular="Testemonial">
+              <div class="slick-slide-item" data-pg-collapsed>
                 <div class="testimonial-inner">
                   <div class="content-box">
-                    <div class="rating" cms-no-export>
+                    <div class="rating">
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star-half-full"></i>
                     </div>
-                    <p cms-post-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                   </div>
                   <div class="media">
                     <a href="#"> <img src="img/avatar/avatar-2.jpg" alt="testimonial-avatar" class="img-fluid" wp-the-post-thumbnail> </a>
                     <div class="media-body align-self-center">
-                      <h5 cms-post-title>
+                      <h5>
                                     Eliane Perei </h5>
-                      <h6 cms-no-export>Web Developer</h6>
+                      <h6>Web Developer</h6>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="slick-slide-item" cms-no-export>
+              <div class="slick-slide-item" data-pg-collapsed>
                 <div class="testimonial-inner">
                   <div class="content-box">
                     <div class="rating">
@@ -1206,7 +1207,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slick-slide-item" cms-no-export>
+              <div class="slick-slide-item" data-pg-collapsed>
                 <div class="testimonial-inner">
                   <div class="content-box">
                     <div class="rating">
@@ -1228,7 +1229,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slick-slide-item" cms-no-export>
+              <div class="slick-slide-item" data-pg-collapsed>
                 <div class="testimonial-inner">
                   <div class="content-box">
                     <div class="rating">
@@ -1254,41 +1255,41 @@
           </div>
         </div>
       </div>
-      <div class="blog content-area" cms-editable="display_pam_sc_blog" cms-editable-type="show" cms-editable-label="Display Section Blog" cms-editable-section="pam_sc_blog" wp-cz-control-description="Marque para exibir a seção" data-pg-collapsed>
+      <div class="blog content-area" wp-cz-control-description="Marque para exibir a seção" wp-include-template-part wp-include-template-part-slug="template-parts/content/content-area" wp-include-template-part-name="blog" data-pg-collapsed wp-if-get-theme-mod="display_pam_sc_blog">
         <div class="container">
           <!-- Main title -->
-          <div class="main-title" cms-editable="display_pam_sc_blog_load_page" cms-editable-type="page" cms-editable-label="Display Section Blog" cms-editable-section="pam_sc_blog">
-            <h1 cms-post-title>Latest news</h1>
-            <p cms-post-content>Check out some recent news posts.</p>
+          <div class="main-title">
+            <h1>Latest news</h1>
+            <p>Check out some recent news posts.</p>
           </div>
-          <div class="row wow fadeInUp delay-04s" wp-loop-show-empty-text="false" wp-loop="post_query" wp-loop-post-type="post" wp-loop-orderby="date" wp-loop-order="DESC" wp-loop-posts-per-page="3" wp-loop-post-status="publish" wp-loop-show-items="3">
-            <div class="col-lg-4 col-md-6" wp-loop-item wp-post-class wp-the-id>
+          <div class="row wow fadeInUp delay-04s" wp-loop-show-empty-text="false" wp-loop-post-type="post" wp-loop-orderby="date" wp-loop-order="DESC" wp-loop-posts-per-page="3" wp-loop-post-status="publish" wp-loop-show-items="3" data-pg-collapsed>
+            <div class="col-lg-4 col-md-6">
               <div class="blog-1">
                 <div class="blog-photo">
-                  <img src="img/blog/blog-1.jpg" alt="blog" width="960" height="540" cms-post-image class="img-fluid">
+                  <img src="img/blog/blog-1.jpg" alt="blog" width="960" height="540" class="img-fluid">
                   <div class="profile-user">
-                    <img src="img/avatar/avatar-1.jpg" alt="user" wp-get-avatar wp-get-avatar-size="45" width="45" height="45">
+                    <img src="img/avatar/avatar-1.jpg" alt="user" width="45" height="45">
                   </div>
                 </div>
                 <div class="detail">
                   <div class="post-meta clearfix">
                     <ul>
                       <li>
-                        <strong><a href="#" cms-author-field="user_firstname" cms-author-field-type="content" cms-author-field-type-2="link" cms-author-field-2="user_url">Alex Teseira</a></strong>
+                        <strong><a href="#">Alex Teseira</a></strong>
                       </li>
                       <li class="mr-0">
-                        <span wp-the-date="d/m/y" wp-the-date-set="content" wp-the-date-show-same="true">Feb 31, 2018</span>
+                        <span>Feb 31, 2018</span>
                       </li>
-                      <li class="float-right mr-0" cms-no-export>
-                        <i class="fa fa-commenting-o" wp-comments-title wp-comments-title-set="after" wp-comments-title-multiple="%1$s"></i>
+                      <li class="float-right mr-0">
+                        <i class="fa fa-commenting-o"></i>
                       </li>
                       <li class="float-right">
-                        <i class="fa fa-calendar" wp-the-author-posts wp-the-author-posts-set="after"></i>
+                        <i class="fa fa-calendar"></i>
                       </li>
                     </ul>
                   </div>
-                  <h3> <a href="blog-single-sidebar-right.html" cms-post-link wp-the-title>Buying a Best House</a> </h3>
-                  <p wp-call-function="wp_trim_words( get_the_content(), 15, ' ... ' );" wp-call-function-echo="true" wp-call-function-set="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                  <h3> <a href="blog-single-sidebar-right.html">Buying a Best House</a> </h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
                 </div>
               </div>
             </div>
@@ -1355,48 +1356,11 @@
           </div>
         </div>
       </div>
-      <div class="partners" wp-cz-section="pam_sc_partners" wp-cz-section-panel="pam_theme_settings" wp-cz-section-title="Section Partners" wp-cz-section-priority="80" cms-editable="display_pam_sc_partners" cms-editable-type="show" cms-editable-label="Display Section Partners" cms-editable-section="pam_sc_partners" data-pg-collapsed>
-        <div class="container">
-          <h4 wp-cz-control="title_h4" wp-cz-control-label="Titulo da Seção" wp-cz-control-section="pam_sc_partners" wp-cz-control-type="text" wp-cz-theme-mod="title_h4" wp-cz-control-description="Descrição da Seção" wp-cz-theme-mod-check="true" wp-cz-theme-mod-no-prefix="true">Parceiros</h4>
-          <div class="slick-slider-area">
-            <div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
-              <div class="slick-slide-item" wp-post-class wp-the-id wp-loop="partners_query" wp-loop-post-type-custom="partners" wp-loop-orderby="date" wp-loop-order="ASC" wp-loop-nopaging="true" wp-post-type="partners" wp-post-type-name="Partners" wp-post-type-name-singular="Partner" wp-post-type-public="true" wp-post-type-supports="title,editor,thumbnail,custom-fields" wp-post-type-show-in-menu="true" wp-post-type-rest="true" wp-post-type-taxonomies="category">
-                <img src="img/brand/brand-1.png" alt="brand" class="img-fluid" cms-post-image>
-              </div>
-              <div class="slick-slide-item" cms-no-export>
-                <img src="img/brand/brand-2.png" alt="brand" class="img-fluid">
-              </div>
-              <div class="slick-slide-item" cms-no-export>
-                <img src="img/brand/brand-3.png" alt="brand" class="img-fluid">
-              </div>
-              <div class="slick-slide-item" cms-no-export>
-                <img src="img/brand/brand-4.png" alt="brand" class="img-fluid">
-              </div>
-              <div class="slick-slide-item" cms-no-export>
-                <img src="img/brand/brand-5.png" alt="brand" class="img-fluid">
-              </div>
-              <div class="slick-slide-item" cms-no-export>
-                <img src="img/brand/brand-6.png" alt="brand" class="img-fluid">
-              </div>
-              <div class="slick-slide-item" cms-no-export>
-                <img src="img/brand/brand-2.png" alt="brand" class="img-fluid">
-              </div>
-              <div class="slick-slide-item" cms-no-export>
-                <img src="img/brand/brand-4.png" alt="brand" class="img-fluid">
-              </div>
-            </div>
-            <div class="slick-prev slick-arrow-buton">
-              <i class="fa fa-angle-left"></i>
-            </div>
-            <div class="slick-next slick-arrow-buton">
-              <i class="fa fa-angle-right"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="partners" wp-include-template-part wp-include-template-part-slug="template-parts/content/content-area" wp-include-template-part-name="partners" wp-if-get-theme-mod="display_pam_sc_partners">
+</div>
     </main>
     <!-- Footer start -->
-    <footer class="footer site-footer" wp-if-is-404="!" data-pg-collapsed>
+    <footer class="footer site-footer">
       <div class="container footer-inner">
         <div class="row">
           <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
@@ -1418,7 +1382,7 @@
                   Fax: +0477 85X6 552
 </li>
               </ul>
-              <ul class="social-list clearfix" wp-nav-menu="social" wp-nav-menu-theme-location="social" wp-if-has-nav-menu="social">
+              <ul class="social-list clearfix">
                 <li>
                   <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                 </li>
@@ -1500,7 +1464,7 @@
               <h4>Subscribe</h4>
               <div class="Subscribe-box">
                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                <form action="#" method="GET" id="teste" cms-form="teste" cms-form-send-email="true">
+                <form action="#" method="GET" id="subscribe" cms-form="subscribe" cms-form-send-email="true">
                   <p> <input type="text" class="form-contact" name="email" placeholder="Enter Address"> </p>
                   <p> <button type="submit" name="submitNewsletter" class="btn btn-block button-theme">
                       Subscribe

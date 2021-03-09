@@ -2,110 +2,54 @@
   <div class="container">
     <!-- Main title -->
     <div class="main-title">
-      <h1><?php _e( 'Our Agent', 'pam' ); ?></h1>
-      <p><?php _e( 'Meet out small team that make those great products.', 'pam' ); ?></p>
+      <h1><?php echo get_theme_mod( 'pam_sc_team_main_title_h1', __( 'Our Agent', 'pam' ) ); ?></h1>
+      <p><?php echo get_theme_mod( 'pam_sc_team_main_title_p', __( 'Meet out small team that make those great products.', 'pam' ) ); ?></p>
     </div>
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s">
-        <div class="team-1">
-          <div class="team-photo">
-            <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/avatar/avatar-7.jpg" alt="agent-2" class="img-fluid"> </a>
+    <?php
+      $corretor_query_args = array(
+        'post_type' => 'corretor',
+        'nopaging' => true,
+        'order' => 'ASC',
+        'orderby' => 'date'
+      )
+    ?>
+    <?php $corretor_query = new WP_Query( $corretor_query_args ); ?>
+    <?php if ( $corretor_query->have_posts() ) : ?>
+      <div class="row">
+        <?php while ( $corretor_query->have_posts() ) : $corretor_query->the_post(); ?>
+          <?php PG_Helper::rememberShownPost(); ?>
+          <div <?php post_class( 'col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s' ); ?> id="post-<?php the_ID(); ?>">
+            <div class="team-1">
+              <div class="team-photo">
+                <a href="#"> <?php echo PG_Image::getPostImage( null, 'large', array(
+                      'class' => 'img-fluid'
+                  ), 'both', null ) ?> </a>
+              </div>
+              <div class="team-details">
+                <h5><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h5>
+                <h6><?php _e( 'Web Developer', 'pam' ); ?></h6>
+                <ul class="social-list clearfix">
+                  <li>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="team-details">
-            <h5><a href="#"><?php _e( 'Martin Smith', 'pam' ); ?></a></h5>
-            <h6><?php _e( 'Web Developer', 'pam' ); ?></h6>
-            <ul class="social-list clearfix">
-              <li>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft delay-04s">
-        <div class="team-1">
-          <div class="team-photo">
-            <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/avatar/avatar-6.jpg" alt="agent-2" class="img-fluid"> </a>
-          </div>
-          <div class="team-details">
-            <h5><a href="#"><?php _e( 'John Pitarshon', 'pam' ); ?></a></h5>
-            <h6><?php _e( 'Creative Director', 'pam' ); ?></h6>
-            <ul class="social-list clearfix">
-              <li>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s">
-        <div class="team-1">
-          <div class="team-photo">
-            <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/avatar/avatar-8.jpg" alt="agent-2" class="img-fluid"> </a>
-          </div>
-          <div class="team-details">
-            <h5><a href="#"><?php _e( 'Maria Blank', 'pam' ); ?></a></h5>
-            <h6><?php _e( 'Office Manager', 'pam' ); ?></h6>
-            <ul class="social-list clearfix">
-              <li>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 d-none d-xl-block d-lg-block wow fadeInRight delay-04s">
-        <div class="team-1">
-          <div class="team-photo">
-            <a href="#"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/avatar/avatar-5.jpg" alt="agent-2" class="img-fluid"> </a>
-          </div>
-          <div class="team-details">
-            <h5><a href="#"><?php _e( 'Karen Paran', 'pam' ); ?></a></h5>
-            <h6><?php _e( 'Support Manager', 'pam' ); ?></h6>
-            <ul class="social-list clearfix">
-              <li>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php else : ?>
+      <p><?php _e( 'Sorry, no posts matched your criteria.', 'pam' ); ?></p>
+    <?php endif; ?>
   </div>
 </div>

@@ -1,33 +1,31 @@
 <div class="partners">
   <div class="container">
-    <h4><?php _e( 'Brands $ Partners', 'pam' ); ?></h4>
+    <h4><?php echo get_theme_mod( 'title_h4', __( 'Brands Partners', 'pam' ) ); ?></h4>
     <div class="slick-slider-area">
-      <div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
-        <div class="slick-slide-item">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brand/brand-1.png" alt="brand" class="img-fluid">
+      <?php
+        $partners_query_args = array(
+          'post_type' => 'partners',
+          'posts_per_page' => 12,
+          'order' => 'ASC',
+          'orderby' => 'date'
+        )
+      ?>
+      <?php $partners_query = new WP_Query( $partners_query_args ); ?>
+      <?php if ( $partners_query->have_posts() ) : ?>
+        <div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
+          <?php while ( $partners_query->have_posts() ) : $partners_query->the_post(); ?>
+            <div <?php post_class( 'slick-slide-item' ); ?> title="<?php the_title_attribute(array(
+  'echo' => true
+)); ?>" id="post-<?php the_ID(); ?>">
+              <?php echo PG_Image::getPostImage( null, 'large', array(
+                  'class' => 'img-fluid',
+                  'sizes' => 'max-width(768px) 155px, max-width(1280px) 160px, 160px'
+              ), null, null ) ?>
+            </div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
-        <div class="slick-slide-item">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brand/brand-2.png" alt="brand" class="img-fluid">
-        </div>
-        <div class="slick-slide-item">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brand/brand-3.png" alt="brand" class="img-fluid">
-        </div>
-        <div class="slick-slide-item">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brand/brand-4.png" alt="brand" class="img-fluid">
-        </div>
-        <div class="slick-slide-item">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brand/brand-5.png" alt="brand" class="img-fluid">
-        </div>
-        <div class="slick-slide-item">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brand/brand-6.png" alt="brand" class="img-fluid">
-        </div>
-        <div class="slick-slide-item">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brand/brand-2.png" alt="brand" class="img-fluid">
-        </div>
-        <div class="slick-slide-item">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/brand/brand-4.png" alt="brand" class="img-fluid">
-        </div>
-      </div>
+      <?php endif; ?>
       <div class="slick-prev slick-arrow-buton">
         <i class="fa fa-angle-left"></i>
       </div>

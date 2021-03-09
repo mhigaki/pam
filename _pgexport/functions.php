@@ -18,7 +18,7 @@ function pam_setup() {
      * Let WordPress manage the document title.
      */
     add_theme_support( 'title-tag' );
-
+    
     /*
      * Enable support for Post Thumbnails on posts and pages.
      */
@@ -36,7 +36,7 @@ function pam_setup() {
     /* Pinegrow generated Register Menus Begin */
 
     /* Pinegrow generated Register Menus End */
-
+    
 /*
     * Set image sizes
      */
@@ -45,7 +45,7 @@ function pam_setup() {
     add_image_size( 'agents', 360, 300, true );
     add_image_size( 'agent', 305, 365, true );
     /* Pinegrow generated Image Sizes End */
-
+    
     /*
      * Switch default core markup for search form, comment form, and comments
      * to output valid HTML5.
@@ -75,7 +75,7 @@ if ( ! function_exists( 'pam_init' ) ) :
 
 function pam_init() {
 
-
+    
     // Use categories and tags with attachments
     register_taxonomy_for_object_type( 'category', 'attachment' );
     register_taxonomy_for_object_type( 'post_tag', 'attachment' );
@@ -96,6 +96,7 @@ function pam_init() {
     'hierarchical' => true,
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' ),
     'has_archive' => true,
+    'show_in_rest' => true,
     'show_in_menu' => true,
     'menu_icon' => 'dashicons-admin-multisite',
     'taxonomies' => array( 'category' )
@@ -114,7 +115,8 @@ function pam_init() {
     'has_archive' => true,
     'show_in_rest' => true,
     'show_in_menu' => true,
-    'menu_icon' => 'dashicons-id'
+    'menu_icon' => 'dashicons-id',
+    'taxonomies' => array( 'category' )
   ));
 
     register_post_type('sliders', array(
@@ -127,6 +129,18 @@ function pam_init() {
     'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
     'show_in_menu' => true,
     'menu_icon' => 'dashicons-slides'
+  ));
+
+    register_post_type('servicos', array(
+    'labels' => 
+      array(
+        'name' => __( 'Services', 'pam' ),
+        'singular_name' => __( 'Service', 'pam' )
+      ),
+    'public' => true,
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
+    'show_in_rest' => true,
+    'show_in_menu' => true
   ));
 
     register_post_type('testemonials', array(
@@ -148,27 +162,13 @@ function pam_init() {
         'singular_name' => __( 'Partner', 'pam' )
       ),
     'public' => true,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
     'show_in_rest' => true,
-    'show_in_menu' => true,
-    'taxonomies' => array( 'category' )
-  ));
-
-    register_post_type('servicos', array(
-    'labels' => 
-      array(
-        'name' => __( 'Nossos Servicos', 'pam' ),
-        'singular_name' => __( 'Servico', 'pam' )
-      ),
-    'public' => true,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-    'show_in_rest' => true,
-    'show_in_menu' => true,
-    'taxonomies' => array( 'category' )
+    'show_in_menu' => true
   ));
 
     /* Pinegrow generated Custom Post Types End */
-
+    
     /*
      * Register custom taxonomies. You can also move this code to a plugin.
      */
@@ -247,23 +247,6 @@ function pam_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
-    $wp_customize->add_section( 'pam_header', array(
-    'title' => __( 'Header', 'pam' ),
-    'panel' => 'pam_theme_settings',
-    'priority' => '5'
-  ));
-
-    $wp_customize->add_section( 'pam_sc_partners', array(
-    'title' => __( 'Section Partners', 'pam' ),
-    'panel' => 'pam_theme_settings',
-    'priority' => '80'
-  ));
-
-    $wp_customize->add_section( 'pam_sc_services', array(
-    'title' => __( 'Section Services', 'pam' ),
-    'panel' => 'pam_theme_settings'
-  ));
-
     $wp_customize->add_section( 'pam_sc_team', array(
     'title' => __( 'Section Team', 'pam' ),
     'panel' => 'pam_theme_settings'
@@ -308,11 +291,6 @@ function pam_customize_register( $wp_customize ) {
     'title' => __( 'Section Partners', 'pam' ),
     'panel' => 'pam_theme_settings'
   ));
-
-    $wp_customize->add_section( 'pam_sc_footer', array(
-    'title' => __( 'Section Footer', 'pam' ),
-    'panel' => 'pam_theme_settings'
-  ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
     $wp_customize->add_setting( 'pam_brand_logo', array(
@@ -353,26 +331,73 @@ function pam_customize_register( $wp_customize ) {
     'section' => 'pam_sc_features'
   ));
 
-    $wp_customize->add_setting( 'display_pam_sc_services', array(
+    $wp_customize->add_setting( 'display_pam_sc_team', array(
     'type' => 'theme_mod',
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'display_pam_sc_services', array(
-    'label' => __( 'Display Section Service', 'pam' ),
-    'description' => __( 'Marque para exibir a seção', 'pam' ),
+    $wp_customize->add_control( 'display_pam_sc_team', array(
+    'label' => __( 'Display Section Team', 'pam' ),
+    'type' => 'checkbox',
+    'section' => 'pam_sc_team'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_team_main_title_h1', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Our Agent', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_team_main_title_h1', array(
+    'label' => __( 'Titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_team'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_team_main_title_p', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Meet out small team that make those great products.', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_team_main_title_p', array(
+    'label' => __( 'Sub-titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_team'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_services_display_pam_sc_services', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_services_display_pam_sc_services', array(
+    'label' => __( 'Display Section Services', 'pam' ),
     'type' => 'checkbox',
     'section' => 'pam_sc_services'
   ));
 
-    $wp_customize->add_setting( 'display_pam_sc_service_load_page', array(
+    $wp_customize->add_setting( 'pam_sc_services_main_title_h1', array(
     'type' => 'theme_mod',
+    'default' => __( 'What are you looking for?', 'pam' ),
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'display_pam_sc_service_load_page', array(
-    'label' => __( 'Selecione a Pagina de Serviços', 'pam' ),
-    'type' => 'dropdown-pages',
+    $wp_customize->add_control( 'pam_sc_services_main_title_h1', array(
+    'label' => __( 'Titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_services'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_services_main_title_p', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_services_main_title_p', array(
+    'label' => __( 'Sub-titulo', 'pam' ),
+    'type' => 'text',
     'section' => 'pam_sc_services'
   ));
 
@@ -383,65 +408,54 @@ function pam_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( 'display_pam_sc_categories', array(
     'label' => __( 'Display Section Categories', 'pam' ),
-    'description' => __( 'Marque para exibir a seção', 'pam' ),
     'type' => 'checkbox',
     'section' => 'pam_sc_categories'
   ));
 
-    $wp_customize->add_setting( 'display_pam_sc_categories_load_page', array(
+    $wp_customize->add_setting( 'pam_sc_categories_main_title_h1', array(
     'type' => 'theme_mod',
+    'default' => __( 'Most Popular Places', 'pam' ),
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'display_pam_sc_categories_load_page', array(
-    'label' => __( 'Selecione a Pagina de Categorias', 'pam' ),
-    'type' => 'dropdown-pages',
+    $wp_customize->add_control( 'pam_sc_categories_main_title_h1', array(
+    'label' => __( 'Titulo', 'pam' ),
+    'type' => 'text',
     'section' => 'pam_sc_categories'
   ));
 
-    $wp_customize->add_setting( 'display_pam_sc_team', array(
+    $wp_customize->add_setting( 'pam_sc_categories_main_title_p', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Find Property In Your City', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_categories_main_title_p', array(
+    'label' => __( 'Sub-titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_categories'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_testemonial_display_pam_sc_testemonials', array(
     'type' => 'theme_mod',
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'display_pam_sc_team', array(
-    'label' => __( 'Display Section Team', 'pam' ),
-    'description' => __( 'Marque para exibir a seção', 'pam' ),
-    'type' => 'checkbox',
-    'section' => 'pam_sc_team'
-  ));
-
-    $wp_customize->add_setting( 'display_pam_sc_team_load_page', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
-
-    $wp_customize->add_control( 'display_pam_sc_team_load_page', array(
-    'label' => __( 'Selecione a Pagina de Serviços', 'pam' ),
-    'type' => 'dropdown-pages',
-    'section' => 'pam_sc_team'
-  ));
-
-    $wp_customize->add_setting( 'display_pam_sc_testemonials', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
-
-    $wp_customize->add_control( 'display_pam_sc_testemonials', array(
-    'label' => __( 'Display Section Testemonial', 'pam' ),
-    'description' => __( 'Marque para exibir a seção', 'pam' ),
+    $wp_customize->add_control( 'pam_sc_testemonial_display_pam_sc_testemonials', array(
+    'label' => __( 'Display Section Testemonials', 'pam' ),
     'type' => 'checkbox',
     'section' => 'pam_sc_testemonial'
   ));
 
-    $wp_customize->add_setting( 'display_pam_sc_testemonials_load_page', array(
+    $wp_customize->add_setting( 'pam_sc_testemonial_main_title_h1', array(
     'type' => 'theme_mod',
+    'default' => __( 'Our Testimonial', 'pam' ),
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'display_pam_sc_testemonials_load_page', array(
-    'label' => __( 'Selecione a Pagina de Serviços', 'pam' ),
-    'type' => 'dropdown-pages',
+    $wp_customize->add_control( 'pam_sc_testemonial_main_title_h1', array(
+    'label' => __( 'Titulo', 'pam' ),
+    'type' => 'text',
     'section' => 'pam_sc_testemonial'
   ));
 
@@ -452,19 +466,31 @@ function pam_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( 'display_pam_sc_blog', array(
     'label' => __( 'Display Section Blog', 'pam' ),
-    'description' => __( 'Marque para exibir a seção', 'pam' ),
     'type' => 'checkbox',
     'section' => 'pam_sc_blog'
   ));
 
-    $wp_customize->add_setting( 'display_pam_sc_blog_load_page', array(
+    $wp_customize->add_setting( 'main_title_h1', array(
     'type' => 'theme_mod',
+    'default' => __( 'Latest news', 'pam' ),
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'display_pam_sc_blog_load_page', array(
-    'label' => __( 'Display Section Blog', 'pam' ),
-    'type' => 'dropdown-pages',
+    $wp_customize->add_control( 'main_title_h1', array(
+    'label' => __( 'Titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_blog'
+  ));
+
+    $wp_customize->add_setting( 'main_title_p', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Check out some recent news posts.', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'main_title_p', array(
+    'label' => __( 'Sub-titulo', 'pam' ),
+    'type' => 'text',
     'section' => 'pam_sc_blog'
   ));
 
@@ -481,13 +507,12 @@ function pam_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'title_h4', array(
     'type' => 'theme_mod',
-    'default' => __( 'Parceiros', 'pam' ),
+    'default' => __( 'Brands Partners', 'pam' ),
     'sanitize_callback' => $pgwp_sanitize
   ));
 
     $wp_customize->add_control( 'title_h4', array(
-    'label' => __( 'Titulo da Seção', 'pam' ),
-    'description' => __( 'Descrição da Seção', 'pam' ),
+    'label' => __( 'Titulo', 'pam' ),
     'type' => 'text',
     'section' => 'pam_sc_partners'
   ));
@@ -580,6 +605,8 @@ if ( ! function_exists( 'pam_enqueue_scripts' ) ) :
 
     wp_enqueue_style( 'pam-ieviewportbugworkaround', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css', null, null, 'all' );
 
+    wp_enqueue_style( 'pam-custom', get_template_directory_uri() . '/css/custom.css', null, null, 'all' );
+
     wp_deregister_style( 'pam-style-1' );
     wp_enqueue_style( 'pam-style-1', get_bloginfo('stylesheet_url'), false, null, 'all');
 
@@ -614,10 +641,10 @@ function pam_selectively_enqueue_admin_script( $page ) {
     wp_enqueue_style( 'pam-red', get_template_directory_uri() . '/css/skins/red.css', null, null, 'all' );
 
     /* Pinegrow generated Enqueue Admin Styles End */
-
+    
     /* Pinegrow generated Enqueue Admin Scripts Begin */
     /* Pinegrow generated Enqueue Admin Scripts End */
-
+        
 }
 add_action( 'admin_enqueue_scripts', 'pam_selectively_enqueue_admin_script' );
 
@@ -653,8 +680,8 @@ function pam_register_required_plugins()
 
         // This is an example of how to include a plugin from the WordPress Plugin Repository.
         array(
-            'name'      => 'Autoptimize',
-            'slug'      => 'autoptimize',
+            'name'      => 'WP-Sweep',
+            'slug'      => 'wp-sweep',
             'required'  => true,
         ),
 
@@ -810,5 +837,4 @@ function pam_register_required_plugins()
 
  	tgmpa( $plugins, $config );
  }
-
 ?>

@@ -306,7 +306,7 @@
       </div>
     </header>
     <div wp-site-content>
-      <div class="blog-banner">
+      <div class="blog-banner" data-pg-collapsed>
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -326,8 +326,8 @@
       <div class="blog-body content-area">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 col-md-12" cms-post="query" cms-post-type="post" cms-post-show-empty-text="false" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-count="4" cms-post-type-order="date DESC" cms-post-type-query-name="post_blog">
-              <div class="blog-1" wp-loop-item wp-post-class wp-the-id>
+            <div class="col-lg-8 col-md-12" cms-post="query" cms-post-type="post" cms-post-type-query-name="post_blog" cms-post-type-count="4" cms-post-show-empty-text="false" cms-post-items-container="this" cms-post-repeat="> div:nth-of-type(1)" cms-post-type-order="date DESC">
+              <div class="blog-1">
                 <div class="blog-photo">
                   <img src="img/blog/blog-1.jpg" alt="blog-img" class="img-fluid" width="900" height="500" wp-the-post-thumbnail="array(0,400),true" wp-the-post-thumbnail-if="true" wp-the-post-thumbnail-sizes="max-width(320px) 85vw, max-width(640px) 510px, max-width(768px) 90vw, max-width(1024px) 70vw, max-width(1280px) 730px, 730px">
                   <div class="profile-user">
@@ -335,45 +335,45 @@
                   </div>
                 </div>
                 <div class="detail">
-                  <div class="post-meta clearfix">
+                  <div class="post-meta clearfix" cms-template-part="template-parts/post/post-meta" data-pg-collapsed>
                     <ul>
                       <li>
-                        <strong cms-author-field="display_name" cms-author-field-type="content"><a href="#">Alex Teseira</a></strong>
+                        <strong><a href="#">Alex Teseira</a></strong>
                       </li>
                       <li class="mr-0">
-                        <span wp-the-modified-date wp-the-modified-date-set="content">Feb 31, 2018</span>
+                        <span>Feb 31, 2018</span>
                       </li>
-                      <li class="float-right mr-0" cms-no-export>
-                        <i class="fa fa-commenting-o" wp-comments-title wp-comments-title-set="after" wp-comments-title-multiple="%1$s"></i>
+                      <li class="float-right mr-0">
+                        <i class="fa fa-commenting-o"></i>
                       </li>
                       <li class="float-right">
-                        <i class="fa fa-calendar" wp-the-author-posts wp-the-author-posts-set="after"></i>
+                        <i class="fa fa-calendar"></i>
                       </li>
                     </ul>
                   </div>
                   <h3> <a href="blog-single-sidebar-right.html" cms-post-link wp-the-title rel="nofollow noreferrer noopener">Buying a Best House</a> </h3>
                   <p wp-get-the-excerpt>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with</p>
-                  <a class="read-more" href="blog-single-sidebar-right.html" rel="nofollow noreferrer noopener">Saiba Mais</a>
+                  <a class="read-more" href="blog-single-sidebar-right.html" rel="nofollow noreferrer noopener" cms-post-link="not_singular">Saiba Mais</a>
                 </div>
               </div>
               <div class="pagination-box hidden-mb-45 text-center">
                 <nav aria-label="Page navigation example">
                   <ul class="pagination" wp-if-custom="PG_Pagination::isPaginated()">
                     <li class="page-item">
-                      <a class="page-link" href="#" wp-pagination-field wp-pagination-field-item="prev_link" wp-pagination-field-query="post_blog" wp-pagination-field-if><i class="fa fa-angle-left"></i></a>
+                      <a class="page-link" href="#" wp-pagination-field wp-pagination-field-item="prev_link" wp-pagination-field-if wp-pagination-field-query="post_blog"><i class="fa fa-angle-left"></i></a>
                     </li>
-                    <li class="active page-item" wp-pagination-field wp-pagination-field-query="post_blog" wp-pagination-field-active-class="active" wp-pagination-field-item="repeat">
+                    <li class="active page-item" wp-pagination-field wp-pagination-field-active-class="active" wp-pagination-field-item="repeat" wp-pagination-field-query="post_blog">
                       <a class="page-link" href="#">#</a>
                     </li>
                     <li class="page-item">
-                      <a class="page-link" href="#" wp-pagination-field wp-pagination-field-item="next_link" wp-pagination-field-query="post_blog" wp-pagination-field-if><i class="fa fa-angle-right"></i></a>
+                      <a class="page-link" href="#" wp-pagination-field wp-pagination-field-item="next_link" wp-pagination-field-if wp-pagination-field-query="post_blog"><i class="fa fa-angle-right"></i></a>
                     </li>
                   </ul>
                 </nav>
               </div>
             </div>
             <div class="col-lg-4 col-md-12">
-              <div class="sidebar-right" wp-get-sidebar="right">
+              <div class="sidebar-right" wp-get-sidebar="right" data-pg-collapsed>
                 <!-- Search box -->
                 <div class="widget search-box">
                   <h3 class="sidebar-title">Pesquisa</h3>

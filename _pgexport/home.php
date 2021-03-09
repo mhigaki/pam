@@ -54,23 +54,12 @@
                                 </div>
                             </div>
                             <div class="detail">
-                                <div class="post-meta clearfix">
-                                    <ul>
-                                        <li>
-                                            <strong><?php echo get_the_author_meta( 'display_name', false ) ?></strong>
-                                        </li>
-                                        <li class="mr-0">
-                                            <span><?php the_modified_date(); ?></span>
-                                        </li>
-                                        <li class="float-right">
-                                            <i class="fa fa-calendar"></i>
-                                            <?php the_author_posts(); ?>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <?php get_template_part( 'template-parts/post/post-meta' ); ?>
                                 <h3> <a href="<?php echo esc_url( get_permalink() ); ?>" rel="nofollow noreferrer noopener"><?php the_title(); ?></a> </h3>
                                 <p><?php echo get_the_excerpt(); ?></p>
-                                <a class="read-more" href="blog-single-sidebar-right.html" rel="nofollow noreferrer noopener"><?php _e( 'Saiba Mais', 'pam' ); ?></a>
+                                <?php if ( !is_singular() ) : ?>
+                                    <a class="read-more" href="<?php echo esc_url( get_permalink() ); ?>" rel="nofollow noreferrer noopener"><?php _e( 'Saiba Mais', 'pam' ); ?></a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php endwhile; ?>

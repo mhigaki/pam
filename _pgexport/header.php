@@ -10,10 +10,8 @@
     <body class="<?php echo implode(' ', get_body_class()); ?>">
         <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>
         <div class="page_loader"></div>
-        <?php if ( !is_404() ) : ?>
-            <header class="site-header">
-                <?php get_template_part( 'template-parts/header/header', 'top' ); ?>
-                <?php get_template_part( 'template-parts/header/header', 'main' ); ?>
-            </header>
-        <?php endif; ?>
+        <header class="site-header">
+            <?php get_template_part( 'template-parts/header/header', 'top' ); ?>
+            <?php get_template_part( 'template-parts/header/header', 'main' ); ?>
+        </header>
         <main>

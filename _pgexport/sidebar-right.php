@@ -16,21 +16,21 @@
   </div>
   <!-- Popular posts start -->
   <?php
-    $post_query_args = array(
-      'post__in' => PG_Helper::getPostIdList( get_post_thumbnail_id() ),
-      'post_type' => 'any',
-      'post_status' => 'any',
+    $post_recents_args = array(
+      'post__not_in' => PG_Helper::getShownPosts(),
+      'post_type' => 'post',
       'posts_per_page' => 3,
       'ignore_sticky_posts' => true,
       'order' => 'DESC',
       'orderby' => 'date'
     )
   ?>
-  <?php $post_query = new WP_Query( $post_query_args ); ?>
-  <?php if ( $post_query->have_posts() ) : ?>
+  <?php $post_recents = new WP_Query( $post_recents_args ); ?>
+  <?php if ( $post_recents->have_posts() ) : ?>
     <div class="widget popular-posts">
       <h3 class="sidebar-title"><?php _e( 'Postagens Recentes', 'pam' ); ?></h3>
-      <?php while ( $post_query->have_posts() ) : $post_query->the_post(); ?>
+      <?php while ( $post_recents->have_posts() ) : $post_recents->the_post(); ?>
+        <?php PG_Helper::rememberShownPost(); ?>
         <div <?php post_class( 'media' ); ?> id="post-<?php the_ID(); ?>">
           <div class="media-left">
             <?php echo PG_Image::getPostImage( null, 'thumbnail', array(
@@ -45,6 +45,8 @@
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>
     </div>
+  <?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.', 'pam' ); ?></p>
   <?php endif; ?>
   <!-- Posts by Start -->
   <div class="posts-by-category widget">
@@ -68,14 +70,13 @@
   <div class="widget tags-box">
     <h3 class="sidebar-title"><?php _e( 'Tags', 'pam' ); ?></h3>
     <ul class="tags">
-      <li>
-        <?php wp_tag_cloud(array(
-            'number' => '10',
-            'orderby' => 'name',
-            'order' => 'ASC',
-            'taxonomy' => 'post_tag'
-        )); ?>
-      </li>
+      <?php wp_tag_cloud(array(
+          'largest' => '14',
+          'number' => '10',
+          'format' => 'list',
+          'orderby' => 'name',
+          'order' => 'ASC'
+      )); ?>
     </ul>
   </div>
   <!-- Latest reviews Start -->
