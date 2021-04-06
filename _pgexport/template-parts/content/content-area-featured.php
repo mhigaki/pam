@@ -1,383 +1,92 @@
-<div class="featured-properties content-area-9">
-  <div class="container">
-    <!-- Main title -->
-    <div class="main-title">
-      <h1><?php _e( 'Featured Properties', 'pam' ); ?></h1>
-      <p><?php _e( 'Find Your Properties In Your City', 'pam' ); ?></p>
-    </div>
-    <div class="slick-slider-area">
-      <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-        <div class="slick-slide-item">
-          <div class="property-box">
-            <div class="property-thumbnail">
-              <a href="properties-details.html" class="property-img"> <div class="listing-badges">
-                  <span class="featured"><?php _e( 'Featured', 'pam' ); ?></span>
-                </div> <div class="price-ratings-box">
-                  <p class="price"> <?php _e( '$178,000', 'pam' ); ?> </p>
-                  <div class="ratings">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                  </div>
-                </div> <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-2.jpg" alt="properties">
+<div class="featured-properties content-area-9"> 
+  <div class="container"> 
+    <!-- Main title -->     
+    <div class="main-title"> 
+      <h1><?php echo get_theme_mod( 'pam_sc_features_main_title_h1', __( 'What are you looking for?', 'pam' ) ); ?></h1> 
+      <p><?php echo get_theme_mod( 'pam_sc_features_main_title_p', __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.', 'pam' ) ); ?></p> 
+    </div>     
+    <?php
+      $properties_query_args = array(
+        'post_type' => 'properties',
+        'posts_per_page' => 5,
+        'order' => 'ASC',
+        'orderby' => 'date'
+      )
+    ?>
+    <?php $properties_query = new WP_Query( $properties_query_args ); ?>
+    <?php if ( $properties_query->have_posts() ) : ?>
+      <div class="slick-slider-area"> 
+        <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'> 
+          <?php while ( $properties_query->have_posts() ) : $properties_query->the_post(); ?>
+            <?php PG_Helper::rememberShownPost(); ?>
+            <div <?php post_class( 'slick-slide-item' ); ?> id="post-<?php the_ID(); ?>"> 
+              <div class="property-box"> 
+                <div class="property-thumbnail"> 
+                  <a href="<?php echo esc_url( get_permalink() ); ?>" class="property-img"> <div class="listing-badges"> 
+                      <?php $terms = get_the_terms( get_the_ID(), 'properties_status' ) ?>
+                      <?php if( !empty( $terms ) ) : ?>
+                        <?php $term_i = 0; ?>
+                        <?php foreach( $terms as $term ) : ?>
+                          <?php if( $term_i == 0 ) : ?>
+                            <span class="featured"><?php echo $term->name; ?></span>
+                          <?php endif; ?>
+                          <?php $term_i++; ?>
+                        <?php endforeach; ?>
+                      <?php endif; ?> 
+                    </div> <div class="price-ratings-box"> 
+                      <p class="price"><?php echo get_field( 'preco' ); ?></p> 
+                      <div class="ratings">
+                        <?php echo get_field( 'rattings' ); ?>
+                      </div>                       
+                    </div><?php echo PG_Image::getPostImage( null, 'large', array(
+                        'class' => 'd-block w-100'
+                    ), 'both', null ) ?> </a> 
+                </div>                 
+                <div class="detail"> 
+                  <h1 class="title"> <?php echo single_cat_title(); ?> </h1> 
+                  <?php if ( get_field( 'endereco' ) ) : ?>
+                    <div class="location"> 
+                      <a href="<?php echo esc_url( get_permalink() ); ?>"> <i class="fa fa-map-marker"></i><?php echo get_field( 'endereco' ); ?></a> 
                     </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-2.jpg" alt="properties">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-2.jpg" alt="properties">
-                    </div>
-                  </div>
-                </div> </a>
+                  <?php endif; ?> 
+                  <ul class="facilities-list clearfix"> 
+                    <li> 
+                      <i class="flaticon-furniture"></i>
+                      <?php echo get_post_meta( get_the_ID(), 'informacoes_planta_quartos', true ); ?> 
+                    </li>                     
+                    <li> 
+                      <i class="flaticon-holidays"></i>
+                      <?php echo get_field( 'informacoes_planta_banheiros' ); ?> 
+                    </li>                     
+                    <li> 
+                      <i class="flaticon-square"></i>
+                      <?php echo get_field( 'informacoes_planta_area' ); ?> 
+                    </li>                     
+                    <li> 
+                      <i class="flaticon-vehicle"></i>
+                      <?php echo get_field( 'informacoes_planta_garagem' ); ?> 
+                    </li>                     
+                  </ul>                   
+                </div>                 
+                <div class="footer clearfix"> 
+                  <div class="pull-left days"> 
+                    <p><i class="flaticon-time"></i><?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ) . ' atrás'; ?></p>
+                  </div>                                      
+                </div>                 
+              </div>               
             </div>
-            <div class="detail">
-              <h1 class="title"> <a href="properties-details.html"><?php _e( 'Modern Family Home', 'pam' ); ?></a> </h1>
-              <div class="location">
-                <a href="properties-details.html"> <i class="fa fa-map-marker"></i><?php _e( '123 Kathal St. Tampa City,', 'pam' ); ?> </a>
-              </div>
-              <ul class="facilities-list clearfix">
-                <li>
-                  <i class="flaticon-furniture"></i> 
-                  <?php _e( '3 Bedrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-holidays"></i> 
-                  <?php _e( '2 Bathrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-square"></i> 
-                  <?php _e( 'Sq Ft:3400', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-vehicle"></i> 
-                  <?php _e( '1 Garage', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <div class="footer clearfix">
-              <div class="pull-left days">
-                <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
-              </div>
-              <ul class="pull-right">
-                <li>
-                  <a href="#"><i class="flaticon-favorite"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="flaticon-multimedia"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="slick-slide-item">
-          <div class="property-box">
-            <div class="property-thumbnail">
-              <a href="properties-details.html" class="property-img"> <div class="listing-badges">
-                  <span class="featured"><?php _e( 'Featured', 'pam' ); ?></span>
-                </div> <div class="price-ratings-box">
-                  <p class="price"> <?php _e( '$178,000', 'pam' ); ?> </p>
-                  <div class="ratings">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                  </div>
-                </div> <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-5.jpg" alt="properties"> </a>
-            </div>
-            <div class="detail">
-              <h1 class="title"> <a href="properties-details.html"><?php _e( 'Relaxing Apartment', 'pam' ); ?></a> </h1>
-              <div class="location">
-                <a href="properties-details.html"> <i class="fa fa-map-marker"></i><?php _e( '123 Kathal St. Tampa City,', 'pam' ); ?> </a>
-              </div>
-              <ul class="facilities-list clearfix">
-                <li>
-                  <i class="flaticon-furniture"></i> 
-                  <?php _e( '3 Bedrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-holidays"></i> 
-                  <?php _e( '2 Bathrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-square"></i> 
-                  <?php _e( 'Sq Ft:3400', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-vehicle"></i> 
-                  <?php _e( '1 Garage', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <div class="footer clearfix">
-              <div class="pull-left days">
-                <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
-              </div>
-              <ul class="pull-right">
-                <li>
-                  <a href="#"><i class="flaticon-favorite"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="flaticon-multimedia"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="slick-slide-item">
-          <div class="property-box">
-            <div class="property-thumbnail">
-              <a href="properties-details.html" class="property-img"> <div class="listing-time opening">
-                  <?php _e( 'For Sale', 'pam' ); ?>
-                </div> <div class="price-ratings-box">
-                  <p class="price"> <?php _e( '$178,000', 'pam' ); ?> </p>
-                  <div class="ratings">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                  </div>
-                </div> <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-6.jpg" alt="properties"> </a>
-            </div>
-            <div class="detail">
-              <h1 class="title"> <a href="properties-details.html"><?php _e( 'Park Avenue', 'pam' ); ?></a> </h1>
-              <div class="location">
-                <a href="properties-details.html"> <i class="fa fa-map-marker"></i><?php _e( '123 Kathal St. Tampa City,', 'pam' ); ?> </a>
-              </div>
-              <ul class="facilities-list clearfix">
-                <li>
-                  <i class="flaticon-furniture"></i> 
-                  <?php _e( '3 Bedrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-holidays"></i> 
-                  <?php _e( '2 Bathrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-square"></i> 
-                  <?php _e( 'Sq Ft:3400', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-vehicle"></i> 
-                  <?php _e( '1 Garage', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <div class="footer clearfix">
-              <div class="pull-left days">
-                <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
-              </div>
-              <ul class="pull-right">
-                <li>
-                  <a href="#"><i class="flaticon-favorite"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="flaticon-multimedia"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="slick-slide-item">
-          <div class="property-box">
-            <div class="property-thumbnail">
-              <a href="properties-details.html" class="property-img"> <div class="listing-badges">
-                  <span class="featured"><?php _e( 'Featured', 'pam' ); ?></span>
-                </div> <div class="price-ratings-box">
-                  <p class="price"> <?php _e( '$178,000', 'pam' ); ?> </p>
-                  <div class="ratings">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                  </div>
-                </div> <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-4.jpg" alt="properties">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-4.jpg" alt="properties">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-4.jpg" alt="properties">
-                    </div>
-                  </div>
-                </div> </a>
-            </div>
-            <div class="detail">
-              <h1 class="title"> <a href="properties-details.html"><?php _e( 'Modern Family Home', 'pam' ); ?></a> </h1>
-              <div class="location">
-                <a href="properties-details.html"> <i class="fa fa-map-marker"></i><?php _e( '123 Kathal St. Tampa City,', 'pam' ); ?> </a>
-              </div>
-              <ul class="facilities-list clearfix">
-                <li>
-                  <i class="flaticon-furniture"></i> 
-                  <?php _e( '3 Bedrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-holidays"></i> 
-                  <?php _e( '2 Bathrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-square"></i> 
-                  <?php _e( 'Sq Ft:3400', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-vehicle"></i> 
-                  <?php _e( '1 Garage', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <div class="footer clearfix">
-              <div class="pull-left days">
-                <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
-              </div>
-              <ul class="pull-right">
-                <li>
-                  <a href="#"><i class="flaticon-favorite"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="flaticon-multimedia"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="slick-slide-item">
-          <div class="property-box">
-            <div class="property-thumbnail">
-              <a href="properties-details.html" class="property-img"> <div class="listing-badges">
-                  <span class="featured"><?php _e( 'Featured', 'pam' ); ?></span>
-                </div> <div class="price-ratings-box">
-                  <p class="price"> <?php _e( '$178,000', 'pam' ); ?> </p>
-                  <div class="ratings">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                  </div>
-                </div> <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-1.jpg" alt="properties"> </a>
-            </div>
-            <div class="detail">
-              <h1 class="title"> <a href="properties-details.html"><?php _e( 'Relaxing Apartment', 'pam' ); ?></a> </h1>
-              <div class="location">
-                <a href="properties-details.html"> <i class="fa fa-map-marker"></i><?php _e( '123 Kathal St. Tampa City,', 'pam' ); ?> </a>
-              </div>
-              <ul class="facilities-list clearfix">
-                <li>
-                  <i class="flaticon-furniture"></i> 
-                  <?php _e( '3 Bedrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-holidays"></i> 
-                  <?php _e( '2 Bathrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-square"></i> 
-                  <?php _e( 'Sq Ft:3400', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-vehicle"></i> 
-                  <?php _e( '1 Garage', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <div class="footer clearfix">
-              <div class="pull-left days">
-                <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
-              </div>
-              <ul class="pull-right">
-                <li>
-                  <a href="#"><i class="flaticon-favorite"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="flaticon-multimedia"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="slick-slide-item">
-          <div class="property-box">
-            <div class="property-thumbnail">
-              <a href="properties-details.html" class="property-img"> <div class="listing-time opening">
-                  <?php _e( 'For Sale', 'pam' ); ?>
-                </div> <div class="price-ratings-box">
-                  <p class="price"> <?php _e( '$178,000', 'pam' ); ?> </p>
-                  <div class="ratings">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                  </div>
-                </div> <img class="d-block w-100" src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/properties/properties-3.jpg" alt="properties"> </a>
-            </div>
-            <div class="detail">
-              <h1 class="title"> <a href="properties-details.html"><?php _e( 'Park Avenue', 'pam' ); ?></a> </h1>
-              <div class="location">
-                <a href="properties-details.html"> <i class="fa fa-map-marker"></i><?php _e( '123 Kathal St. Tampa City,', 'pam' ); ?> </a>
-              </div>
-              <ul class="facilities-list clearfix">
-                <li>
-                  <i class="flaticon-furniture"></i> 
-                  <?php _e( '3 Bedrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-holidays"></i> 
-                  <?php _e( '2 Bathrooms', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-square"></i> 
-                  <?php _e( 'Sq Ft:3400', 'pam' ); ?>
-                </li>
-                <li>
-                  <i class="flaticon-vehicle"></i> 
-                  <?php _e( '1 Garage', 'pam' ); ?>
-                </li>
-              </ul>
-            </div>
-            <div class="footer clearfix">
-              <div class="pull-left days">
-                <p><i class="flaticon-time"></i> <?php _e( '5 Days ago', 'pam' ); ?></p>
-              </div>
-              <ul class="pull-right">
-                <li>
-                  <a href="#"><i class="flaticon-favorite"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="flaticon-multimedia"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>                                                        
+        </div>         
+        <div class="slick-prev slick-arrow-buton"> 
+          <i class="fa fa-angle-left"></i> 
+        </div>         
+        <div class="slick-next slick-arrow-buton"> 
+          <i class="fa fa-angle-right"></i> 
+        </div>         
       </div>
-      <div class="slick-prev slick-arrow-buton">
-        <i class="fa fa-angle-left"></i>
-      </div>
-      <div class="slick-next slick-arrow-buton">
-        <i class="fa fa-angle-right"></i>
-      </div>
-    </div>
-  </div>
+    <?php else : ?>
+      <p><?php _e( 'Sorry, no posts matched your criteria.', 'pam' ); ?></p>
+    <?php endif; ?> 
+  </div>   
 </div>

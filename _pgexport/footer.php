@@ -9,18 +9,18 @@
                             <h4><?php _e( 'Contact Us', 'pam' ); ?></h4>
                             <ul class="contact-info">
                                 <li>
-                                    <?php _e( 'Address: 20/F Green Road, Dhanmondi, Dhaka', 'pam' ); ?>
+                                    <?php _e( 'Address: 20/F Green Road, Dhanmondi, Dhaka', 'pam' ); ?> 
                                 </li>
                                 <li>
-                                    <?php _e( 'Email:', 'pam' ); ?>
+                                    <?php _e( 'Email:', 'pam' ); ?> 
                                     <a href="mailto:sales@hotelempire.com"><?php _e( 'info@themevessel.com', 'pam' ); ?></a>
                                 </li>
                                 <li>
-                                    <?php _e( 'Phone:', 'pam' ); ?>
+                                    <?php _e( 'Phone:', 'pam' ); ?> 
                                     <a href="tel:+55-417-634-7071"><?php _e( '+0477 85X6 552', 'pam' ); ?></a>
                                 </li>
                                 <li>
-                                    <?php _e( 'Fax: +0477 85X6 552', 'pam' ); ?>
+                                    <?php _e( 'Fax: +0477 85X6 552', 'pam' ); ?> 
                                 </li>
                             </ul>
                             <ul class="social-list clearfix">
@@ -112,7 +112,7 @@
                                     <form action="<?php echo '#subscribe_mailer_id'; ?>" method="post" id="subscribe_mailer_id" onsubmit="event.stopImmediatePropagation();event.stopPropagation();">
                                         <p> <input type="text" class="form-contact" name="email" placeholder="Enter Address" value="<?php echo ( isset( $_POST['email'] ) ? $_POST['email'] : '' ); ?>"> </p>
                                         <p> <button type="submit" name="submitNewsletter" class="btn btn-block button-theme">
-                                                <?php _e( 'Subscribe', 'pam' ); ?>
+                                                <?php _e( 'Subscribe', 'pam' ); ?> 
                                             </button> </p>
                                         <input type="hidden" name="subscribe_mailer_id" value="1"/>
                                     </form>
@@ -136,7 +136,7 @@
         <div id="full-page-search">
             <button type="button" class="close">×</button>
             <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <input type="search" value="<?php the_search_query(); ?>" placeholder="Procurando por algo" name="s" id="textsearch2"/>
+                <input type="search" value="<?php the_search_query(); ?>" placeholder="Procurando por algo" name="s" id="txtsearch"/>
                 <button class="btn btn-sm button-theme" id="searchsubmit" type="submit" value="&lt;?php esc_attr_e( 'Search', 'pam' ); ?&gt;" name="submit">
                     <?php _e( 'Procurar', 'pam' ); ?>
                 </button>
@@ -144,8 +144,6 @@
         </div>
         <!-- Full Page Search -->
         <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery-2.2.0.min.js"></script>
-        <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/maps.js"></script>
-        <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/app.js"></script>
         <?php wp_footer(); ?>
     </body>
 </html>

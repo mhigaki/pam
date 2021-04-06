@@ -123,10 +123,11 @@ function pam_init() {
     'labels' => 
       array(
         'name' => __( 'Banners', 'pam' ),
-        'singular_name' => __( 'Banners', 'pam' )
+        'singular_name' => __( 'Banner', 'pam' )
       ),
     'public' => true,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+    'supports' => array( 'title', 'editor', 'thumbnail' ),
+    'show_in_rest' => true,
     'show_in_menu' => true,
     'menu_icon' => 'dashicons-slides'
   ));
@@ -138,9 +139,11 @@ function pam_init() {
         'singular_name' => __( 'Service', 'pam' )
       ),
     'public' => true,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
+    'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
     'show_in_rest' => true,
-    'show_in_menu' => true
+    'show_in_menu' => true,
+    'menu_icon' => 'dashicons-screenoptions',
+    'taxonomies' => array( 'category' )
   ));
 
     register_post_type('testemonials', array(
@@ -150,9 +153,10 @@ function pam_init() {
         'singular_name' => __( 'Testemonial', 'pam' )
       ),
     'public' => true,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
+    'supports' => array( 'title', 'editor', 'thumbnail' ),
     'show_in_rest' => true,
-    'show_in_menu' => true
+    'show_in_menu' => true,
+    'menu_icon' => 'dashicons-format-chat'
   ));
 
     register_post_type('partners', array(
@@ -162,9 +166,10 @@ function pam_init() {
         'singular_name' => __( 'Partner', 'pam' )
       ),
     'public' => true,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
+    'supports' => array( 'title', 'editor', 'thumbnail' ),
     'show_in_rest' => true,
-    'show_in_menu' => true
+    'show_in_menu' => true,
+    'menu_icon' => 'dashicons-nametag'
   ));
 
     /* Pinegrow generated Custom Post Types End */
@@ -247,8 +252,13 @@ function pam_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
-    $wp_customize->add_section( 'pam_sc_team', array(
-    'title' => __( 'Section Team', 'pam' ),
+    $wp_customize->add_section( 'pam_sc_header', array(
+    'title' => __( 'Header', 'pam' ),
+    'panel' => 'pam_theme_settings'
+  ));
+
+    $wp_customize->add_section( 'pam_sc_banner', array(
+    'title' => __( 'Section Banners', 'pam' ),
     'panel' => 'pam_theme_settings'
   ));
 
@@ -293,6 +303,148 @@ function pam_customize_register( $wp_customize ) {
   ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
+    $wp_customize->add_setting( 'main_title_h1', array(
+    'type' => 'theme_mod',
+    'default' => __( 'What are you looking for?', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'main_title_h1', array(
+    'label' => __( 'Titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_features'
+  ));
+
+    $wp_customize->add_setting( 'main_title_p', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'main_title_p', array(
+    'label' => __( 'Sub-titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_features'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_categories_main_title_h1', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Most Popular Places', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_categories_main_title_h1', array(
+    'label' => __( 'Titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_categories'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_categories_main_title_p', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Find Property In Your City', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_categories_main_title_p', array(
+    'label' => __( 'Sub-titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_categories'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_team_main_title_h1', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Our Agent', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_team_main_title_h1', array(
+    'label' => __( 'Titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_team'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_team_main_title_p', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Meet out small team that make those great products.', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'pam_sc_team_main_title_p', array(
+    'label' => __( 'Sub-titulo', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_team'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_telefone', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'wp_filter_nohtml_kses'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_telefone', array(
+    'label' => __( 'Telefone', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_header'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_email', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'sanitize_email'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_email', array(
+    'label' => __( 'E-Mail', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_header',
+    'input_attrs' => 
+      array(
+        'placeholder' => 'contato@pamconsultoria.com.br'
+      )
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_facebook', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_facebook', array(
+    'label' => __( 'Facebook', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_header'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_twitter', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_twitter', array(
+    'label' => __( 'Twitter', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_header'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_linkedin', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_linkedin', array(
+    'label' => __( 'Linkedin', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_header'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_instagram', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_instagram', array(
+    'label' => __( 'Instagram', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_header'
+  ));
+
     $wp_customize->add_setting( 'pam_brand_logo', array(
     'type' => 'theme_mod',
     'sanitize_callback' => $pgwp_sanitize
@@ -320,58 +472,36 @@ function pam_customize_register( $wp_customize ) {
     'section' => 'pam_sc_features'
   ));
 
-    $wp_customize->add_setting( 'display_pam_sc_properties_load_page', array(
+    $wp_customize->add_setting( 'pam_sc_features_main_title_h1', array(
     'type' => 'theme_mod',
+    'default' => __( 'What are you looking for?', 'pam' ),
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'display_pam_sc_properties_load_page', array(
-    'label' => __( 'Selecione a Pagina de Novidades', 'pam' ),
-    'type' => 'dropdown-pages',
+    $wp_customize->add_control( 'pam_sc_features_main_title_h1', array(
+    'label' => __( 'Display Section Features', 'pam' ),
+    'type' => 'text',
     'section' => 'pam_sc_features'
   ));
 
-    $wp_customize->add_setting( 'display_pam_sc_team', array(
+    $wp_customize->add_setting( 'pam_sc_features_main_title_p', array(
     'type' => 'theme_mod',
+    'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor.', 'pam' ),
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'display_pam_sc_team', array(
-    'label' => __( 'Display Section Team', 'pam' ),
-    'type' => 'checkbox',
-    'section' => 'pam_sc_team'
-  ));
-
-    $wp_customize->add_setting( 'pam_sc_team_main_title_h1', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Our Agent', 'pam' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
-
-    $wp_customize->add_control( 'pam_sc_team_main_title_h1', array(
-    'label' => __( 'Titulo', 'pam' ),
-    'type' => 'text',
-    'section' => 'pam_sc_team'
-  ));
-
-    $wp_customize->add_setting( 'pam_sc_team_main_title_p', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Meet out small team that make those great products.', 'pam' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
-
-    $wp_customize->add_control( 'pam_sc_team_main_title_p', array(
+    $wp_customize->add_control( 'pam_sc_features_main_title_p', array(
     'label' => __( 'Sub-titulo', 'pam' ),
     'type' => 'text',
-    'section' => 'pam_sc_team'
+    'section' => 'pam_sc_features'
   ));
 
-    $wp_customize->add_setting( 'pam_sc_services_display_pam_sc_services', array(
+    $wp_customize->add_setting( 'display_pam_sc_services', array(
     'type' => 'theme_mod',
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'pam_sc_services_display_pam_sc_services', array(
+    $wp_customize->add_control( 'display_pam_sc_services', array(
     'label' => __( 'Display Section Services', 'pam' ),
     'type' => 'checkbox',
     'section' => 'pam_sc_services'
@@ -401,6 +531,29 @@ function pam_customize_register( $wp_customize ) {
     'section' => 'pam_sc_services'
   ));
 
+    $wp_customize->add_setting( 'btn_label', array(
+    'type' => 'theme_mod',
+    'default' => __( 'Read More', 'pam' ),
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'btn_label', array(
+    'label' => __( 'Button Label', 'pam' ),
+    'type' => 'text',
+    'section' => 'pam_sc_services'
+  ));
+
+    $wp_customize->add_setting( 'btn_link', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'btn_link', array(
+    'label' => __( 'Button Link', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_services'
+  ));
+
     $wp_customize->add_setting( 'display_pam_sc_categories', array(
     'type' => 'theme_mod',
     'sanitize_callback' => $pgwp_sanitize
@@ -412,36 +565,23 @@ function pam_customize_register( $wp_customize ) {
     'section' => 'pam_sc_categories'
   ));
 
-    $wp_customize->add_setting( 'pam_sc_categories_main_title_h1', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Most Popular Places', 'pam' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
-
-    $wp_customize->add_control( 'pam_sc_categories_main_title_h1', array(
-    'label' => __( 'Titulo', 'pam' ),
-    'type' => 'text',
-    'section' => 'pam_sc_categories'
-  ));
-
-    $wp_customize->add_setting( 'pam_sc_categories_main_title_p', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Find Property In Your City', 'pam' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
-
-    $wp_customize->add_control( 'pam_sc_categories_main_title_p', array(
-    'label' => __( 'Sub-titulo', 'pam' ),
-    'type' => 'text',
-    'section' => 'pam_sc_categories'
-  ));
-
-    $wp_customize->add_setting( 'pam_sc_testemonial_display_pam_sc_testemonials', array(
+    $wp_customize->add_setting( 'display_pam_sc_team', array(
     'type' => 'theme_mod',
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'pam_sc_testemonial_display_pam_sc_testemonials', array(
+    $wp_customize->add_control( 'display_pam_sc_team', array(
+    'label' => __( 'Display Section Team', 'pam' ),
+    'type' => 'checkbox',
+    'section' => 'pam_sc_team'
+  ));
+
+    $wp_customize->add_setting( 'display_pam_sc_testemonials', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'display_pam_sc_testemonials', array(
     'label' => __( 'Display Section Testemonials', 'pam' ),
     'type' => 'checkbox',
     'section' => 'pam_sc_testemonial'
@@ -529,86 +669,88 @@ if ( ! function_exists( 'pam_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
-    wp_enqueue_script( 'pam-ieemulationmodeswarning', get_template_directory_uri() . '/js/ie-emulation-modes-warning.js', null, null, false );
+    wp_enqueue_script( 'pam-ieemulationmodeswarning', get_template_directory_uri() . '/js/ie-emulation-modes-warning.js', null, '1.10', false );
 
-    wp_enqueue_script( 'pam-popper', get_template_directory_uri() . '/js/popper.min.js', null, null, true );
+    wp_enqueue_script( 'pam-popper', get_template_directory_uri() . '/js/popper.min.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', null, null, true );
+    wp_enqueue_script( 'pam-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-bootstrapsubmenu', get_template_directory_uri() . '/js/bootstrap-submenu.js', null, null, true );
+    wp_enqueue_script( 'pam-bootstrapsubmenu', get_template_directory_uri() . '/js/bootstrap-submenu.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-rangeslider', get_template_directory_uri() . '/js/rangeslider.js', null, null, true );
+    wp_enqueue_script( 'pam-rangeslider', get_template_directory_uri() . '/js/rangeslider.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-jquerymbytplayer', get_template_directory_uri() . '/js/jquery.mb.YTPlayer.js', null, null, true );
+    wp_enqueue_script( 'pam-jquerymbytplayer', get_template_directory_uri() . '/js/jquery.mb.YTPlayer.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-wow', get_template_directory_uri() . '/js/wow.min.js', null, null, true );
+    wp_enqueue_script( 'pam-wow', get_template_directory_uri() . '/js/wow.min.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-bootstrapselect', get_template_directory_uri() . '/js/bootstrap-select.min.js', null, null, true );
+    wp_enqueue_script( 'pam-bootstrapselect', get_template_directory_uri() . '/js/bootstrap-select.min.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-jqueryeasing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', null, null, true );
+    wp_enqueue_script( 'pam-jqueryeasing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-jqueryscrollup', get_template_directory_uri() . '/js/jquery.scrollUp.js', null, null, true );
+    wp_enqueue_script( 'pam-jqueryscrollup', get_template_directory_uri() . '/js/jquery.scrollUp.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-jquerymcustomscrollbarconcat', get_template_directory_uri() . '/js/jquery.mCustomScrollbar.concat.min.js', null, null, true );
+    wp_enqueue_script( 'pam-jquerymcustomscrollbarconcat', get_template_directory_uri() . '/js/jquery.mCustomScrollbar.concat.min.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-leaflet', get_template_directory_uri() . '/js/leaflet.js', null, null, true );
+    wp_enqueue_script( 'pam-leaflet', get_template_directory_uri() . '/js/leaflet.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-leafletproviders', get_template_directory_uri() . '/js/leaflet-providers.js', null, null, true );
+    wp_enqueue_script( 'pam-leafletproviders', get_template_directory_uri() . '/js/leaflet-providers.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-leafletmarkercluster', get_template_directory_uri() . '/js/leaflet.markercluster.js', null, null, true );
+    wp_enqueue_script( 'pam-leafletmarkercluster', get_template_directory_uri() . '/js/leaflet.markercluster.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-dropzone', get_template_directory_uri() . '/js/dropzone.js', null, null, true );
+    wp_enqueue_script( 'pam-dropzone', get_template_directory_uri() . '/js/dropzone.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-slick', get_template_directory_uri() . '/js/slick.min.js', null, null, true );
+    wp_enqueue_script( 'pam-slick', get_template_directory_uri() . '/js/slick.min.js', null, '1.10', true );
 
-    wp_enqueue_script( 'filter', get_template_directory_uri() . '/js/jquery.filterizr.js', null, null, true );
+    wp_enqueue_script( 'pam-jqueryfilterizr', get_template_directory_uri() . '/js/jquery.filterizr.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-jquerymagnificpopup', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', null, null, true );
+    wp_enqueue_script( 'pam-jquerymagnificpopup', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-jquerycountdown', get_template_directory_uri() . '/js/jquery.countdown.js', null, null, true );
+    wp_enqueue_script( 'pam-jquerycountdown', get_template_directory_uri() . '/js/jquery.countdown.js', null, '1.10', true );
 
-    wp_enqueue_script( 'pam-ieviewportbugworkaround', get_template_directory_uri() . '/js/ie10-viewport-bug-workaround.js', null, null, true );
+    wp_enqueue_script( 'pam-maps', get_template_directory_uri() . '/js/maps.js', null, '1.10', true );
+
+    wp_enqueue_script( 'pam-app', get_template_directory_uri() . '/js/app.js', null, '1.10', true );
+
+    wp_enqueue_script( 'pam-ieviewportbugworkaround', get_template_directory_uri() . '/js/ie10-viewport-bug-workaround.js', null, '1.10', true );
 
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
 
-    wp_enqueue_style( 'pam-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array( 'pam-fonts' ), null, 'all' );
+    wp_enqueue_style( 'pam-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-animate', get_template_directory_uri() . '/css/animate.min.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-animate', get_template_directory_uri() . '/css/animate.min.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-bootstrapsubmenu', get_template_directory_uri() . '/css/bootstrap-submenu.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-bootstrapsubmenu', get_template_directory_uri() . '/css/bootstrap-submenu.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-bootstrapselect', get_template_directory_uri() . '/css/bootstrap-select.min.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-bootstrapselect', get_template_directory_uri() . '/css/bootstrap-select.min.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-leaflet', get_template_directory_uri() . '/css/leaflet.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-leaflet', get_template_directory_uri() . '/css/leaflet.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-map', get_template_directory_uri() . '/css/map.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-map', get_template_directory_uri() . '/css/map.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-flaticon', get_template_directory_uri() . '/fonts/flaticon/font/flaticon.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-flaticon', get_template_directory_uri() . '/fonts/flaticon/font/flaticon.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-linearicons', get_template_directory_uri() . '/fonts/linearicons/linearicons.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-linearicons', get_template_directory_uri() . '/fonts/linearicons/linearicons.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-jquerymcustomscrollbar', get_template_directory_uri() . '/css/jquery.mCustomScrollbar.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-jquerymcustomscrollbar', get_template_directory_uri() . '/css/jquery.mCustomScrollbar.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-dropzone', get_template_directory_uri() . '/css/dropzone.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-dropzone', get_template_directory_uri() . '/css/dropzone.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-slick', get_template_directory_uri() . '/css/slick.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-slick', get_template_directory_uri() . '/css/slick.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-style', get_template_directory_uri() . '/css/style.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-style', get_template_directory_uri() . '/css/style.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-red', get_template_directory_uri() . '/css/skins/red.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-red', get_template_directory_uri() . '/css/skins/red.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700', null, null, 'all' );
+    wp_enqueue_style( 'pam-style-1', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-ieviewportbugworkaround', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-ieviewportbugworkaround', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css', null, '1.10', 'all' );
 
-    wp_enqueue_style( 'pam-custom', get_template_directory_uri() . '/css/custom.css', null, null, 'all' );
-
-    wp_deregister_style( 'pam-style-1' );
-    wp_enqueue_style( 'pam-style-1', get_bloginfo('stylesheet_url'), false, null, 'all');
+    wp_deregister_style( 'pam-style-2' );
+    wp_enqueue_style( 'pam-style-2', get_bloginfo('stylesheet_url'), false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
@@ -636,9 +778,7 @@ function pam_selectively_enqueue_admin_script( $page ) {
     // Don't edit anything between the following comments.
     /* Pinegrow generated Enqueue Admin Styles Begin */
 
-    wp_enqueue_style( 'pam-style', get_template_directory_uri() . '/css/style.css', null, null, 'all' );
-
-    wp_enqueue_style( 'pam-red', get_template_directory_uri() . '/css/skins/red.css', null, null, 'all' );
+    wp_enqueue_style( 'pam-red', get_template_directory_uri() . '/css/skins/red.css', null, '1.10', 'all' );
 
     /* Pinegrow generated Enqueue Admin Styles End */
     
