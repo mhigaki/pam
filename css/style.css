@@ -6816,7 +6816,7 @@ blockquote {
     }
 
     .banner .slider-mover-right i,
-        .banner .slider-mover-left i {
+    .banner .slider-mover-left i {
         font-size: 20px;
         line-height: 35px;
     }
@@ -7078,8 +7078,8 @@ blockquote {
     }
 
     .coming-soon-inner .btn,
-        .coming-soon-inner .btn:hover,
-        .coming-soon-inner .btn:active {
+    .coming-soon-inner .btn:hover,
+    .coming-soon-inner .btn:active {
         width: 37%;
     }
 
@@ -7221,7 +7221,7 @@ blockquote {
     }
 
     .banner .slider-mover-right i,
-        .banner .slider-mover-left i {
+    .banner .slider-mover-left i {
         font-size: 20px;
         line-height: 30px;
     }
@@ -7252,7 +7252,7 @@ blockquote {
     }
 
     .search-options-btn,
-        .search-options-btn:hover {
+    .search-options-btn:hover {
         padding: 7px 11px 6px 11px;
         font-size: 11px;
         letter-spacing: normal;
@@ -7397,7 +7397,7 @@ blockquote {
     }
 
     .search-contents .col-xs-12,
-        .search-contents .col-xs-6 {
+    .search-contents .col-xs-6 {
         padding: 3px 10px;
     }
 

@@ -35,6 +35,8 @@ function pam_setup() {
      */
     /* Pinegrow generated Register Menus Begin */
 
+    register_nav_menu(  'footer', __( 'Footer', 'pam' )  );
+
     /* Pinegrow generated Register Menus End */
     
 /*
@@ -43,7 +45,7 @@ function pam_setup() {
     /* Pinegrow generated Image Sizes Begin */
 
     add_image_size( 'agents', 360, 300, true );
-    add_image_size( 'agent', 305, 365, true );
+    add_image_size( 'agent', 500, 600, true );
     /* Pinegrow generated Image Sizes End */
     
     /*
@@ -110,13 +112,10 @@ function pam_init() {
       ),
     'description' => __( 'Nossos Corretores', 'pam' ),
     'public' => true,
-    'hierarchical' => true,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
-    'has_archive' => true,
+    'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
     'show_in_rest' => true,
     'show_in_menu' => true,
-    'menu_icon' => 'dashicons-id',
-    'taxonomies' => array( 'category' )
+    'menu_icon' => 'dashicons-id'
   ));
 
     register_post_type('sliders', array(
@@ -351,6 +350,50 @@ function pam_customize_register( $wp_customize ) {
     'section' => 'pam_sc_categories'
   ));
 
+    $wp_customize->add_setting( 'pam_sc_header_facebook', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_facebook', array(
+    'label' => __( 'Facebook', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_header'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_twitter', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_twitter', array(
+    'label' => __( 'Twitter', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_header'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_linkedin', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_linkedin', array(
+    'label' => __( 'Linkedin', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_header'
+  ));
+
+    $wp_customize->add_setting( 'pam_sc_header_instagram', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+    $wp_customize->add_control( 'pam_sc_header_instagram', array(
+    'label' => __( 'Instagram', 'pam' ),
+    'type' => 'url',
+    'section' => 'pam_sc_header'
+  ));
+
     $wp_customize->add_setting( 'pam_sc_team_main_title_h1', array(
     'type' => 'theme_mod',
     'default' => __( 'Our Agent', 'pam' ),
@@ -401,47 +444,14 @@ function pam_customize_register( $wp_customize ) {
       )
   ));
 
-    $wp_customize->add_setting( 'pam_sc_header_facebook', array(
+    $wp_customize->add_setting( 'pam_sc_header_endereco', array(
     'type' => 'theme_mod',
-    'sanitize_callback' => 'esc_url_raw'
+    'sanitize_callback' => 'wp_filter_nohtml_kses'
   ));
 
-    $wp_customize->add_control( 'pam_sc_header_facebook', array(
-    'label' => __( 'Facebook', 'pam' ),
-    'type' => 'url',
-    'section' => 'pam_sc_header'
-  ));
-
-    $wp_customize->add_setting( 'pam_sc_header_twitter', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => 'esc_url_raw'
-  ));
-
-    $wp_customize->add_control( 'pam_sc_header_twitter', array(
-    'label' => __( 'Twitter', 'pam' ),
-    'type' => 'url',
-    'section' => 'pam_sc_header'
-  ));
-
-    $wp_customize->add_setting( 'pam_sc_header_linkedin', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => 'esc_url_raw'
-  ));
-
-    $wp_customize->add_control( 'pam_sc_header_linkedin', array(
-    'label' => __( 'Linkedin', 'pam' ),
-    'type' => 'url',
-    'section' => 'pam_sc_header'
-  ));
-
-    $wp_customize->add_setting( 'pam_sc_header_instagram', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => 'esc_url_raw'
-  ));
-
-    $wp_customize->add_control( 'pam_sc_header_instagram', array(
-    'label' => __( 'Instagram', 'pam' ),
-    'type' => 'url',
+    $wp_customize->add_control( 'pam_sc_header_endereco', array(
+    'label' => __( 'Endereço', 'pam' ),
+    'type' => 'textarea',
     'section' => 'pam_sc_header'
   ));
 
@@ -766,8 +776,9 @@ function pgwp_sanitize_placeholder($input) { return $input; }
 require_once "inc/custom.php";
 require_once "inc/wp_pg_helpers.php";
 require_once "inc/wp_pg_pagination.php";
-require_once "inc/wp_simple_form_mailer.php";
 require_once "inc/bootstrap/wp_bootstrap4_navwalker.php";
+require_once "inc/wp_smart_navwalker.php";
+require_once "inc/wp_simple_form_mailer.php";
 
     /* Pinegrow generated Include Resources End */
 

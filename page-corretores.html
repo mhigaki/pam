@@ -330,11 +330,12 @@
               <div class="col-md-8"> 
                 <div class="contact-info"> 
                   <ul> 
-                    <li> 
-                      <i class="fa fa-phone"></i> +1-8X0-666-8X88
+                    <li>
+                      <i class="fa fa-phone"></i> 
+                      <span wp-cz-theme-mod="pam_sc_header_telefone" wp-cz-theme-mod-no-prefix="true" wp-cz-theme-mod-set="element">+1-8X0-666-8X88 </span>
                     </li>                     
                     <li> 
-                      <a href="contact.html" class="btn btn-md button-theme">Contact us</a> 
+                      <a href="contact.html" class="btn btn-md button-theme" cms-site-link="page" cms-site-link-post="contato">Contact us</a> 
                     </li>                     
                   </ul>                   
                 </div>                 
@@ -354,24 +355,24 @@
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6" data-pg-collapsed> 
               <div class="team-2"> 
                 <div class="team-photo"> 
-                  <a href="#" cms-post-link> <img src="img/avatar/avatar-7.jpg" alt="avatar-7" class="img-fluid" cms-post-image="agent" width="360" height="300"> </a> 
+                  <a href="#" cms-post-link> <img src="img/avatar/avatar-7.jpg" alt="avatar-7" class="img-fluid" wp-the-post-thumbnail="agent" width="500" height="600"> </a> 
                 </div>                 
                 <div class="team-details"> 
                   <h6 cms-post-field="creci_numero" cms-post-field-type="content" cms-post-field-acf>Creative Director</h6> 
                   <h5><a href="#" wp-the-title cms-post-link>Martin Smith</a></h5> 
                   <p cms-post-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p> 
                   <ul class="social-list clearfix"> 
-                    <li>
-                      <a href="#" class="facebook" cms-post-field="facebook" cms-post-field-type="link" cms-post-field-type-2="link" cms-post-field-2="field2" cms-post-field-if><i class="fa fa-facebook"></i></a>
+                    <li wp-if-custom="get_field( 'facebook' )">
+                      <a href="#" class="facebook" wp-acf-get-field="facebook" wp-acf-get-field-set="attr" wp-acf-get-field-set-attr="href"><i class="fa fa-facebook"></i></a>
                     </li>                     
-                    <li>
-                      <a href="#" class="twitter" cms-post-field="twitter" cms-post-field-type="link" cms-post-field-type-2="link" cms-post-field-2="field2" cms-post-field-acf cms-post-field-if><i class="fa fa-twitter"></i></a>
+                    <li wp-if-custom="get_field( 'twitter' )">
+                      <a href="#" class="twitter" wp-acf-get-field="twitter" wp-acf-get-field-set="attr" wp-acf-get-field-set-attr="href"><i class="fa fa-twitter"></i></a>
                     </li>                     
-                    <li>
-                      <a href="#" class="instagram" cms-post-field="instagram" cms-post-field-type="link" cms-post-field-type-2="link" cms-post-field-2="field2" cms-post-field-acf cms-post-field-if><i class="fa fa-instagram"></i></a>
+                    <li wp-if-custom="get_field( 'instagram' )">
+                      <a href="#" class="instagram" wp-acf-get-field="instagram" wp-acf-get-field-set="attr" wp-acf-get-field-set-attr="href"><i class="fa fa-instagram"></i></a>
                     </li>                     
-                    <li>
-                      <a href="#" class="linkedin" cms-post-field="linkedin" cms-post-field-type="content" cms-post-field-type-2="link" cms-post-field-2="field2" cms-post-field-acf cms-post-field-if><i class="fa fa-linkedin"></i></a>
+                    <li wp-if-custom="get_field( 'linkedin' )">
+                      <a href="#" class="linkedin" cms-post-field="linkedin" cms-post-field-type="link" cms-post-field-type-2="link" cms-post-field-2="field2" cms-post-field-acf cms-post-field-if><i class="fa fa-linkedin"></i></a>
                     </li>                     
                   </ul>                   
                 </div>                 

@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="zxx" wp-template wp-template-master="index.html" wp-template-preview-url="http://pam.test:8080/corretor/alessandro-tesci/"> 
+<html lang="zxx" wp-template wp-template-master="index.html" wp-template-preview-url="http://pam.test:8080/contato/" wp-page-template="Contact Page" wp-page-template-field="The template for displaying"> 
   <head> 
     <title>Real House - Real Estate HTML Template</title>     
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -38,7 +38,7 @@
   <body> 
     <div class="page_loader"></div>     
     <!-- Top header start -->     
-    <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2" data-pg-collapsed> 
+    <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2"> 
       <div class="container"> 
         <div class="row"> 
           <div class="col-lg-6 col-md-8 col-sm-7"> 
@@ -71,7 +71,7 @@
     </header>     
     <!-- Top header end -->     
     <!-- Main header start -->     
-    <header class="main-header" data-pg-collapsed> 
+    <header class="main-header"> 
       <div class="container"> 
         <nav class="navbar navbar-expand-lg navbar-light"> 
           <a class="navbar-brand logo" href="index-2.html"> <img src="img/logos/logo-site.svg" alt="logo"> </a> 
@@ -306,10 +306,10 @@
       </div>       
     </header>     
     <div wp-site-content> 
-      <div class="sub-banner" cms-template-part="template-parts/content/sub-banner" cms-template-part-define data-pg-collapsed> 
+      <div class="sub-banner"> 
         <div class="container"> 
           <div class="page-name"> 
-            <h1 wp-if-custom="single_post_title( '', false ) " wp-title wp-title-sep="''" wp-title-set="content">Agent Detail</h1> 
+            <h1 wp-title wp-title-set="content" wp-title-sep-location="LEFT">Contact Us</h1> 
           </div>           
         </div>         
         <div class="page-info"> 
@@ -317,12 +317,12 @@
             <div class="row"> 
               <div class="col-md-6"> 
                 <div class="breadcrumb-area"> 
-                  <ul cms-breadcrumbs="categories" cms-breadcrumbs-home cms-breadcrumbs-separator="span" cms-breadcrumbs-last-item="> li:nth-of-type(2)" cms-breadcrumbs-last-item-name="> li:nth-of-type(2)"> 
+                  <ul cms-breadcrumbs cms-breadcrumbs-home cms-breadcrumbs-separator="span" cms-breadcrumbs-last-item="> li:nth-of-type(2)" cms-breadcrumbs-last-item-name="> li:nth-of-type(2)"> 
                     <li> 
                       <a href="index-2.html">Index</a> 
                     </li>                     
                     <li> 
-                      <span>/</span>Agent Detail
+                      <span>/</span>Contact Us
                     </li>                     
                   </ul>                   
                 </div>                 
@@ -331,10 +331,10 @@
                 <div class="contact-info"> 
                   <ul> 
                     <li> 
-                      <i class="fa fa-phone"></i> wqwqwq                       
+                      <i class="fa fa-phone"></i> 
                     </li>                     
                     <li> 
-                      <a class="btn btn-md button-theme" href="contact.html" cms-site-link="page" cms-site-link-post="contato">Contate-nos</a> 
+                      <a href="contact.html" class="btn btn-md button-theme">Contact us</a> 
                     </li>                     
                   </ul>                   
                 </div>                 
@@ -343,132 +343,104 @@
           </div>           
         </div>         
       </div>       
-      <div class="agent-page content-area" data-pg-collapsed> 
+      <div class="contact-1 content-area-5"> 
         <div class="container"> 
-          <!-- Heading -->           
-          <h1 class="heading-2">Detalhes do Corretor</h1> 
           <div class="row"> 
-            <div class="col-lg-8"> 
-              <div class="row team-4" wp-loop-item wp-post-class wp-the-id="corretor"> 
-                <div class="col-xl-5 col-lg-5 col-md-5 col-pad "> 
-                  <div class="photo"> 
-                    <img src="img/avatar/avatar-9.jpg" alt="avatar-4" width="500" height="600" class="img-fluid" cms-post-image="agent"> 
+            <div class=" col-lg-4 col-md-5"> 
+              <div class="contact-info"> 
+                <h3 class="heading">Escritório</h3> 
+                <p wp-acf-get-field="endereco">Rua Joaquim Machado, 283 - Sala 43
+Lapa - São Paulo - CEP: 05050 010</p> 
+                <div class="media"> 
+                  <i class="flaticon-technology-1"></i> 
+                  <div class="media-body"> 
+                    <h5 class="mt-0">Telefone:</h5> 
+                    <p><a href="tel:0477-0477-8556-552" wp-acf-get-field="telefone" wp-acf-get-field-set="element">0477 8556 552</a></p> 
                   </div>                   
                 </div>                 
-                <div class="col-xl-7 col-lg-7 col-md-7 col-pad align-self-center"> 
-                  <div class="detail"> 
-                    <h5 cms-post-field="creci_numero" cms-post-field-type="content" cms-post-field-acf cms-post-field-if>CRECI Nº : </h5> 
-                    <h4 wp-the-title> <a href="#">John Pitarshon</a> </h4> 
-                    <div class="contact"> 
-                      <ul> 
-                        <li wp-if-custom="get_field( 'endereco' )"> 
-                          <span><b>Endereço</b>:</span> 
-                          <a href="#" wp-acf-get-field="endereco" wp-acf-get-field-set="element"> 44 New Design Street,</a> 
-                        </li>                         
-                        <li wp-if-custom="get_field( 'e-mail' )"> 
-                          <span><b>Email</b>:</span> 
-                          <a href="mailto:info@themevessel.com" wp-acf-get-field="e-mail" wp-acf-get-field-set="element"> info@themevessel.com</a> 
-                        </li>                         
-                        <li wp-if-custom="get_field( 'telefone_celular' )"> 
-                          <span><b>Celular</b>:</span> 
-                          <span href="tel:+554XX-634-7071" wp-acf-get-field="telefone_celular" wp-acf-get-field-set="element"> +55 4XX-634-7071</span> 
-                        </li>                         
-                        <li wp-if-custom="get_field( 'telefone_fixo' )"> 
-                          <b>Telefone Fixo:</b> 
-                          <span href="#" wp-acf-get-field="telefone_fixo" wp-acf-get-field-set="element"> +0477 85X6 552</span> 
-                        </li>                         
-                        <li class="invisible"> 
-                          <span>Website:</span> 
-                          <a href="#"> www.themevesselcom</a> 
-                        </li>                         
-                      </ul>                       
-                    </div>                     
-                    <ul class="social-list clearfix"> 
-                      <li> 
-                        <a class="facebook-bg" href="#" cms-post-field="facebook" cms-post-field-type="link" cms-post-field-acf cms-post-field-if><i class="fa fa-facebook"></i></a> 
-                      </li>                       
-                      <li> 
-                        <a class="twitter-bg" href="#" cms-post-field="twitter" cms-post-field-acf cms-post-field-type="link" cms-post-field-if cms-post-field-type-2="content"><i class="fa fa-twitter"></i></a> 
-                      </li>                       
-                      <li> 
-                        <a class="pinterest-bg" href="#" cms-post-field="instagram" cms-post-field-acf cms-post-field-type="link" cms-post-field-if cms-post-field-type-2="content"><i class="fa fa-instagram"></i></a> 
-                      </li>                       
-                      <li> 
-                        <a class="linkedin-bg" href="#" cms-post-field="linkedin" cms-post-field-acf cms-post-field-type="link" cms-post-field-if cms-post-field-type-2="content"><i class="fa fa-linkedin"></i></a> 
-                      </li>                       
-                    </ul>                     
+                <div class="media"> 
+                  <i class="flaticon-envelope"></i> 
+                  <div class="media-body"> 
+                    <h5 class="mt-0">Email:</h5> 
+                    <p><a href="#" wp-acf-get-field="e-mail" wp-acf-get-field-set="element" wp-acf-get-field-set-attr="href">info@themevessel.com</a></p> 
                   </div>                   
                 </div>                 
-              </div>               
-              <div class="agent-biography"> 
-                <h3 class="heading-2">Biografia | Resumo</h3> 
-                <p cms-post-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra a.</p> 
-                <p cms-no-export wp-hide>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit amet rutrum elementum</p> 
-                <p cms-no-export wp-hide>Vestibulum vel mauris et odio lobortis laoreet eget eu magna. Proin mauris erat, luctus at nulla ut, lobortis mattis magna. Morbi a arcu lacus. Maecenas tristique velit vitae nisi consectetur, in mattis diam sodales. Mauris sagittis sem mattis justo bibendum, a eleifend dolor facilisis. Mauris nec pharetra tortor, ac aliquam felis. Nunc pretium erat sed quam consectetur fringilla. Aliquam ultricies nunc porta metus interdum mollis. Donec porttitor libero augue, vehicula tincidunt lectus placerat a. Sed tincidunt dolor non sem dictum dignissim. Nulla vulputate orci felis, ac ornare purus ultricies a. Fusce euismod magna orci, sit amet aliquam turpis dignissim ac. </p> 
-                <p cms-no-export wp-hide>In at tortor at ligula pharetra sollicitudin. Sed tincidunt, purus eget laoreet elementum, felis est pharetra ante, tincidunt feugiat libero enim sed risus. Sed at leo sit amet mi bibendum aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent cursus varius odio, non faucibus dui. Nunc vehicula lectus sed velit suscipit aliquam vitae eu ipsum. adipiscing elit.</p> 
-                <br> 
+                <div class="media"> 
+                  <i class="flaticon-globe"></i> 
+                  <div class="media-body"> 
+                    <h5 class="mt-0">Web:</h5> 
+                    <p><a href="#" wp-acf-get-field="website" wp-acf-get-field-set="element">info@themevessel.com</a></p> 
+                  </div>                   
+                </div>                 
+                <div class="media mb-0" cms-no-export> 
+                  <i class="flaticon-technology-2"></i> 
+                  <div class="media-body"> 
+                    <h5 class="mt-0">Fax:</h5> 
+                    <p><a href="#">0477 8556 552</a></p> 
+                  </div>                   
+                </div>                 
               </div>               
             </div>             
-            <div class="col-lg-4"> 
-              <div class="sidebar-right"> 
-                <!-- Contact 1 start -->                 
-                <div class="contact-2 widget reviews"> 
-                  <h3 class="sidebar-title">Mande uma mensagem</h3> 
-                  <form action="#" method="post" enctype="multipart/form-data" id="reviews" cms-form="reviews" cms-form-send-email="true" cms-form-subject="Fale com o Corretor"> 
-                    <div class="rowo"> 
-                      <div class="form-group name"> 
-                        <input class="form-control" type="text" name="name" placeholder="Seu Nome"/> 
-                      </div>                       
-                      <div class="form-group email"> 
-                        <input class="form-control" type="email" name="email" placeholder="Seu Email"/> 
-                      </div>                       
-                      <div class="form-group number"> 
-                        <input class="form-control" type="text" name="phone" placeholder="Seu Telefone de contato"/> 
-                      </div>                       
-                      <div class="form-group message"> 
-                        <textarea class="form-control" name="message" placeholder="Escreva sua mensagem"></textarea> 
-                      </div>                       
-                      <div class="send-btn"> 
-                        <button class="btn btn-md button-theme btn-block" type="submit">Enviar</button>                         
-                      </div>                       
-                    </div>                     
-                  </form>                   
-                </div>                 
-                <!-- Latest reviews Start -->                 
-                <div class="widget latest-reviews" cms-no-export wp-hide> 
-                  <h3 class="sidebar-title">Reviews</h3> 
-                  <div class="media"> 
-                    <div class="media-left"> 
-                      <a href="#"> <img class="media-object" src="img/avatar/avatar-1.jpg" alt="avatar-1"> </a> 
-                    </div>                     
-                    <div class="media-body"> 
-                      <h3 class="media-heading"><a href="#">Emma Connor</a></h3> 
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiamrisus tortor, accumsan at nisi,</p> 
+            <div class="offset-lg-1 col-lg-7 col-md-7 "> 
+              <h3 class="heading">Entre em contato conosco</h3> 
+              <form action="#" method="get" enctype="multipart/form-data" cms-form="contact_form" cms-form-send-email="true" cms-form-subject="Formulário de Contato" id="contact_form"> 
+                <div class="row"> 
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
+                    <div class="form-group name"> 
+                      <input type="text" name="name" class="form-control" placeholder="Seu Nome" required> 
                     </div>                     
                   </div>                   
-                  <div class="media"> 
-                    <div class="media-left"> 
-                      <a href="#"> <img class="media-object" src="img/avatar/avatar-2.jpg" alt="avatar-2"> </a> 
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
+                    <div class="form-group email"> 
+                      <input type="email" name="email" class="form-control" placeholder="Email" required> 
                     </div>                     
-                    <div class="media-body"> 
-                      <h3 class="media-heading"><a href="#">Martin Smith</a></h3> 
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiamrisus tortor, accumsan at nisi,</p> 
+                  </div>                   
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
+                    <div class="form-group subject"> 
+                      <input type="text" name="subject" class="form-control" placeholder="Assunto" required> 
+                    </div>                     
+                  </div>                   
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
+                    <div class="form-group number"> 
+                      <input type="text" name="phone" class="form-control" placeholder="Seu Telefone" required> 
+                    </div>                     
+                  </div>                   
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                    <div class="form-group message"> 
+                      <textarea class="form-control is-valid" name="message" placeholder="Escreva sua mensagem"></textarea> 
+                    </div>                     
+                  </div>                   
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
+                    <div class="send-btn"> 
+                      <button class="btn btn-md button-theme" type="submit">Enviar Mensagem</button>                       
                     </div>                     
                   </div>                   
                 </div>                 
-              </div>               
+              </form>               
             </div>             
           </div>           
+        </div>         
+      </div>       
+      <div class="section"> 
+        <div class="map"> 
+          <div id="map" class="contact-map" cms-no-export wp-hide></div>           
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.4156416429337!2d-46.90053558547252!3d-23.517548565859798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03f9793f14bf%3A0x9d2a069967fa44f0!2sEstr.%20das%20Na%C3%A7%C3%B5es%2C%20411%20-%20Vila%20Iracema%2C%20Barueri%20-%20SP%2C%2006422-100!5e0!3m2!1spt-BR!2sbr!4v1604333571065!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" wp-acf-get-field="mapa" wp-acf-get-field-set-attr="src" wp-acf-get-field-set="element"></iframe>           
         </div>         
       </div>       
     </div>     
     <!-- Main header end -->     
     <!-- Sub banner start -->     
     <!-- Sub Banner end -->     
-    <!-- Agent page start -->     
-    <!-- Agent page end -->     
+    <!-- Contact 1 start -->     
+    <!-- Contact 1 end -->     
+    <!-- Google map start -->     
+    <!-- Google map end -->     
     <!-- Footer start -->     
-    <footer class="footer" data-pg-collapsed> 
+    <!-- Footer end -->     
+    <!-- Full Page Search -->     
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->     
+    <!-- Custom javascript -->     
+    <footer class="footer"> 
       <div class="container footer-inner"> 
         <div class="row"> 
           <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6"> 
@@ -479,11 +451,11 @@
                   Address: 20/F Green Road, Dhanmondi, Dhaka
 </li>                 
                 <li> 
-                  Email:
+                  Email: 
                   <a href="mailto:sales@hotelempire.com">info@themevessel.com</a> 
                 </li>                 
                 <li> 
-                  Phone:
+                  Phone: 
                   <a href="tel:+55-417-634-7071">+0477 85X6 552</a> 
                 </li>                 
                 <li> 
@@ -592,8 +564,6 @@
         </div>         
       </div>       
     </footer>     
-    <!-- Footer end -->     
-    <!-- Full Page Search -->     
     <div id="full-page-search"> 
       <button type="button" class="close">×</button>       
       <form action="http://theme-vessel-templates.theme-vessel.ey.r.appspot.com/real-house/index.html#"> 
@@ -601,6 +571,67 @@
         <button type="submit" class="btn btn-sm button-theme">Search</button>         
       </form>       
     </div>     
+    <script cms-no-export>
+    function LoadMap(propertes) {
+        var defaultLat = 40.7110411;
+        var defaultLng = -74.0110326;
+        var mapOptions = {
+            center: new google.maps.LatLng(defaultLat, defaultLng),
+            zoom: 15,
+            scrollwheel: false,
+            styles: [
+                {
+                    featureType: "administrative",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    featureType: "water",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    featureType: 'poi.business',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'labels.icon',
+                    stylers: [{visibility: 'off'}]
+                },
+            ]
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var infoWindow = new google.maps.InfoWindow();
+        var myLatlng = new google.maps.LatLng(40.7110411, -74.0110326);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map
+        });
+        (function (marker) {
+            google.maps.event.addListener(marker, "click", function (e) {
+                infoWindow.setContent("" +
+                    "<div class='map-properties contact-map-content'>" +
+                    "<div class='map-content'>" +
+                    "<p class='address'>20-21 Kathal St. Tampa City, FL</p>" +
+                    "<ul class='map-properties-list'> " +
+                    "<li><i class='fa fa-phone'></i>  +0477 8556 552</li> " +
+                    "<li><i class='fa fa-envelope'></i>  info@themevessel.com</li> " +
+                    "<li><a href='index.html'><i class='fa fa-globe'></i>  http://www.example.com</li></a> " +
+                    "</ul>" +
+                    "</div>" +
+                    "</div>");
+                infoWindow.open(map, marker);
+            });
+        })(marker);
+    }
+    LoadMap();
+</script>     
     <script src="js/jquery-2.2.0.min.js"></script>     
     <script src="js/popper.min.js"></script>     
     <script src="js/bootstrap.min.js"></script>     
@@ -622,9 +653,8 @@
     <script src="js/jquery.countdown.js"></script>     
     <script src="js/maps.js"></script>     
     <script src="js/app.js"></script>     
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->     
     <script src="js/ie10-viewport-bug-workaround.js"></script>     
-    <!-- Custom javascript -->     
     <script src="js/ie10-viewport-bug-workaround.js"></script>     
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0N5pbJN10Y1oYFRd0MJ_v2g8W2QT74JE" cms-no-export></script>     
   </body>   
 </html>
