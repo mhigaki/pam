@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-BR" wp-template wp-template-export-as="404.php" wp-template-post-template-name="404" wp-template-post-template-types="page" wp-page-template="404 pages (not found)" wp-page-template-field="The template for displaying" wp-template-preview-url="http://pam.test:8080/404/" wp-template-master="index.html" data-pgc-lock>
+<html lang="pt-BR" wp-template wp-template-export-as="404.php" wp-template-post-template-name="404" wp-template-post-template-types="page" wp-page-template="404 Error Pages" wp-page-template-field="The template for displaying" wp-template-preview-url="http://pam.test/404/">
   <head>
     <title>Real House - Real Estate HTML Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
     <!-- External CSS libraries -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/leaflet.css" type="text/css">
-    <link rel="stylesheet" href="css/map.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="fonts/linearicons/linearicons.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" type="text/css" href="css/dropzone.css">
-    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css"/>
+    <link rel="stylesheet" href="css/leaflet.css" type="text/css"/>
+    <link rel="stylesheet" href="css/map.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons/linearicons.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/dropzone.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/skins/red.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skins/red.css"/>
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
     <!-- Google fonts -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700"/>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css"/>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
@@ -37,20 +37,20 @@
   </head>
   <body>
     <div class="page_loader"></div>
-    <div wp-site-content data-pg-collapsed>
-      <div class="pages-404 overview-bgi">
+    <div wp-site-content>
+      <div class="pages-404 overview-bgi" wp-if-is-404>
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
               <div class="error404-content" wp-template-part wp-template-part-slug="template-parts/content/content" wp-template-part-name="error-404" wp-include-template-part wp-include-template-part-slug="template-parts/content/content" wp-include-template-part-name="error-404" wp-template-part-component data-pgc-edit="part[wp-include-template-part-set, no_content]" data-pgc-section="Content" data-pgc-define="404" data-pgc-define-name="Error 404">
                 <div class="error404">404</div>
                 <div class="nobottomborder">
-                  <h4 wp-title wp-title-sep="OPS! A " wp-title-set="content">Ooopps.! The Page you were looking for, couldn't be found.</h4>
+                  <h4>Ooopps.! The Page you were looking for, couldn't be found.</h4>
                   <p>Experimente a pesquisa abaixo para encontrar páginas correspondentes:</p>
                 </div>
                 <div class="coming-form clearfix">
                   <form class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="searchform1">
-                    <input type="text" class="form-control" placeholder="Procurando por algo" value="<?php the_search_query(); ?>" id="textsearch2" name="s">
+                    <input type="text" class="form-control" placeholder="Procurando por algo" value="<?php the_search_query(); ?>" id="textsearch2" name="s"/>
                     <button type="submit" class="btn" id="searchsubmit" name="submit" value="<?php esc_attr_e( 'Search', 'pam' ); ?>">Procurar</button>
                   </form>
                 </div>

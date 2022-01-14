@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" wp-template wp-template-no-export wp-template-preview-url="http://pam.test:8080/login/">
+<html lang="zxx" wp-template wp-template-post-template-name="login" wp-template-post-template-types="page" wp-template-post-template>
   <head>
     <title>Real House - Real Estate HTML Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,53 +34,55 @@
     <script  src="js/html5shiv.min.js"></script>
     <script  src="js/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="page_loader"></div>
     <!-- Contact section start -->
-    <div class="contact-section overview-bgi">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- Form content box start -->
-            <div class="form-content-box" wp-login-form wp-login-form-redirect="home_url( '/login/' );" wp-login-form-id="loginform-custom" wp-login-form-label-username="Username or Email Address" wp-login-form-label-password="Password" wp-login-form-label-remember="Remember" wp-login-form-label-log_in="Log In" wp-login-form-id-username="user_login" wp-login-form-id-password="user_pass" wp-login-form-id-remember="rememberme" wp-login-form-id-submit="wp-submit" wp-login-form-remember="1" wp-register>
-              <!-- Logo -->
-              <a href="index-2.html">  <img src="img/logos/white-logo.png" class="cm-logo" alt="black-logo">  </a>
-              <!-- details -->
-              <div class="details">
-                <!-- Name -->
-                <h3>Sign into your account</h3>
-                <!-- Form start -->
-                <form action="http://theme-vessel-templates.theme-vessel.ey.r.appspot.com/real-house/index.html" method="GET">
-                  <div class="form-group">
-                    <input type="email" name="email" class="input-text" placeholder="Email Address">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" name="Password" class="input-text" placeholder="Password">
-                  </div>
-                  <div class="checkbox">
-                    <div class="ez-checkbox pull-left">
-                      <label>
-                        <input type="checkbox" class="ez-hide">
-                        Remember me
-                      </label>
+    <div wp-site-content>
+      <div class="contact-section overview-bgi">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Form content box start -->
+              <div class="form-content-box">
+                <!-- Logo -->
+                <a href="index-2.html" wp-href="login" wp-href-redirect="1212121"> <img src="img/logos/white-logo.png" class="cm-logo" alt="black-logo" wp-cz-theme-mod="pam_brand_logo" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-set-attr="src" wp-cz-theme-mod-set-get-image wp-cz-theme-mod-set-get-image-size="large"> </a>
+                <!-- details -->
+                <div class="details">
+                  <!-- Name -->
+                  <h3>Faça login em sua conta</h3>
+                  <!-- Form start -->
+                  <form method="post" id="loginform" wp-login-form wp-login-form-redirect="http://pam.laragon:8080/wp-login.php" wp-login-form-id="loginform" wp-login-form-label-password="Password" wp-login-form-label-remember="Remember" wp-login-form-label-log_in="Log In" wp-login-form-id-username="user_login" wp-login-form-id-password="user_pass" wp-login-form-id-remember="rememberme" wp-login-form-id-submit="wp-submit" wp-login-form-remember="1" wp-login-form-value-remember="1" action="http://pam.laragon:8080/wp-login.php">
+                    <div class="form-group">
+                      <input type="email" name="email" class="d-block input-text" placeholder="Email Address">
                     </div>
-                    <a href="forgot-password.html" class="link-not-important pull-right" wp-the-site-url wp-the-site-url-scheme="login">Forgot Password</a>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="form-group mb-0">
-                    <button type="submit" class="btn-md button-theme btn-block">login</button>
-                  </div>
-                </form>
-                <!-- Form end -->
+                    <div class="form-group">
+                      <input type="password" name="Password" class="input-text" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                      <div class="ez-checkbox pull-left">
+                        <label>
+                          <input type="checkbox" class="ez-hide">
+                          Remember me
+                        </label>
+                      </div>
+                      <a href="forgot-password.html" class="link-not-important pull-right" wp-href="lost_password">Forgot Password</a>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group mb-0">
+                      <button type="submit" class="btn-md button-theme btn-block">login</button>
+                    </div>
+                  </form>
+                  <!-- Form end -->
+                </div>
+                <!-- Footer -->
+                <div class="footer">
+                  <span>Não tem conta? <a href="signup.html" wp-register="wp-register">Registre-se</a></span>
+                </div>
               </div>
-              <!-- Footer -->
-              <div class="footer">
-                <span>
-                        Don't have an account? <a href="signup.html" wp-register>Register here</a>  </span>
-              </div>
+              <!-- Form content box end -->
             </div>
-            <!-- Form content box end -->
           </div>
         </div>
       </div>

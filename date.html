@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" wp-template wp-template-export-as="date.php" wp-template-master="index.html" wp-template-preview-url="http://pam.test:8080/2020/" wp-page-template="Archive Pages." wp-page-template-field="The template for displaying">
+<html lang="zxx" wp-template wp-template-export-as="date.php" wp-template-master="index.html" wp-template-preview-url="http://pam.laragon:8080/2021/" wp-page-template="Archive Pages." wp-page-template-field="The template for displaying">
   <head>
     <title>Real House - Real Estate HTML Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,7 @@
     <script  src="js/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body wp-body-class>
     <div class="page_loader"></div>
     <!-- Top header start -->
     <header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
@@ -310,13 +310,13 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <h2 wp-call-function="the_archive_title( )" wp-call-function-echo="true" wp-call-function-set="content">Blog Columns 2 Columns</h2>
-              <ul class="breadcrumbs" cms-breadcrumbs="categories" cms-breadcrumbs-home cms-breadcrumbs-separator="span" cms-breadcrumbs-last-item=".active" cms-breadcrumbs-last-item-name=".active">
+              <h2 wp-call-function-set="content" wp-call-function-echo="true" wp-call-function="the_archive_title( )">Blog Columns 2 Columns</h2>
+              <ul class="breadcrumbs" cms-breadcrumbs="categories" cms-breadcrumbs-home cms-breadcrumbs-separator="span" cms-breadcrumbs-last-item=".active" cms-breadcrumbs-home-name="<i class=&quot;fa  fa-home&quot;></i> Home">
                 <li>
                   <a href="index-2.html">Home</a>
                 </li>
                 <li class="active">
-                  <span>/</span>Blog Columns 2 Columns
+                  <span>/</span>
                 </li>
               </ul>
             </div>
@@ -330,6 +330,8 @@
               <!-- Option bar start -->
               <div class="option-bar d-none d-xl-block d-lg-block d-md-block d-sm-block">
                 <div class="row">
+                  <div class="cod-pad offset-5 offset-md-5">
+</div>
                   <div class="col-md-7 col-sm-7 col-xs-10 cod-pad">
                     <div class="sorting-options2" wp-the-widget="WP_Widget_Archives" wp-the-widget-title="Ordenar por:" wp-the-widget-count="true" wp-the-widget-dropdown="true" wp-the-widget-before-widget="<div class=&quot;sorting-options2&quot;>" wp-the-widget-after-widget="</div>" wp-the-widget-before-title="<span>" wp-the-widget-after-title="<span>">
                       <span> Ordenar por:</span>
@@ -349,7 +351,7 @@
                 <div class="col-lg-6 col-md-6" wp-loop-item>
                   <div class="blog-1" wp-the-id>
                     <div class="blog-photo">
-                      <img src="img/blog/blog-1.jpg" alt="blog-1" class="img-fluid" cms-post-image>
+                      <img src="img/blog/blog-1.jpg" alt="blog-1" class="img-fluid" cms-post-image cms-post-image-sizes="(max-width: 320px) 84vw, (max-width: 640px) 510px, (max-width: 768px) 70vw, (max-width: 1024px) 34vw, (max-width: 1280px) 350px, 350px">
                       <div class="profile-user">
                         <img src="img/avatar/avatar-1.jpg" alt="user" wp-get-avatar wp-get-avatar-size="45">
                       </div>
